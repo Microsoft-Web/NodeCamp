@@ -15,7 +15,7 @@ x64/
 x86/
 build/
 bld/
-[Bb]in/
+[Bb]in/**/*
 [Oo]bj/
 
 # Roslyn cache directories
@@ -200,3 +200,4 @@ Configuration/SharedConfiguration.config
 
 # Visual Studio Node Tools
 .ntvs_analysis.dat
+![Bb]in/www
