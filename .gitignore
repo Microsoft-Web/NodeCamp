@@ -197,3 +197,6 @@ gen/
 
 # Don't check in the shared configuration file!
 Configuration/SharedConfiguration.config
+
+# Visual Studio Node Tools
+.ntvs_analysis.dat
