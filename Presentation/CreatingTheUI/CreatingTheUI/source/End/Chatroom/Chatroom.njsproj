@@ -3,25 +3,27 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>09_NodeChatroom</Name>
-    <RootNamespace>09_NodeChatroom</RootNamespace>
+    <Name>Chatroom</Name>
+    <RootNamespace>Chatroom</RootNamespace>
+    <Environment>DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
+DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1Bm0XDhU2nwsJHnLnJEu4cMIm08Rg==</Environment>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{216fef5b-bae6-44db-8ebd-16e6d09842f7}</ProjectGuid>
+    <ProjectGuid>4857b22c-8071-4346-9501-2f7a94f03226</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>bin\www</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,44 +33,42 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="public\js\bootstrap.js" />
-    <Compile Include="public\js\bootstrap.min.js" />
-    <Compile Include="public\js\index.js" />
+    <Compile Include="docDBUtils.js" />
+    <Compile Include="socketio.js" />
+    <Compile Include="public\javascripts\bootstrap.js" />
+    <Compile Include="public\javascripts\bootstrap.min.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\user.js" />
+    <Compile Include="routes\users.js" />
+    <Compile Include="bin\www" />
     <Content Include="package.json" />
-    <Content Include="public\css\bootstrap-theme.css" />
-    <Content Include="public\css\bootstrap-theme.css.map" />
-    <Content Include="public\css\bootstrap-theme.min.css" />
-    <Content Include="public\css\bootstrap.css" />
-    <Content Include="public\css\bootstrap.css.map" />
-    <Content Include="public\css\bootstrap.min.css" />
-    <Content Include="public\css\style.css" />
-    <Content Include="public\css\style.styl" />
+    <Content Include="public\stylesheets\bootstrap-theme.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.css.map" />
+    <Content Include="public\stylesheets\bootstrap-theme.min.css" />
+    <Content Include="public\stylesheets\bootstrap.css" />
+    <Content Include="public\stylesheets\bootstrap.css.map" />
+    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\style.styl" />
     <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="README.md" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <Content Include="views\error.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="public\" />
-    <Folder Include="public\css\" />
     <Folder Include="public\fonts\" />
-    <Folder Include="public\js\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config" />
-    <Content Include="bin\ChangeConfig.ps1" />
-    <Content Include="bin\download.ps1" />
-    <Content Include="bin\setup_web.cmd" />
-    <Content Include="bin\node.cmd" />
-  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
     <VisualStudio>

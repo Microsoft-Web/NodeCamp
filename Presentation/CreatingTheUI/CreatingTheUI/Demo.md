@@ -72,13 +72,6 @@ This demo is composed of the following segments:
 	link(rel='stylesheet' href='/css/bootstrap-theme.min.css')
 	````
 
-1. Add the following line at the end of the file.
-
-	````HTML
-	script(type='text/javascript' src='/js/bootstrap.min.js')
-	````
-
-
 1. Open the **index.jade** file and remove all the lines of code under the content block.
 
 1. Now, add the following code below the content block.
