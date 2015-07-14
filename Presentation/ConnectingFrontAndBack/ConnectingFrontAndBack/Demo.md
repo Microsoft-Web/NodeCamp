@@ -63,7 +63,7 @@ This demo is composed of the following segments:
 	> **Speaking Point:** Socket.io provides its own client, that's why you are targeting the file located in the socket.io folder.
 
 	````JavaScript
-	script(type='text/javascript' src='/js/bootstrap.min.js')
+	script(type='text/javascript' src='/javascripts/bootstrap.min.js')
 	script(type='text/javascript' src='/socket.io/socket.io.js')
 	````
 
@@ -75,24 +75,31 @@ This demo is composed of the following segments:
 	block body_end
 	````
 
+1. Now, create a new **index.js** file inside the **javascripts** folder.
+
 1. Open the **index.jade** file and add the following code to include the **index.js** file to the view.
 
 	````JavaScript
 	block body_end
-		script(type='text/javascript' src='/js/index.js')
+		script(type='text/javascript' src='/javascripts/index.js')
 	````
 
 
 <a name="segment2" />
 ### Listening and handling messages ###
 
-1. Open the **app.js** file located at the root of the project. Find the `// TODO: Add code here.` comment and replace it with the following code.
+1. Open the **socketio.js** file located at the root of the project. Find the `// TODO: Add code here.` comment and replace it with the following code.
 
  	> **Speaking Point:**  First, I want to reverse the sorting direction so that the oldest messages are sent first and second, I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
 
 	````JavaScript
-	var stream = collection.find().sort().limit(10).stream();
-	stream.on('data', function (chat) { socket.emit('chat', chat.content); });
+	docDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')
+					.forEach(function (err, msg) {
+						if (msg) {
+							 console.log('emitting chat');
+							 socket.emit('chat', msg.content);
+						}
+					});
 	````
 
 1. Open the **index.js** file inside the **public/js** folder and add the following code.
