@@ -1,5 +1,5 @@
 ﻿<a name="title" />
-# Building a Backend with Socket.IO and MongoDB #
+# Building the Backend#
 
 ---
 <a name="Overview" />
@@ -10,9 +10,9 @@ WebSockets allowed web applications to become real-time and support advanced int
 
 Socket.IO is a simple JavaScript library and Node.js module that allows you to create real-time bidirectional event-based communication apps simply and quickly. It simplifies the process of using WebSockets significantly.
 
-MongoDB is an open source database that uses a document-oriented data model. It provides high performance, high availability, and easy scalability.
+Azure DocumentDB is a NoSQL document database service designed from the ground up to natively support JSON and JavaScript directly inside the database engine. It’s the right solution for applications that run in the cloud when predictable throughput, low latency, and flexible query are key.
 
-This demo introduces the use of the Socket.IO module that allows to create real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use MongoDB, a NoSQL database to save and retrieve messages.
+This demo introduces the use of the Socket.IO module that allows to create real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use DocumentDB, a NoSQL database to save and retrieve messages.
 
 <a id="goals" />
 ### Goals ###
@@ -20,20 +20,20 @@ In this demo, you will see how to:
 
 1. Create a bidirectional communication between client and server by using Socket.IO module.
 
-1. Add MongoDB to your app for retrieving and saving messages.
+1. Add DocumentDB to your app for retrieving and saving messages.
 
 <a name="technologies" />
 ### Key Technologies ###
 
 - [Node.js][1]
 - [Socket.IO][2]
-- [MongoDB][3]
+- [DocumentDB][3]
 - [Node.js Tools for Visual Studio][4]
 - [Visual Studio Community 2013][5]
 
 [1]: https://nodejs.org/
 [2]: http://socket.io/
-[3]: https://www.mongodb.org/
+[3]: http://azure.microsoft.com/en-us/services/documentdb/
 [4]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
 [5]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
 
@@ -44,7 +44,6 @@ Follow these steps to set up your environment for the demo.
 1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
 1. Install [Node.js](https://nodejs.org/download/)
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
-1. Install [MongoDB](http://docs.mongodb.org/manual/installation/).
 1. Open Windows Explorer and browse to the **source** folder.
 1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
@@ -62,7 +61,8 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 This demo is composed of the following segments:
 
 1. [Creating a chat server with Socket.IO](#segment1)
-1. [Saving messages into a MongoDB database](#segment2)
+1. [Saving messages into a DocumentDB database](#segment2)
+1. [Appendix: Saving messages into a MongoDB database](#appendix1)
 
 <a name="segment1" />
 ### Creating a chat server with Socket.IO ###
@@ -132,7 +132,22 @@ To do the same for when a user leaves, we have to hook up to the “disconnect�
 	````
 
 <a name="segment2" />
-### Saving messages into a MongoDB database ###
+### Saving messages into a DocumentDB database ###
+
+1. Install **documentdb** package as you did with **socket.IO** package in previous segment.
+
+1. Add the following code ...
+
+	````JavaScript
+	var DocumentDBClient = require('documentdb').DocumentClient;
+	````
+
+1. TBC
+
+---
+
+<a name="appendix1" />
+### Appendix: Saving messages into a MongoDB database ###
 
 1. Install **MongoDB** package as you did with **socket.IO** package in previous segment.
 
@@ -165,8 +180,6 @@ To do the same for when a user leaves, we have to hook up to the “disconnect�
 1. Add the next code snippet inside the "chat" event and before the `socket.broadcast.emit('chat', msg);` line:
 
 	> **Speaking point:** We want to connect to the database using the URI we have in the **CUSTOMCONNSTR_MONGOLAB_URI** environment variable and insert the chat message received in the socket connection.
-
-
 
 	(Code Snippet - _NodeJsSocketIO-mongoDB-save-message_)
 
