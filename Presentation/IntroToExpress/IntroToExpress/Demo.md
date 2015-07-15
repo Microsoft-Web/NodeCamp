@@ -47,7 +47,7 @@ Follow these steps to set up your environment for the demo.
 
 Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can access from within Visual Studio to avoid having to add it manually.
 
-> **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
+> **Note:** Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use this solution as guidance if you need additional help as you work through this demo.
 
 ---
 
@@ -61,17 +61,18 @@ This demo is composed of the following segment:
 ### Introducing Express framework ###
 
 1. Go to **File | New | Project**.
+
 1. In the **Templates | JavaScript | Node.js** tab, select the **Basic Node.js Express 4 Application** project. Name it **ExpressApp**.
 
 	![Creating a new Node.js Express Application](images/create-new-node-express-application.png?raw=true "Creating a new Node.js Express Application")
 
 	_Creating a new Node.js Express Application_
 
-1. Open **app.js** file.
+1. Open the **app.js** file located at the root of the project.
 
-	![app.js file](images/app-js.png?raw=true "app.js file")
+	![Opening the app.js file](images/app-js.png?raw=true "Opening the app.js file")
 
-	_app.js file_
+	_Opening the app.js file_
 
 1. The require function loads various modules including express and path. What’s interesting is that we also load a module called routes (which will be explained later) and a module in the routes folder called user.
 
