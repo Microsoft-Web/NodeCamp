@@ -11,7 +11,6 @@
         client.queryDatabases(querySpec).toArray(function (err, results) {
             if (err) {
                 callback(err);
-
             } else {
                 if (results.length === 0) {
                     var databaseSpec = {
@@ -41,7 +40,6 @@
         client.queryCollections(databaseLink, querySpec).toArray(function (err, results) {
             if (err) {
                 callback(err);
-
             } else {
                 if (results.length === 0) {
                     var collectionSpec = {
@@ -62,7 +60,7 @@
             }
         });
     },
-
+    
     initCollection: function (client, databaseId, collectionId, callback) {
         var self = this;
         
