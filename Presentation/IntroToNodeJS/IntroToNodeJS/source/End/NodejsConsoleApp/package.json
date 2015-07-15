@@ -4,7 +4,10 @@
   "description": "NodejsConsoleApp",
   "main": "app.js",
   "author": {
-    "name": "Author Name",
+    "name": "User",
     "email": ""
+  },
+  "dependencies": {
+    "express": "^4.13.1"
   }
 }

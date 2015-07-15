@@ -6,3 +6,5 @@ var server = http.createServer(function (request, response) {
 });
 
 server.listen(7000);
+
+console.log('Navigate to http://localhost:7000');
