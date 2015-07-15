@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ExpressApp", "ExpressApp\ExpressApp.njsproj", "{F86782DD-CAF2-440F-B1C3-2322997C1EA7}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ExpressApp", "ExpressApp\ExpressApp.njsproj", "{9C7370ED-29B8-44DC-BEFE-76330A65EDD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F86782DD-CAF2-440F-B1C3-2322997C1EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F86782DD-CAF2-440F-B1C3-2322997C1EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F86782DD-CAF2-440F-B1C3-2322997C1EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F86782DD-CAF2-440F-B1C3-2322997C1EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7370ED-29B8-44DC-BEFE-76330A65EDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7370ED-29B8-44DC-BEFE-76330A65EDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7370ED-29B8-44DC-BEFE-76330A65EDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7370ED-29B8-44DC-BEFE-76330A65EDD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
