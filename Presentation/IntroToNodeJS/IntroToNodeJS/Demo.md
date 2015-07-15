@@ -135,7 +135,7 @@ This demo is composed of the following segments:
 
 1. Copy the following code snippet in the **server.js** file you created.
 
-	(Code Snippet - _NodeJsIntroduction-Tcp-Server_)
+	(Code Snippet - _NodeJsIntroduction-TcpServer_)
 
 	````JavaScript
 	var net = require('net');
@@ -153,7 +153,7 @@ This demo is composed of the following segments:
 
 1. Add another JavaScript file named **client.js** and copy the following code in it:
 
-	(Code Snippet - _NodeJsIntroduction-Tcp-Client_)
+	(Code Snippet - _NodeJsIntroduction-TcpClient_)
 
 	````JavaScript
 	var net = require('net');
@@ -191,7 +191,7 @@ This demo is composed of the following segments:
 
 1. Copy the following code snippet in the **file-reader-sync.js** file you created.
 
-	(Code Snippet - _NodeJsIntroduction-File-Reader-Sync_)
+	(Code Snippet - _NodeJsIntroduction-FileReaderSync_)
 
 	````JavaScript
 	var fs = require('fs');
@@ -210,7 +210,7 @@ This demo is composed of the following segments:
 
 1. Copy the following code snippet to the **file-reader-async.js** file.
 	
-	(Code Snippet - _NodeJsIntroduction-File-Reader-Async_)
+	(Code Snippet - _NodeJsIntroduction-FileReaderAsync_)
 
 	````JavaScript
 	var fs = require('fs');
