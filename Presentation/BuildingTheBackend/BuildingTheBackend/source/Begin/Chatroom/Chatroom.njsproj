@@ -33,8 +33,6 @@ DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1B
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="docDBUtils.js" />
-    <Compile Include="socketio.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
