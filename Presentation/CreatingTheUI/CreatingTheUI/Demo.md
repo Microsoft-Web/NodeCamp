@@ -37,8 +37,33 @@ In this demo, you will see how to:
 Follow these steps to set up your environment for the demo.
 
 1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
-
+1. Install [Node.js](https://nodejs.org/download/)
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+
+1. Open Windows Explorer and browse to the **source** folder.
+
+1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
+
+1. If the User Account Control dialog box is shown, confirm the action to proceed.
+
+1. Open Visual Studio.
+
+1. Open the **Chatroom.sln** solution located under **source\Begin**.
+
+1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
+
+	![Installing Missing npm Packages](Images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+
+	_Installing Missing npm Packages_
+
+<a name="CodeSnippets" />
+### Using the Code Snippets ###
+
+Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can access from within Visual Studio to avoid having to add it manually.
+
+> **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
+
+---
 
 <a name="Demo" />
 ## Demo ##
@@ -68,8 +93,8 @@ This demo is composed of the following segments:
 	````HTML
 	meta(charset="utf-8")
 	meta(http-equiv="X-UA-Compatible" content="IE=edge")
-	link(rel='stylesheet' href='/css/bootstrap.min.css')
-	link(rel='stylesheet' href='/css/bootstrap-theme.min.css')
+	link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')
+	link(rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css')
 	````
 
 1. Open the **index.jade** file and remove all the lines of code under the content block.
@@ -97,7 +122,7 @@ This demo is composed of the following segments:
 	        button#send-message-btn.btn.btn-primary.btn-lg.btn-block Send Message
 	````
 
-1. Open the **style.styl** file located at **public/css/**.
+1. Open the **style.styl** file located at **public/stylesheets/**.
 
 1. Add the following code to ensure the whole page takes up 100% of the height.
 
