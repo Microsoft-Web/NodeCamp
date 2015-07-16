@@ -36,9 +36,30 @@ Follow these steps to set up your environment for the demo.
 
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
-1. Open Visual Studio 2013.
+1. Open Windows Explorer and browse to the **source** folder.
 
-1. Open the **NodeChatroom.sln** solution located under **source\Begin**.
+1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
+
+1. If the User Account Control dialog box is shown, confirm the action to proceed.
+
+1. Open Visual Studio.
+
+1. Open the **Chatroom.sln** solution located under **source\Begin**.
+
+1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
+
+	![Installing Missing npm Packages](Images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+
+	_Installing Missing npm Packages_
+
+<a name="CodeSnippets" />
+### Using the Code Snippets ###
+
+Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can access from within Visual Studio to avoid having to add it manually.
+
+> **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
+
+---
 
 <a name="Demo" />
 ## Demo ##
@@ -75,7 +96,7 @@ This demo is composed of the following segments:
 	block body_end
 	````
 
-1. Now, create a new **index.js** file inside the **javascripts** folder.
+1. Create a new **index.js** file inside the **javascripts** folder.
 
 1. Open the **index.jade** file and add the following code to include the **index.js** file to the view.
 
@@ -84,13 +105,14 @@ This demo is composed of the following segments:
 		script(type='text/javascript' src='/javascripts/index.js')
 	````
 
-
 <a name="segment2" />
 ### Listening and handling messages ###
 
 1. Open the **socketio.js** file located at the root of the project. Find the `// TODO: Add code here.` comment and replace it with the following code.
 
- 	> **Speaking Point:**  First, I want to reverse the sorting direction so that the oldest messages are sent first and second, I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
+ 	> **Speaking Point:**  I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
+
+	(Code Snippet - _ConnectingFrontAndBack - SendPreviouslyReceivedMessages_)
 
 	````JavaScript
 	docDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')
@@ -102,7 +124,7 @@ This demo is composed of the following segments:
 					});
 	````
 
-1. Open the **index.js** file inside the **public/js** folder and add the following code.
+1. Open the **index.js** file inside the **public/javascripts** folder and add the following code.
 
 	````JavaScript
 	var socket = io();
@@ -111,6 +133,8 @@ This demo is composed of the following segments:
 1. 	Now, add a click handler for the **Send Message** button which will send the message to the server.
 	
 	> **Note:**  The node backend will not resend the message that the client wrote back to itself but that’s alright because we added the message right away in the click function handler.
+
+	(Code Snippet - _ConnectingFrontAndBack - SendMessages_)
 
 	````JavaScript
 	$('#send-message-btn').click(function () {
@@ -122,15 +146,23 @@ This demo is composed of the following segments:
 	});
 	````
 
-1. Add the following code to append the message received on the chat channel from other users to the #messages div.
+1. Add the following code to append the message received on the chat channel from other users to the  div element with **messages** id.
 
+	(Code Snippet - _ConnectingFrontAndBack - AppendMessagesReceived_)
+	
 	````JavaScript
 	socket.on('chat', function (msg) {
 		 $('#messages').append($('<p>').text(msg));
 	});
 	````
 
-1. Run the solution and send a few messages from two different clients.
+1. Run the solution and open a second browser instance. In the second browser instance navigate to the running site URL (e.g. [http://localhost:1337](http://localhost:1337) )
+
+1. Send a few messages from the two different clients.
+
+	![Sending messages from two different clients](Images/running-the-solution.png?raw=true "Sending messages from two different clients")
+
+	_Sending messages from two different clients_
 
 ---
 
