@@ -88,14 +88,6 @@ This demo is composed of the following segments:
 	script(type='text/javascript' src='/socket.io/socket.io.js')
 	````
 
-1. Then, add the following line at the end to create a new block.
-
-	> **Speaking Point:**  By doing this, any Jade file that extends **layout.jade** can also add script tags right before the end of the body tag.
-
-	````JavaScript
-	block body_end
-	````
-
 1. Create a new **index.js** file inside the **javascripts** folder.
 
 1. Open the **index.jade** file and add the following code to include the **index.js** file to the view.
