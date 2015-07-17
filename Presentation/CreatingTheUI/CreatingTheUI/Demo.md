@@ -5,7 +5,7 @@
 <a name="Overview" />
 ## Overview ##
 
-This demo introduces the Jade templating language and Jade templates to build up views. Also, its introduces Bootstrap and how to use it in combination with Jade.
+This demo introduces the Jade templating language and Jade templates to build up views. Additionally, this demo introduces Bootstrap and how to use it in combination with Jade.
 
 <a id="goals" />
 ### Goals ###
@@ -71,7 +71,7 @@ This demo is composed of the following segments:
 
 1. Navigate to Bootstrap site (http://getbootstrap.com/) and download Bootstrap.
 
-	> **Note:** You can also find the bootstrap zip in the **source\assets** folder.
+	> **Note:** You can also find the bootstrap zip file at the **source\assets** folder.
 
 1. Extract content of the file and move the content of the **css** folder to the **public/stylesheets** folder, the content of the js folder to the **public/stylesheets** folder and the **fonts** folder to **public**.
 
