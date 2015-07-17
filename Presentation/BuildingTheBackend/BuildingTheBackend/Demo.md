@@ -290,21 +290,33 @@ We then pass the socket.io instance to the module we created.
 
 1. Add the following code snippet below the `console.log('a user connected');`.
 
+	> **Speaking Point:**  I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
+
+	(Code Snippet - _BuildingTheBackend-DocDBLoadMessages_)
+
 	````JavaScript
 	var docDbClient = new DocumentDBClient(process.env.DOCUMENT_DB_HOST, {
-		 masterKey: process.env.DOCUMENT_DB_AUTH_KEY
+		masterKey: process.env.DOCUMENT_DB_AUTH_KEY
 	});
 
 	docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {
-		 if (err) {
-			  console.warn(err.message);
-		 } else {
-			  // TODO: Add code here.
-		 }
+		if (err) {
+			console.warn(err.message);
+		} else {
+			docDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')
+				.forEach(function (err, msg) {
+					if (msg) {
+						console.log('emitting chat');
+						socket.emit('chat', msg.content);
+					}
+				});
+		}
 	});
 	````
 
 1. Add the following code snippet inside the chat event handler and before the **socket.broadcast.emit** function call.
+
+	(Code Snippet - _BuildingTheBackend-DocDBSaveMessages_)
 
 	````JavaScript
 	docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {

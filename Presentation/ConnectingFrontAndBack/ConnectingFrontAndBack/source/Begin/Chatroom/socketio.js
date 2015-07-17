@@ -13,7 +13,13 @@ module.exports = function (io, config) {
             if (err) {
                 console.warn(err.message);
             } else {
-                // TODO: Add code here.
+                docDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')
+            .forEach(function (err, msg) {
+                    if (msg) {
+                        console.log('emitting chat');
+                        socket.emit('chat', msg.content);
+                    }
+                });
             }
         });
         
