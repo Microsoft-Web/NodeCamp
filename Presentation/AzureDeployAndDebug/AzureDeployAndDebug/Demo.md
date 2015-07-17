@@ -1,11 +1,11 @@
 ﻿<a name="title" />
-# Debugging and Deploying on Azure #
+# Deploying and Debugging on Azure #
 
 ---
 <a name="Overview" />
 ## Overview ##
 
-This demo introduces how to create a Web App in Azure and how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.
+This demo introduces how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.
 
 <a id="goals" />
 ### Goals ###
@@ -64,13 +64,13 @@ This demo is composed of the following segments:
 
 	![New Web App window](images/create-web-app-form.png?raw=true "New Web App window")
 
-	_Create a Web App on Microsoft Azure_
+	_Creating a Web App on Microsoft Azure_
 
 1. Click on the **Publish** button.
 
 	![Publish window](images/publish.png?raw=true "Publish window")
 
-	_Publish to Azure_
+	_Publishing to Azure_
 
 1. We have deployed to the cloud but we still need to enable WebSockets for the Web App in Azure. Go to the **Configure** tab of your Web App in Azure and make sure **V4.5** is selected in **.NET FRAMEWORK VERSION** and **ON** in **WEB SOCKETS** fields.
 
