@@ -10,7 +10,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>9c7370ed-29b8-44dc-befe-76330a65edd1</ProjectGuid>
+    <ProjectGuid>f0d1a8c6-3b89-47fb-b1cb-56ecb39db0e7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>bin\www</StartupFile>
     <SearchPath>
@@ -31,8 +31,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="routes\index.js" />
     <Compile Include="routes\contacts.js" />
+    <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
