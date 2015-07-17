@@ -47,7 +47,7 @@ Follow these steps to set up your environment for the demo.
 
 Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can access from within Visual Studio to avoid having to add it manually.
 
-> **Note:** Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use this solution as guidance if you need additional help as you work through this demo.
+> **Note:** Inside the source code you will find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use this solution as guidance if you need additional help as you work through this demo.
 
 ---
 
@@ -74,7 +74,9 @@ This demo is composed of the following segment:
 
 	_Opening the app.js file_
 
-1. The require function loads various modules including express and path. What’s interesting is that we also load a module called routes (which will be explained later) and a module in the routes folder called user.
+1. The **require** function loads various modules including **express** and **path**. What’s interesting is that we also load a module called **routes** and another one called **users** from the routes folder.
+
+	> **Speaking point:** We'll explain the use of these modules later on.
 
 	<!-- mark:8-9 -->	
 	````JavaScript
@@ -88,39 +90,110 @@ This demo is composed of the following segment:
 	var routes = require('./routes/index');
 	var users = require('./routes/users');
 	````
-1. 
+1. On this line, we called the function **express()** which will create our app. This will be the object containing all the properties of our web application as well as the mapping between the URL received in a request and the function handling its response.
+
 	````JavaScript
 	var app = express();
 	````
 
-1. 
+1. On these lines, we set various configuration parameters such as in which directory the template files will be found and the templating engine that we want to use, in this case Jade. Jade is a popular templating engine that makes writing HTML extremely easy and without the extraneous syntax requirements of angle brackets (<>).
+
+	> **Note:** You can change the templating engine to simply return HTML as is and not do anything further by setting the view engine as `app.set('view engine', 'html');`
+
 	````JavaScript
 	app.set('views', path.join(__dirname, 'views'));
 	app.set('view engine', 'jade');
 	````
 
-1. 
+1. These lines are interesting as it is where we specify middleware to handle Stylus CSS sheets and HTML. Middleware is a layer that is automatically inserted into the function calls between receiving the request and returning a response. In this case, we are asking Express to run the **stylus** middleware and the **static** middleware for all requests in which the URL specifies a path inside the public folder of our project.
+
+	> **Speaking point:** The stylus middleware is just going to read the **.styl** file and write the corresponding **.css** file but it expects the static middleware to then find the .css file and serve it.
+
+
 	````JavaScript
 	app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 	app.use(express.static(path.join(__dirname, 'public')));
 	````
 
-1. 
+1. In these lines, we are finally mapping a URL path in a HTTP request to a specific function to handling the response.
+
+	> **Speaking point:** We already imported the route modules from the **routes** directory. Here we mapped the URL in the browser to the function on the server that will respond to that request. Those functions that will handle the requests are in the routes directory.
+
 	````JavaScript
 	app.use('/', routes);
 	app.use('/users', users);
 	````
-1. Display index and users routes inside routes folder.
+1. Display **index.js** and **users.js** routes inside **routes** folder.
 
-1. Explain how to configure routes with Express.
+	> **Note:** The index route is using the **render** function to respond with a view template while the users route is using the **send** function to respond with a text/html type.
+
+	![Opening the index.js file](images/index-js.png?raw=true "Opening the index.js file")
+
+	_index.js file_
+
+	![Opening the users.js file](images/users-js.png?raw=true "Opening the users.js file")
+
+	_users.js file_
 
 1. Display Jade views inside views folder.
 
-1. Explain how to create a layout view and how to use it in Jade.
+	> **Speaking point:** Note how we access the **#{title}** parameter passed in by the index route.
+
+
+	![Jade views](images/jade-views.png?raw=true "Jade views")
+
+	_Jade views_
 
 1. Run the application using Visual Studio debugger.
 
 1. Show  results from your browser.
+	
+	![Show results](images/browse-results.png?raw=true "Show results")
+
+	_Showing index and users routes_
+
+1. Stop the debugger and get back to Visual Studio.
+	
+	> **Speaking point:** We are going to configure a new **contacts** route and return a Json response.
+
+1. Create a new JavaScript file named **contacts.js** inside the routes folder.
+
+1. Add the following code snippet inside it:
+
+	(Code Snippet - _IntroductionToExpress-Contacts-route_)
+
+	````JavaScript
+	var express = require('express');
+	var router = express.Router();
+
+	/* GET contacts */
+	router.get('/', function (req, res) {
+		 var contacts = [{ "name": "Jane Doe", "phone": "888-555-1212" }, { "name": "Justin Doe", "phone": "877-123-1212" }];
+		 res.json(contacts);
+	});
+
+	module.exports = router;
+	````
+1. Open the **app.js** file and add `var contacts = require('./routes/contacts');` below the `users` variable.
+
+	> **Speaking point:** Here we are loading the **contacts** route module.
+
+1. Add the `app.use('/contacts', contacts);` line below the `app.use('/users', users);` line.
+
+	> **Speaking point:** Here we are mapping the **contacts** route to the module to attend the request.
+
+	![Configuring a /contacts route](images/contacts-route.png?raw=true "Configuring a /contacts route")
+
+	_Configuring a /contacts route_
+
+1. Run the application using Visual Studio debugger.
+
+1. Access the new /contacts route and show the Json result.
+	
+	![Showing /contacts route](images/contacts-json.png?raw=true "Showing /contacts route")
+
+	_Showing /contacts route_
+
 
 ---
 
