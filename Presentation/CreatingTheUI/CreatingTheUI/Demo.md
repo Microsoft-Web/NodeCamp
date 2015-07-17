@@ -40,12 +40,6 @@ Follow these steps to set up your environment for the demo.
 1. Install [Node.js](https://nodejs.org/download/)
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
-1. Open Windows Explorer and browse to the **source** folder.
-
-1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
-
-1. If the User Account Control dialog box is shown, confirm the action to proceed.
-
 1. Open Visual Studio.
 
 1. Open the **Chatroom.sln** solution located under **source\Begin**.
@@ -75,20 +69,17 @@ This demo is composed of the following segments:
 <a name="segment1" />
 ### Using Jade Templates ###
 
-1. Navigate to [Jade site](http://jade-lang.com/) and show the example.
+1. Navigate to Bootstrap site (http://getbootstrap.com/) and download Bootstrap.
 
-1. Show that the indentation change the output
+	> **Note:** You can also find the bootstrap zip in the **source\assets** folder.
 
-1. Show the reference.
-
-<a name="segment2" />
-### Creating the chat UI ###
-
-1. Add bootstrap files to the public folder.
+1. Extract content of the file and move the content of the **css** folder to the **public/stylesheets** folder, the content of the js folder to the **public/stylesheets** folder and the **fonts** folder to **public**.
 
 1. Open the **layout.jade** file inside the **views** folder.
 
 1. Add the following lines right before the line containing the style.css link.
+
+	> **Speaking Point:** By adding this references here, any Jade file that extends **layout.jade** will have them.
 
 	````HTML
 	meta(charset="utf-8")
@@ -96,6 +87,17 @@ This demo is composed of the following segments:
 	link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')
 	link(rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css')
 	````
+
+1. Then, add the following line at the end to create a new block.
+
+	> **Speaking Point:** By doing this, any Jade file that extends **layout.jade** can also add script tags right before the end of the body tag.
+
+	````JavaScript
+	block body_end
+	````
+
+<a name="segment2" />
+### Creating the chat UI ###
 
 1. Open the **index.jade** file and remove all the lines of code under the content block.
 
@@ -156,6 +158,10 @@ This demo is composed of the following segments:
 	````
 
 1. Run the solution.
+
+	![Running the solution](Images/running-the-solution.png?raw=true "Running the solution")
+
+	_Running the solution_
 
 ---
 
