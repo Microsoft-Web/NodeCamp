@@ -64,19 +64,25 @@ This demo is composed of the following segment:
 
 1. In the **Templates | JavaScript | Node.js** tab, select the **Basic Node.js Express 4 Application** project. Name it **ExpressApp**.
 
-	![Creating a new Node.js Express Application](images/create-new-node-express-application.png?raw=true "Creating a new Node.js Express Application")
+	![Creating a new Node.js Express Application](images/Creating-a-new-express-app.png?raw=true "Creating a new Node.js Express Application")
 
 	_Creating a new Node.js Express Application_
 
+	> **Note:** If the **Node.js Tools for Visual Studio** dialog box shows up, click **Yes** in order to install the dependencies in background.
+
+	> ![Installing the dependencies](images/installing-the-dependencies.png?raw=true "Installing the dependencies")
+
+	> _Installing the dependencies_
+
 1. Open the **app.js** file located at the root of the project.
 
-	![Opening the app.js file](images/app-js.png?raw=true "Opening the app.js file")
+	![Opening the app.js file](images/opening-the-app-js-file.png?raw=true "Opening the app.js file")
 
 	_Opening the app.js file_
 
-1. The **require** function loads various modules including **express** and **path**. What’s interesting is that we also load a module called **routes** and another one called **users** from the routes folder.
+1. Show the **require** function calls at the top of the file. 
 
-	> **Speaking point:** We'll explain the use of these modules later on.
+	> **Speaking point:** The **require** function loads various modules including **express** and **path**. Something interesting is that we also load a module called **routes** and another one called **users** from the routes folder. We'll explain the use of these modules later on.
 
 	<!-- mark:8-9 -->	
 	````JavaScript
@@ -90,75 +96,102 @@ This demo is composed of the following segment:
 	var routes = require('./routes/index');
 	var users = require('./routes/users');
 	````
-1. On this line, we called the function **express()** which will create our app. This will be the object containing all the properties of our web application as well as the mapping between the URL received in a request and the function handling its response.
+1. Show the **express()** function call.
+
+	> **Speaking point:** On this line, we called the function **express()** which will create our app. This will be the object containing all the properties of our web application as well as the mapping between the URL received in a request and the function handling its response.
 
 	````JavaScript
 	var app = express();
 	````
 
-1. On these lines, we set various configuration parameters such as in which directory the template files will be found and the templating engine that we want to use, in this case Jade. Jade is a popular templating engine that makes writing HTML extremely easy and without the extraneous syntax requirements of angle brackets (<>).
+1. Show the following lines.
 
-	> **Note:** You can change the templating engine to simply return HTML as is and not do anything further by setting the view engine as `app.set('view engine', 'html');`
+	> **Speaking point:** On these lines, we set various configuration parameters such as in which directory the template files will be found and the templating engine that we want to use, in this case Jade. Jade is a popular templating engine that makes writing HTML extremely easy and without the extraneous syntax requirements of angle brackets (<>).
+	>
+	> You can change the templating engine to simply return HTML as is and not do anything further by setting the view engine as `app.set('view engine', 'html');`
 
 	````JavaScript
 	app.set('views', path.join(__dirname, 'views'));
 	app.set('view engine', 'jade');
 	````
 
-1. These lines are interesting as it is where we specify middleware to handle Stylus CSS sheets and HTML. Middleware is a layer that is automatically inserted into the function calls between receiving the request and returning a response. In this case, we are asking Express to run the **stylus** middleware and the **static** middleware for all requests in which the URL specifies a path inside the public folder of our project.
+1. Show the following lines.
 
-	> **Speaking point:** The stylus middleware is just going to read the **.styl** file and write the corresponding **.css** file but it expects the static middleware to then find the .css file and serve it.
-
+	> **Speaking point:** These lines are interesting as it is where we specify middleware to handle Stylus CSS sheets and HTML. Middleware is a layer that is automatically inserted into the function calls between receiving the request and returning a response. In this case, we are asking Express to run the **stylus** middleware and the **static** middleware for all requests in which the URL specifies a path inside the public folder of our project.
+	>
+	> The stylus middleware is just going to read the **.styl** file and write the corresponding **.css** file but it expects the static middleware to then find the .css file and serve it.
 
 	````JavaScript
 	app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 	app.use(express.static(path.join(__dirname, 'public')));
 	````
 
-1. In these lines, we are finally mapping a URL path in a HTTP request to a specific function to handling the response.
+1. Show the following lines.
 
-	> **Speaking point:** We already imported the route modules from the **routes** directory. Here we mapped the URL in the browser to the function on the server that will respond to that request. Those functions that will handle the requests are in the routes directory.
+	> **Speaking point:** In these lines, we are finally mapping a URL path in a HTTP request to a specific function to handling the response.
+	>
+	> We already imported the route modules from the **routes** directory. Here we mapped the URL in the browser to the function on the server that will respond to that request. Those functions that will handle the requests are in the routes directory.
 
 	````JavaScript
 	app.use('/', routes);
 	app.use('/users', users);
 	````
-1. Display **index.js** and **users.js** routes inside **routes** folder.
 
-	> **Note:** The index route is using the **render** function to respond with a view template while the users route is using the **send** function to respond with a text/html type.
+1. Open the **index.js** file located inside **routes** folder and show routes definition.
 
-	![Opening the index.js file](images/index-js.png?raw=true "Opening the index.js file")
+	> **Speaking point:** The index route is using the **render** function to respond with a view template.
 
-	_index.js file_
+	![Showing the index.js file](images/showing-the-index-route-file.png?raw=true "Showing the index.js file")
 
-	![Opening the users.js file](images/users-js.png?raw=true "Opening the users.js file")
+	_Showing the index.js file_
 
-	_users.js file_
+1. Repeat the previous step but this time with the **users.js** file.
+
+	> **Speaking point:** The users route is using the **send** function to respond with a text/html type.
+
+	![Showing the users.js file](images/showing-the-users-route-file.png?raw=true "Showing the users.js file")
+
+	_Showing the users.js file_
 
 1. Display Jade views inside views folder.
 
 	> **Speaking point:** Note how we access the **#{title}** parameter passed in by the index route.
 
+	![Showing the index Jade view](images/showing-the-index-jade-view.png?raw=true "Showing the index Jade view")
 
-	![Jade views](images/jade-views.png?raw=true "Jade views")
-
-	_Jade views_
+	_Showing the index Jade view_
 
 1. Run the application using Visual Studio debugger.
 
-1. Show  results from your browser.
+1. Show results from your browser.
 	
-	![Show results](images/browse-results.png?raw=true "Show results")
+	![Showing the index output](images/showing-the-index-output.png?raw=true "Showing the index output")
 
-	_Showing index and users routes_
+	_Showing the index output_
 
-1. Stop the debugger and get back to Visual Studio.
+1. Navigate to the users route to show the output.
+
+	![Showing the users output](images/showing-the-users-output.png?raw=true "Showing the users output")
+
+	_Showing the users output_
+
+1. Stop the debugger and switch back to Visual Studio.
 	
 	> **Speaking point:** We are going to configure a new **contacts** route and return a Json response.
 
-1. Create a new JavaScript file named **contacts.js** inside the routes folder.
+1. Right-click on the **routes** folder and select **Add | New Item...**.
 
-1. Add the following code snippet inside it:
+	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
+
+	_Creating a new item_
+
+1. In the **Add New Item** dialog box, select **JavaScript file**, name it **contacts.js** and click **Add**.
+
+	![Creating a new JavaScript file](images/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
+
+	_Creating a new JavaScript file_
+
+1. Add the following code snippet in the **contacts.js** file you created.
 
 	(Code Snippet - _IntroductionToExpress-Contacts-route_)
 
@@ -190,10 +223,9 @@ This demo is composed of the following segment:
 
 1. Access the new /contacts route and show the Json result.
 	
-	![Showing /contacts route](images/contacts-json.png?raw=true "Showing /contacts route")
+	![Showing the new contacts route](images/showing-the-contacts-route.png?raw=true "Showing the new contacts route")
 
-	_Showing /contacts route_
-
+	_Showing the new contacts route_
 
 ---
 
