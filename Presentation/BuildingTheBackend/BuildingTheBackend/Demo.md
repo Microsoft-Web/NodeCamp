@@ -76,6 +76,8 @@ This demo is composed of the following segments:
 
 1. [Creating a chat server with Socket.IO](#segment1)
 1. [Saving messages into a Azure DocumentDB database](#segment2)
+1. [Creating a DocumentDB database account](#segment3)
+1. [Configurating local enviroments variables](#segment4)
 1. [Appendix: Saving messages into a MongoDB database](#appendix1)
 
 <a name="segment1" />
@@ -353,6 +355,52 @@ We then pass the socket.io instance to the module we created.
 		 }
 	});
 	````
+
+<a name="segment3" />
+### Creating a DocumentDB database account ###
+
+1. Sign in to the online [Microsoft Azure Preview portal](https://portal.azure.com/).
+
+1. In the Jumpbar, click **New,** then click **Data + Storage**, and then click **Azure DocumentDB**.
+
+	![Creating a new DocumentDB account](images/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
+
+	_Creating a new DocumentDB account_
+
+1. In the **New DocumentDB account** blade, specify the desired configuration for the DocumentDB account.
+
+	![Setting up the new DocumentDB account](images/setting-up-the-new-documentdb-account.png?raw=true "Setting up the new DocumentDB account")
+
+	_Setting up the new DocumentDB account_
+
+1. Once the new DocumentDB account options are configured, click **Create**. It can take a few minutes for the DocumentDB account to be created. To check the status, you can monitor the progress on the Startboard or you can monitor your progress from the Notifications hub.
+
+1. After the DocumentDB account is created, it is ready for use with the default settings in the online portal. Now navigate to the Keys blade of your DocumentDB account as we will use these values in the web application we create next.
+
+	![Copying the DocumentDB account keys](images/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
+
+	_Copying the DocumentDB account keys_
+
+<a name="segment4" />
+### Configurating local enviroments variables ###
+
+1. Right-click on the project and select **Properties**.
+
+	![Opening the project properties](images/opening-the-project-properties.png?raw=true "Opening the project properties")
+
+	_Opening the project properties_
+
+1. In the Environment Variables section, add the following variables in each file, replacing the values with the ones obtained in the previous section.
+
+	````C#
+	DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
+DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
+	````
+
+	![Setting up the Environment Variables](images/setting-up-the-env-variables.png?raw=true "Setting up the Environment Variables")
+
+	_Setting up the Environment Variables_
+
 
 ---
 
