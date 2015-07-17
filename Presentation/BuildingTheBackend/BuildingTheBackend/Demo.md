@@ -12,7 +12,7 @@ Socket.IO is a simple JavaScript library and Node.js module that allows you to c
 
 Azure DocumentDB is a NoSQL document database service designed from the ground up to natively support JSON and JavaScript directly inside the database engine. It’s the right solution for applications that run in the cloud when predictable throughput, low latency, and flexible query are key.
 
-This demo introduces the use of the Socket.IO module that allows to create real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use DocumentDB, a NoSQL database to save and retrieve messages.
+This demo introduces the use of the Socket.IO module that allows to create real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use Azure DocumentDB, a NoSQL database to save and retrieve messages.
 
 <a id="goals" />
 ### Goals ###
@@ -20,14 +20,14 @@ In this demo, you will see how to:
 
 1. Create a bidirectional communication between client and server by using Socket.IO module.
 
-1. Add DocumentDB to your app for retrieving and saving messages.
+1. Add Azure DocumentDB to your app for retrieving and saving messages.
 
 <a name="technologies" />
 ### Key Technologies ###
 
 - [Node.js][1]
 - [Socket.IO][2]
-- [DocumentDB][3]
+- [Azure DocumentDB][3]
 - [Node.js Tools for Visual Studio][4]
 - [Visual Studio Community 2013][5]
 
@@ -75,7 +75,7 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 This demo is composed of the following segments:
 
 1. [Creating a chat server with Socket.IO](#segment1)
-1. [Saving messages into a DocumentDB database](#segment2)
+1. [Saving messages into a Azure DocumentDB database](#segment2)
 1. [Appendix: Saving messages into a MongoDB database](#appendix1)
 
 <a name="segment1" />
@@ -164,7 +164,7 @@ We then pass the socket.io instance to the module we created.
 	````
 
 <a name="segment2" />
-### Saving messages into a DocumentDB database ###
+### Saving messages into a Azure DocumentDB database ###
 
 1. Install **documentdb** package as you did with **socket.IO** package in previous segment.
 
@@ -173,6 +173,8 @@ We then pass the socket.io instance to the module we created.
 	_Installing documentdb package_
 
 1. Add a new JavaScript file named **docdbUtils.js** to the project.
+
+	> **Speaking Point:**  We will create a few helper functions in this new file.
 
 1. Add the following code snippet in the **docdbUtils.js** file you created.
 
@@ -186,6 +188,9 @@ We then pass the socket.io instance to the module we created.
 	````
 
 1. Add the following function inside the DocDBUtils object definition to get or create a database.
+
+	> **Speaking Point:**  This helper function will help to create or get a  database.
+
 
 	(Code Snippet - _BuildingTheBackend-DocDBUtilsGetOrCreateDatabase_)
 
@@ -222,6 +227,8 @@ We then pass the socket.io instance to the module we created.
 	````
 
 1. Add the following function inside the DocDBUtils object definition to get or create a collection below the previous function.
+
+	> **Speaking Point:**  This helper function will help to create or get a collection in a database.
 
 	(Code Snippet - _BuildingTheBackend-DocDBUtilsGetOrCreateCollection_)
 
@@ -263,6 +270,8 @@ We then pass the socket.io instance to the module we created.
 
 1. Then, add the following function at the end of the DocDBUtils object definition to simplify the initialization of a collection.
 
+	> **Speaking Point:**  This helper function will help to create or get a collection in a database by just calling the ones defined previously.
+
 	(Code Snippet - _BuildingTheBackend-DocDBUtilsInitCollection_)
 
 	````JavaScript
@@ -290,21 +299,43 @@ We then pass the socket.io instance to the module we created.
 
 1. Add the following code snippet below the `console.log('a user connected');`.
 
+	> **Speaking point:** We want to connect to the database using the URI we have in the **DOCUMENT_DB_HOST** environment variable and using the key we have in the **DOCUMENT_DB_AUTH_KEY** environment variable. and insert the chat message received in the socket connection.
+
+	(Code Snippet - _BuildingTheBackend-DocDBClientInitialization_)
+
 	````JavaScript
 	var docDbClient = new DocumentDBClient(process.env.DOCUMENT_DB_HOST, {
-		 masterKey: process.env.DOCUMENT_DB_AUTH_KEY
+		masterKey: process.env.DOCUMENT_DB_AUTH_KEY
 	});
+	````
 
+1. Add the following code snippet below the previous snippet.
+
+	> **Speaking Point:**  I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
+
+	(Code Snippet - _BuildingTheBackend-DocDBLoadMessages_)
+
+	````JavaScript
 	docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {
-		 if (err) {
-			  console.warn(err.message);
-		 } else {
-			  // TODO: Add code here.
-		 }
+		if (err) {
+			console.warn(err.message);
+		} else {
+			docDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')
+				.forEach(function (err, msg) {
+					if (msg) {
+						console.log('emitting chat');
+						socket.emit('chat', msg.content);
+					}
+				});
+		}
 	});
 	````
 
 1. Add the following code snippet inside the chat event handler and before the **socket.broadcast.emit** function call.
+
+	> **Speaking point:** We want to insert the chat message received in the socket connection.
+
+	(Code Snippet - _BuildingTheBackend-DocDBSaveMessages_)
 
 	````JavaScript
 	docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {
@@ -377,6 +408,6 @@ We then pass the socket.io instance to the module we created.
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to create a simple chat application where communictaion between users and server is implemented using Socket.IO module. You have also seen how to save/retrieve messages to/from a NoSQL database like MongoDB.
+By completing this demo, you have learned how to create a simple chat application where communictaion between users and server is implemented using Socket.IO module. You have also seen how to save/retrieve messages to/from a NoSQL database like Azure DocumentDB.
 
 ---

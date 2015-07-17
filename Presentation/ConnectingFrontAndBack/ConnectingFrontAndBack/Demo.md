@@ -108,22 +108,6 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### Listening and handling messages ###
 
-1. Open the **socketio.js** file located at the root of the project. Find the `// TODO: Add code here.` comment and replace it with the following code.
-
- 	> **Speaking Point:**  I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
-
-	(Code Snippet - _ConnectingFrontAndBack - SendPreviouslyReceivedMessages_)
-
-	````JavaScript
-	docDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')
-					.forEach(function (err, msg) {
-						if (msg) {
-							 console.log('emitting chat');
-							 socket.emit('chat', msg.content);
-						}
-					});
-	````
-
 1. Open the **index.js** file inside the **public/javascripts** folder and add the following code.
 
 	````JavaScript
