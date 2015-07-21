@@ -60,7 +60,10 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 This demo is composed of the following segments:
 
 1. [Creating our first Node.js application](#segment1)
-1. [Introducing Node Package Manager](#segment2)
+1. [Creating a basic HTTP server](#segment2)
+1. [Creating a basic TCP server](#segment3)
+1. [Reading file content synchronously vs asynchronously](#segment4)
+1. [Introducing Node Package Manager](#segment5)
 
 <a name="segment1" />
 ### Creating our first Node.js application ###
@@ -89,6 +92,9 @@ This demo is composed of the following segments:
 	![Running the Node.js console app](images/running-the-console-app.png?raw=true "Running the Node.js console app")
 
 	_Running the Node.js console app_
+
+<a name="segment2" />
+### Creating a basic HTTP server ###
 
 1. Get back to Visual Studio an replace the content of the **app.js** file with the following snippet:
 
@@ -120,6 +126,9 @@ This demo is composed of the following segments:
 	_Navigating to the HTTP server_
 
 1. Stop the HTTP server by pressing **Ctrl + C** in the command prompt.
+
+<a name="segment3" />
+### Creating a basic TCP server ###
 
 1. Switch back to Visual Studio. Right-click on the project and select **Add | New Item...**.
 
@@ -187,6 +196,9 @@ This demo is composed of the following segments:
 
 1. Stop the TCP server by pressing **Ctrl + C** in the command prompt running the server.
 
+<a name="segment4" />
+### Reading file content synchronously vs asynchronously ###
+
 1. Switch back to Visual Studio and add a new JavaScript file named **file-reader-sync.js**.
 
 1. Copy the following code snippet in the **file-reader-sync.js** file you created.
@@ -226,7 +238,7 @@ This demo is composed of the following segments:
 
 	_Reading a file asynchronously_
 
-<a name="segment2" />
+<a name="segment5" />
 ### Introducing Node Package Manager ###
 Node Package Manager (NPM) is the official package manager for Node.js. It is bundled and installed automatically with the environment. NPM runs through the command line and manages dependencies for an application. It reads **package.json** file and installs the dependencies found there in the **node_modules** folder.
 

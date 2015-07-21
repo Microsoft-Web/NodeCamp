@@ -7,7 +7,7 @@
 
 Express is a minimal, open source and flexible Node.js web app framework designed to make developing web apps and APIs much easier. It includes route support so that you may write responses to specific URLs. Supports multiple templating engines to simplify generating HTML.
 
-This demo shows the Express folder structure and how routes and views are separated into their own files. It walks us through the creation of a basic REST API. Finally, it explains how middleware can be injected before requests are handled by the server.
+This demo shows the Express folder structure and how routes and views are separated into their own files. It walks us through the creation of a basic REST API. Moreover, it explains how middleware can be injected before requests are handled by the server. Finally, it shows us how to add a new route into our application.
 
 <a id="goals" />
 ### Goals ###
@@ -56,6 +56,7 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 This demo is composed of the following segment:
 
 1. [Introducing Express framework](#segment1)
+1. [Adding a new route](#segment2)
 
 <a name="segment1" />
 ### Introducing Express framework ###
@@ -179,6 +180,9 @@ This demo is composed of the following segment:
 	
 	> **Speaking point:** We are going to configure a new **contacts** route and return a Json response.
 
+<a name="segment2" />
+### Adding a new route ###
+
 1. Right-click on the **routes** folder and select **Add | New Item...**.
 
 	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
@@ -232,6 +236,6 @@ This demo is composed of the following segment:
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to create web apps and REST APIs using the Express framework. You have also understood the folder structure of Express applications and how to add middleware before attending requests in the server.
+By completing this demo, you have learned how to create web apps and REST APIs using the Express framework. You have also understood the folder structure of Express applications, how to add middleware before attending requests in the server and configure new routes.
 
 ---
