@@ -177,6 +177,6 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to create a Web App in Azure and how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.
+By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.
 
 ---
