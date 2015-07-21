@@ -144,21 +144,8 @@ This demo is composed of the following segments:
 
 Node Tools for Visual Studio comes with several advanced debugging features such as conditional breakpoints, “hit count” breakpoints, tracepoints and remote debugging support for Windows.
 
-NTVS has special support for remote debugging of code running on Azure Web Sites. Unlike simple remote debugging, the target machine is not directly accessible over TCP, but NTVS comes with a WebSocket proxy for the debugging protocol that exposes the debugger protocol via HTTP. When you create a new Windows Azure project, the proxy is fully configured for you in Web.Debug.config, and will be enabled on the web site if you publish your project in the "Debug" configuration by following the next steps.
+NTVS has special support for remote debugging of code running on Azure Web Sites. Unlike simple remote debugging, the target machine is not directly accessible over TCP, but NTVS comes with a WebSocket proxy for the debugging protocol that exposes the debugger protocol via HTTP. When you create a new Windows Azure project, the proxy is fully configured for you in Web.Debug.config, and will be enabled on the web site if you publish your project in the "Debug" configuration. If you publish the web site using git, you need to update the Web.config file manually. In the previous section, you published the updated Web.config so in this section you only need to attach the debugger.
 
-1. Right click on the project and select the Publish item from the menu.
-
-	![Publsih the project](images/debug-publish.png?raw=true "Publsih the project")
-
-	_Publishing the project_
-
-1. Select the **Settings** tab on the left and make sure to choose the **Debug** configuration from the dropdown.
-
-	![Selecting debug in the configuration settings](images/settings-debug.png?raw=true "Selecting debug in the configuration settings")
-
-	_Selecting debug in the configuration settings_
-
-1. Press **Publish**.
 1. To attach to the web site, open **Server Explorer** and locate your web app under **Azure | App Service**, and right-click on it. If it is running, and your project has been deployed to it using the **Debug** configuration, you should see the **Attach Debugger (Node.js)** command in the context menu.
 
 	![Attaching the debugger](images/attach-debugger.png?raw=true "Attaching the debugger")
