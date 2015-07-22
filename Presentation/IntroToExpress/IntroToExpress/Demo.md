@@ -5,17 +5,17 @@
 <a name="Overview" />
 ## Overview ##
 
-Express is a minimal, open source and flexible Node.js web app framework designed to make developing web apps and APIs much easier. It includes route support so that you may write responses to specific URLs. Supports multiple templating engines to simplify generating HTML.
+Express is a minimal, open source and flexible Node.js web app framework designed to make developing web apps and APIs much easier. It includes route support so that you can write responses to specific URLs and supports multiple template engines to simplify generating HTML.
 
-This demo shows the Express folder structure and how routes and views are separated into their own files. It walks us through the creation of a basic REST API. Moreover, it explains how middleware can be injected before requests are handled by the server. Finally, it shows us how to add a new route into our application.
+This demo shows the Express folder structure and how routes and views are separated into their own files. It walks us through the creation of a basic REST API. Moreover, it explains how middleware can be injected before requests are handled by the server. Finally, it shows us how to add a new route to our application.
 
 <a id="goals" />
 ### Goals ###
 In this demo, you will see:
 
-1. The Express folder structure and how views and routes can be separated into files.
+1. The Express folder structure and how views and routes can be separated into files
 
-1. How to create a basic REST API and add middleware before handling requests in the server using the Express framework.
+1. How to create a basic REST API and add middleware before handling requests in the server using the Express framework
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -34,11 +34,11 @@ In this demo, you will see:
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
+1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
 1. Install [Node.js](https://nodejs.org/download/)
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
 1. Open Windows Explorer and browse to the **source** folder.
-1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
+1. Right-click **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
 1. Open Visual Studio.
 
@@ -53,7 +53,7 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 
 <a name="Demo" />
 ## Demo ##
-This demo is composed of the following segment:
+This demo is composed of the following segments:
 
 1. [Introducing Express framework](#segment1)
 1. [Adding a new route](#segment2)
@@ -69,13 +69,13 @@ This demo is composed of the following segment:
 
 	_Creating a new Node.js Express Application_
 
-	> **Note:** If the **Node.js Tools for Visual Studio** dialog box shows up, click **Yes** in order to install the dependencies in background.
+	> **Note:** If the **Node.js Tools for Visual Studio** dialog box shows up, click **Yes** in order to install the dependencies in the background.
 
 	> ![Installing the dependencies](images/installing-the-dependencies.png?raw=true "Installing the dependencies")
 
 	> _Installing the dependencies_
 
-1. Open the **app.js** file located at the root of the project.
+1. Open the **app.js** file located in the root of the project.
 
 	![Opening the app.js file](images/opening-the-app-js-file.png?raw=true "Opening the app.js file")
 
@@ -83,7 +83,7 @@ This demo is composed of the following segment:
 
 1. Show the **require** function calls at the top of the file. 
 
-	> **Speaking point:** The **require** function loads various modules including **express** and **path**. Something interesting is that we also load a module called **routes** and another one called **users** from the routes folder. We'll explain the use of these modules later on.
+	> **Speaking point:** The **require** function loads various modules including **express** and **path**. It's interesting to note that we also load a module called **routes** and another one called **users** from the routes folder. We'll explain the use of these modules later on.
 
 	<!-- mark:8-9 -->	
 	````JavaScript
@@ -107,9 +107,9 @@ This demo is composed of the following segment:
 
 1. Show the following lines.
 
-	> **Speaking point:** On these lines, we set various configuration parameters such as in which directory the template files will be found and the templating engine that we want to use, in this case Jade. Jade is a popular templating engine that makes writing HTML extremely easy and without the extraneous syntax requirements of angle brackets (<>).
+	> **Speaking point:** On these lines, we set various configuration parameters such as in which directory the template files will be found and the template engine that we want to use, in this case Jade. Jade is a popular template engine that makes writing HTML extremely easy and without the extraneous syntax requirements of angle brackets (<>).
 	>
-	> You can change the templating engine to simply return HTML as is and not do anything further by setting the view engine as `app.set('view engine', 'html');`
+	> You can change the template engine to simply return HTML as is and not do anything further by setting the view engine as `app.set('view engine', 'html');`
 
 	````JavaScript
 	app.set('views', path.join(__dirname, 'views'));
@@ -120,7 +120,7 @@ This demo is composed of the following segment:
 
 	> **Speaking point:** These lines are interesting as it is where we specify middleware to handle Stylus CSS sheets and HTML. Middleware is a layer that is automatically inserted into the function calls between receiving the request and returning a response. In this case, we are asking Express to run the **stylus** middleware and the **static** middleware for all requests in which the URL specifies a path inside the public folder of our project.
 	>
-	> The stylus middleware is just going to read the **.styl** file and write the corresponding **.css** file but it expects the static middleware to then find the .css file and serve it.
+	> The stylus middleware is just going to read the **.styl** file and write the corresponding **.css** file, but it expects the static middleware to then find the .css file and serve it.
 
 	````JavaScript
 	app.use(require('stylus').middleware(path.join(__dirname, 'public')));
@@ -129,7 +129,7 @@ This demo is composed of the following segment:
 
 1. Show the following lines.
 
-	> **Speaking point:** In these lines, we are finally mapping a URL path in a HTTP request to a specific function to handling the response.
+	> **Speaking point:** In these lines, we are finally mapping a URL path in an HTTP request to a specific function to handle the response.
 	>
 	> We already imported the route modules from the **routes** directory. Here we mapped the URL in the browser to the function on the server that will respond to that request. Those functions that will handle the requests are in the routes directory.
 
@@ -138,7 +138,7 @@ This demo is composed of the following segment:
 	app.use('/users', users);
 	````
 
-1. Open the **index.js** file located inside **routes** folder and show routes definition.
+1. Open the **index.js** file located in the **routes** folder and show the routes definition.
 
 	> **Speaking point:** The index route is using the **render** function to respond with a view template.
 
@@ -154,7 +154,7 @@ This demo is composed of the following segment:
 
 	_Showing the users.js file_
 
-1. Display Jade views inside views folder.
+1. Display the Jade views in the views folder.
 
 	> **Speaking point:** Note how we access the **#{title}** parameter passed in by the index route.
 
@@ -164,7 +164,7 @@ This demo is composed of the following segment:
 
 1. Run the application using Visual Studio debugger.
 
-1. Show results from your browser.
+1. Show the results from your browser.
 	
 	![Showing the index output](images/showing-the-index-output.png?raw=true "Showing the index output")
 
@@ -183,7 +183,7 @@ This demo is composed of the following segment:
 <a name="segment2" />
 ### Adding a new route ###
 
-1. Right-click on the **routes** folder and select **Add | New Item...**.
+1. Right-click the **routes** folder and select **Add | New Item...**.
 
 	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
 
@@ -236,6 +236,6 @@ This demo is composed of the following segment:
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to create web apps and REST APIs using the Express framework. You have also understood the folder structure of Express applications, how to add middleware before attending requests in the server and configure new routes.
+By completing this demo, you have seen how to create web apps and REST APIs using the Express framework. You have also learned about the folder structure of Express applications, how to add middleware before attending requests in the server, and configure new routes.
 
 ---

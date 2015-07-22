@@ -41,9 +41,9 @@ In this demo, you will see how to:
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
-1. Install [Node.js](https://nodejs.org/download/).
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
+1. Install [Node.js](https://nodejs.org/download/)
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
 
 1. Open Windows Explorer and browse to the **source** folder.
 
@@ -165,7 +165,7 @@ We then pass the socket.io instance to the module we created.
 	require('../socketio')(io);
 	````
 
-1. Run the application from Visual Studio opening two browser instances. Show that messages are being broadcasted to all the connections in the socket.
+1. Run the application from Visual Studio opening two browser instances. Show that messages are being broadcasted to all the connections on the socket.
 
 	![Testing socket.io](images/testing-socket-io.png?raw=true "Testing socket.io")
 
@@ -406,6 +406,14 @@ DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 	![Setting up the Environment Variables](images/setting-up-the-env-variables.png?raw=true "Setting up the Environment Variables")
 
 	_Setting up the Environment Variables_
+
+
+1. Run the application from Visual Studio and send a couple of messages.
+1. Restart the application and show how the messages sent before are retrieved from the DocumentDB account.
+
+	![Retrieving messages from DocumentDB](images/stored-messages.png?raw=true "Retrieving messages from DocumentDB")
+
+	_Retrieving messages from DocumentDB_
 
 
 ---
