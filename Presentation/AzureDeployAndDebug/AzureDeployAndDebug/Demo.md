@@ -72,7 +72,7 @@ This demo is composed of the following segments:
 
 1. [Deploying to Azure with Visual Studio](#segment1)
 1. [Deploying to Azure with GitHub](#segment2)
-1. [Remote Debugging a node application with Visual Studio and Azure](#segment3)
+1. [Remote debugging a node application with Visual Studio and Azure](#segment3)
 
 <a name="segment1" />
 ### Deploying to Azure with Visual Studio ###
@@ -144,16 +144,15 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### Deploying to Azure with GitHub ###
 
-
 1. Go back to the [Azure Portal](https://portal.azure.com/). In your Web App blade, locate the **Deployment** section and click **Set up continuous deployment**.
 
-	![Setting up continuos deployment](images/setting-up-continuos-deployment.png?raw=true "Setting up continuos deployment")
+	![Setting up continuous deployment](images/setting-up-continuos-deployment.png?raw=true "Setting up continuous deployment")
 
-	_Setting up continuos deployment_
+	_Setting up continuous deployment_
 
 1. In the **Continuous Deployment** blade select **Choose Source** and then select **GitHub**.
 
-	> **Note:** The first time you will need to autorize Azure to access your GitHub information.
+	> **Note:** The first time you will need to authorize Azure to access your GitHub information.
 
 	![Selecting GitHub as source](images/selecting-github-as-source.png?raw=true "Selecting GitHub as source")
 
@@ -187,7 +186,7 @@ This demo is composed of the following segments:
 	_Showing the new deployment entry_
 
 <a name="segment3" />
-### Remote Debugging a node application with Visual Studio and Azure ###
+### Remote debugging a node application with Visual Studio and Azure ###
 
 Node Tools for Visual Studio comes with several advanced debugging features such as conditional breakpoints, “hit count” breakpoints, tracepoints and remote debugging support for Windows.
 
