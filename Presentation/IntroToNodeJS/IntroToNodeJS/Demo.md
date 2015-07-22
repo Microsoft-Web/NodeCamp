@@ -5,7 +5,7 @@
 <a name="Overview" />
 ## Overview ##
 
-Node.js is a runtime environment and library for running JavaScript applications outside the browser. It is mostly used to run real-time server applications and shines through its performance using non-blocking I/O and asynchronous events.
+Node.js is a runtime environment and library for running JavaScript applications outside the browser. It is mostly used to run real-time server applications and its performance shines with non-blocking I/O and asynchronous events.
 
 In this demo we will show simple code examples from the classic Hello World app to a basic HTTP and TCP server. We will write code to read a file asynchronously. Finally, we'll show the use of Node Package Manager to install/update Node.js packages in Node project.
 
@@ -13,15 +13,15 @@ In this demo we will show simple code examples from the classic Hello World app 
 ### Goals ###
 In this demo, you will see how to:
 
-1. Create a simple Hello World application using Node.
+1. Create a simple Hello World application using Node
 
-1. Create a basic HTTP server.
+1. Create a basic HTTP server
 
-1. Create a basic TCP server.
+1. Create a basic TCP server
 
-1. Read files asynchronously vs synchronously.
+1. Read files asynchronously vs synchronously
 
-1. Install and update Node packages through the Node Package Manager.
+1. Install and update Node packages through the Node Package Manager
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -42,7 +42,7 @@ Follow these steps to set up your environment for the demo.
 1. Install [Node.js](https://nodejs.org/download/)
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 1. Open Windows Explorer and browse to the **source** folder.
-1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
+1. Right-click **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
 1. Open Visual Studio.
 
@@ -96,7 +96,7 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### Creating a basic HTTP server ###
 
-1. Get back to Visual Studio an replace the content of the **app.js** file with the following snippet:
+1. Go back to Visual Studio and replace the content of the **app.js** file with the following snippet:
 
 	(Code Snippet - _NodeJsIntroduction-CreateHttpServer_)
 
@@ -130,7 +130,7 @@ This demo is composed of the following segments:
 <a name="segment3" />
 ### Creating a basic TCP server ###
 
-1. Switch back to Visual Studio. Right-click on the project and select **Add | New Item...**.
+1. Switch back to Visual Studio. Right-click the project name and select **Add | New Item...**.
 
 	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
 
@@ -182,7 +182,7 @@ This demo is composed of the following segments:
 	});
 	````
 
-1. Back in the Command Prompt run **node server.js**.
+1. Back in the Command Prompt, run **node server.js**.
 
 	![Running the TCP server](images/running-the-tcp-server.png?raw=true "Running the TCP server")
 
@@ -218,7 +218,7 @@ This demo is composed of the following segments:
 
 	_Reading a file synchronously_
 
-1. Now, back to Visual Studio, add another JavaScript file named **file-reader-async.js**.
+1. Now, back in Visual Studio, add another JavaScript file named **file-reader-async.js**.
 
 1. Copy the following code snippet to the **file-reader-async.js** file.
 	
@@ -240,7 +240,7 @@ This demo is composed of the following segments:
 
 <a name="segment5" />
 ### Introducing Node Package Manager ###
-Node Package Manager (NPM) is the official package manager for Node.js. It is bundled and installed automatically with the environment. NPM runs through the command line and manages dependencies for an application. It reads **package.json** file and installs the dependencies found there in the **node_modules** folder.
+Node Package Manager (NPM) is the official package manager for Node.js. It is bundled and installed automatically with the environment. NPM runs through the command line and manages dependencies for an application. It reads the **package.json** file and installs the dependencies found there in the **node_modules** folder.
 
 Running `npm install <package-name> --save` installs the package and saves the dependency in the **package.json** file.
 
@@ -264,7 +264,7 @@ Running `npm install <package-name> --save` installs the package and saves the d
 
 	_Installing npm packages with Visual Studio_
 
-1. In the **Install New npm Packages** dialog box, search the **express** package.
+1. In the **Install New npm Packages** dialog box, search for the **express** package.
 
 	![Searching for the express package in Visual Studio](images/searching-for-express-package-in-vs.png?raw=true "Searching for the express package in Visual Studio")
 
@@ -277,6 +277,6 @@ Running `npm install <package-name> --save` installs the package and saves the d
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to create a new Node.js project by using Node Tools for Visual Studio extensions. You have known how to create a basic HTTP and TCP server and read files asynchronously. Additionally, you have seen the use of the Node Package Manager to install/update Node packages into your project.
+By completing this demo, you have learned how to create a new Node.js project by using Node Tools for Visual Studio extensions as well as how to create a basic HTTP and TCP server and read files asynchronously. Additionally, you have seen how to use the Node Package Manager to install/update Node packages in your project.
 
 ---
