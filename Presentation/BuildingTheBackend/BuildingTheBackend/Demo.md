@@ -18,9 +18,9 @@ This demo introduces the use of the Socket.IO module that allows to create real-
 ### Goals ###
 In this demo, you will see how to:
 
-1. Create a bidirectional communication between client and server by using Socket.IO module.
+1. Create a bidirectional communication between client and server by using Socket.IO module
 
-1. Add Azure DocumentDB to your app for retrieving and saving messages.
+1. Add Azure DocumentDB to your app for retrieving and saving messages
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -42,12 +42,12 @@ In this demo, you will see how to:
 Follow these steps to set up your environment for the demo.
 
 1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
-1. Install [Node.js](https://nodejs.org/download/)
+1. Install [Node.js](https://nodejs.org/download/).
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
 1. Open Windows Explorer and browse to the **source** folder.
 
-1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
+1. Right-click **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
 
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
 
@@ -75,7 +75,7 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 This demo is composed of the following segments:
 
 1. [Creating a chat server with Socket.IO](#segment1)
-1. [Saving messages into a Azure DocumentDB database](#segment2)
+1. [Saving messages into an Azure DocumentDB database](#segment2)
 1. [Creating a DocumentDB database account](#segment3)
 1. [Configurating local enviroments variables](#segment4)
 1. [Appendix: Saving messages into a MongoDB database](#appendix1)
@@ -165,8 +165,14 @@ We then pass the socket.io instance to the module we created.
 	require('../socketio')(io);
 	````
 
+1. Run the application from Visual Studio opening two browser instances. Show that messages are being broadcasted to all the connections in the socket.
+
+	![Testing socket.io](images/testing-socket-io.png?raw=true "Testing socket.io")
+
+	_Testing socket.io_
+
 <a name="segment2" />
-### Saving messages into a Azure DocumentDB database ###
+### Saving messages into an Azure DocumentDB database ###
 
 1. Install **documentdb** package as you did with **socket.IO** package in previous segment.
 
@@ -174,11 +180,11 @@ We then pass the socket.io instance to the module we created.
 
 	_Installing documentdb package_
 
-1. Add a new JavaScript file named **docdbUtils.js** to the project.
+1. Add a new JavaScript file named **docDBUtils.js** to the project.
 
 	> **Speaking Point:**  We will create a few helper functions in this new file.
 
-1. Add the following code snippet in the **docdbUtils.js** file you created.
+1. Add the following code snippet in the **docDBUtils.js** file you created.
 
 	(Code Snippet - _BuildingTheBackend-DocDBUtilsStructure_)
 
@@ -313,7 +319,7 @@ We then pass the socket.io instance to the module we created.
 
 1. Add the following code snippet below the previous snippet.
 
-	> **Speaking Point:**  I want to emit the previously received chat messages on the same channel as I plan on receiving the new messages.
+	> **Speaking Point:**  We want to emit the previously received chat messages on the same channel.
 
 	(Code Snippet - _BuildingTheBackend-DocDBLoadMessages_)
 
