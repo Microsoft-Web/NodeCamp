@@ -409,12 +409,12 @@ DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 
 
 1. Run the application from Visual Studio and send a couple of messages.
+
 1. Restart the application and show how the messages sent before are retrieved from the DocumentDB account.
 
-	![Retrieving messages from DocumentDB](images/stored-messages.png?raw=true "Retrieving messages from DocumentDB")
+	![Retrieving messages from DocumentDB](images/retrieving-messages-from-documentdb.png?raw=true "Retrieving messages from DocumentDB")
 
 	_Retrieving messages from DocumentDB_
-
 
 ---
 
