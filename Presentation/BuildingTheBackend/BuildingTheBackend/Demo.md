@@ -6,21 +6,21 @@
 ## Overview ##
 
 A Websocket is a protocol designed to allow web applications to create a full-duplex channel over TCP between the web browser and a web server. It is fully compatible with HTTP and uses TCP port number 80. 
-WebSockets allowed web applications to become real-time and support advanced interactions between the client and the server. 
+WebSockets allow real-time web applications to support advanced interactions between the client and the server. 
 
 Socket.IO is a simple JavaScript library and Node.js module that allows you to create real-time bidirectional event-based communication apps simply and quickly. It simplifies the process of using WebSockets significantly.
 
 Azure DocumentDB is a NoSQL document database service designed from the ground up to natively support JSON and JavaScript directly inside the database engine. It’s the right solution for applications that run in the cloud when predictable throughput, low latency, and flexible query are key.
 
-This demo introduces the use of the Socket.IO module that allows to create real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use Azure DocumentDB, a NoSQL database to save and retrieve messages.
+This demo introduces the use of the Socket.IO module that allows for real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use Azure DocumentDB, a NoSQL database, to save and retrieve messages.
 
 <a id="goals" />
 ### Goals ###
 In this demo, you will see how to:
 
-1. Create a bidirectional communication between client and server by using Socket.IO module
+1. Create bidirectional communication between client and server by using Socket.IO module
 
-1. Add Azure DocumentDB to your app for retrieving and saving messages
+1. Add Azure DocumentDB to your app to retrieve and save messages
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -55,7 +55,7 @@ Follow these steps to set up your environment for the demo.
 
 1. Open the **Chatroom.sln** solution located under **source\Begin**.
 
-1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
+1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
@@ -64,7 +64,7 @@ Follow these steps to set up your environment for the demo.
 <a name="CodeSnippets" />
 ### Using the Code Snippets ###
 
-Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can access from within Visual Studio to avoid having to add it manually.
+Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets which you can access from within Visual Studio to avoid having to add it manually.
 
 > **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
 
@@ -75,35 +75,35 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 This demo is composed of the following segments:
 
 1. [Creating a chat server with Socket.IO](#segment1)
-1. [Saving messages into an Azure DocumentDB database](#segment2)
+1. [Saving messages to an Azure DocumentDB database](#segment2)
 1. [Creating a DocumentDB database account](#segment3)
-1. [Configurating local enviroments variables](#segment4)
-1. [Appendix: Saving messages into a MongoDB database](#appendix1)
+1. [Configuring local environment variables](#segment4)
+1. [Appendix: Saving messages to a MongoDB database](#appendix1)
 
 <a name="segment1" />
 ### Creating a chat server with Socket.IO ###
 
-1. Right-click on the **npm** node of the project and select **Install New npm Packages...**.
+1. Right-click the **npm** node of the project and select **Install New npm Packages...**.
 
 	![Installing Node packages](images/installing-node-packages.png?raw=true "Installing Node packages")
 
 	_Installing new Node package_
 
-1. Search for **Socket.IO**. Select the top result and make sure the **Add to package.json** checkbox is checked before installing the package. 
+1. Search for **Socket.IO**. Select the top result and make sure the **Add to package.json** check box is selected before installing the package. 
 
-	> **Note:** This will install socket.io into your project and add it to the package.json file. You can achieve the same by running the `npm install --save socket.io` command.
+	> **Note:** This will install socket.io to your project and add it to the package.json file. You can achieve the same by running the `npm install --save socket.io` command.
 
 	![Installing Socket.IO package](images/installing-socket-io-package.png?raw=true "Installing Socket.IO package")
 
 	_Installing Socket.IO package_
 
-1. Show the **package.json** file located at the root folder of the project.
+1. Show the **package.json** file located in the root folder of the project.
 
 	![Showing the package.json file](images/showing-the-package-json-file.png?raw=true "Showing the package.json file")
 
 	_Showing the package.json file_
 
-1. Right-click on the project and select **Add | New Item...**.
+1. Right-click the project and select **Add | New Item...**.
 
 	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
 
@@ -153,7 +153,7 @@ This demo is composed of the following segments:
 	});
 	````
 
-1. Open the **www** file located at the **bin** folder and insert the following code snippet at the end of the file.
+1. Open the **www** file located in the **bin** folder and insert the following code snippet at the end of the file.
 
 	> **Speaking point:** Here we capture the HTTP server created by express in a variable called **server** and pass it to the socket.io module so it can attach to it.
 We then pass the socket.io instance to the module we created.
@@ -172,9 +172,9 @@ We then pass the socket.io instance to the module we created.
 	_Testing socket.io_
 
 <a name="segment2" />
-### Saving messages into an Azure DocumentDB database ###
+### Saving messages to an Azure DocumentDB database ###
 
-1. Install **documentdb** package as you did with **socket.IO** package in previous segment.
+1. Install the **documentdb** package as you did with the **socket.IO** package in the previous step.
 
 	![Installing documentdb package](images/installing-documentdb-package.png?raw=true "Installing documentdb package")
 
@@ -296,7 +296,7 @@ We then pass the socket.io instance to the module we created.
     }
 	````
 
-1. Now, open the **socketio.js** file you created in the previous section and add the following code snippet at the beggining of the file.
+1. Now, open the **socketio.js** file you created in the previous section and add the following code snippet at the beginning of the file.
 
 	(Code Snippet - _BuildingTheBackend-DocDBInitialization_)
 
@@ -307,7 +307,7 @@ We then pass the socket.io instance to the module we created.
 
 1. Add the following code snippet below the `console.log('a user connected');`.
 
-	> **Speaking point:** We want to connect to the database using the URI we have in the **DOCUMENT_DB_HOST** environment variable and using the key we have in the **DOCUMENT_DB_AUTH_KEY** environment variable. and insert the chat message received in the socket connection.
+	> **Speaking point:** We want to connect to the database using the URI we have in the **DOCUMENT_DB_HOST** environment variable using the key we have in the **DOCUMENT_DB_AUTH_KEY** environment variable, and insert the chat message received in the socket connection.
 
 	(Code Snippet - _BuildingTheBackend-DocDBClientInitialization_)
 
@@ -367,7 +367,7 @@ We then pass the socket.io instance to the module we created.
 
 1. Sign in to the online [Microsoft Azure Preview portal](https://portal.azure.com/).
 
-1. In the Jumpbar, click **New,** then click **Data + Storage**, and then click **Azure DocumentDB**.
+1. In the Jumpbar, click **New**, then **Data + Storage**, and **Azure DocumentDB**.
 
 	![Creating a new DocumentDB account](images/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
 
@@ -379,24 +379,24 @@ We then pass the socket.io instance to the module we created.
 
 	_Setting up the new DocumentDB account_
 
-1. Once the new DocumentDB account options are configured, click **Create**. It can take a few minutes for the DocumentDB account to be created. To check the status, you can monitor the progress on the Startboard or you can monitor your progress from the Notifications hub.
+1. Once the new DocumentDB account options are configured, click **Create**. It can take a few minutes for the DocumentDB account to be created. To check the status, you can monitor the progress on the Startboard or from the Notifications hub.
 
-1. After the DocumentDB account is created, it is ready for use with the default settings in the online portal. Now navigate to the Keys blade of your DocumentDB account as we will use these values in the web application we create next.
+1. After the DocumentDB account is created, it is ready to use with the default settings in the online portal. Now navigate to the Keys blade of your DocumentDB account; we will use these values in the web application we create next.
 
 	![Copying the DocumentDB account keys](images/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
 
 	_Copying the DocumentDB account keys_
 
 <a name="segment4" />
-### Configurating local enviroments variables ###
+### Configuring local environment variables ###
 
-1. Right-click on the project and select **Properties**.
+1. Right-click the project and select **Properties**.
 
 	![Opening the project properties](images/opening-the-project-properties.png?raw=true "Opening the project properties")
 
 	_Opening the project properties_
 
-1. In the Environment Variables section, add the following variables in each file, replacing the values with the ones obtained in the previous section.
+1. In the Environment Variables section, add the following variables in each file, replacing the values with those obtained in the previous section.
 
 	````C#
 	DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
@@ -408,9 +408,9 @@ DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 	_Setting up the Environment Variables_
 
 
-1. Run the application from Visual Studio and send a couple of messages.
+1. Run the application from Visual Studio and send a few messages.
 
-1. Restart the application and show how the messages sent before are retrieved from the DocumentDB account.
+1. Restart the application and show how the messages you sent are retrieved from the DocumentDB account.
 
 	![Retrieving messages from DocumentDB](images/retrieving-messages-from-documentdb.png?raw=true "Retrieving messages from DocumentDB")
 
@@ -419,17 +419,17 @@ DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 ---
 
 <a name="appendix1" />
-### Appendix: Saving messages into a MongoDB database ###
+### Appendix: Saving messages to a MongoDB database ###
 
-1. Install **MongoDB** package as you did with **socket.IO** package in previous segment.
+1. Install the **MongoDB** package as you did with the **socket.IO** package in previous segment.
 
-1. Add the following code before `var app = express();` line in **app.js** file:
+1. Add the following code before `var app = express();` in the **app.js** file:
 
 	`var mongo = require('mongodb').MongoClient;`
 
-1. Add the next code snippet inside the "connection" event and after the `console.log('a user connected');` line:
+1. Add the next code snippet inside the "connection" event and after  `console.log('a user connected');`:
 
-	> **Speaking point:** We want to give our users the last 10 messages from the chatroom so they have some context when they just joined. To do that, we need to connect to Mongo. We use the **limit** function to limit the results to only 10 messages. We will stream the results from Mongo so that we emit them as soon as they arrive to the chatroom.
+	> **Speaking point:** We want to give our users the last 10 messages from the chatroom so they have some context when they have just joined. To do that, we need to connect to Mongo. We use the **limit** function to limit the results to only 10 messages. We will stream the results from Mongo so that we emit them as soon as they arrive to the chatroom.
 	
 	(Code Snippet - _NodeJsSocketIO-mongoDB-retrieve-messages_)
 
@@ -470,6 +470,6 @@ DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to create a simple chat application where communictaion between users and server is implemented using Socket.IO module. You have also seen how to save/retrieve messages to/from a NoSQL database like Azure DocumentDB.
+By completing this demo, you have learned how to create a simple chat application where communication between users and server is implemented using the Socket.IO module. You have also seen how to save/retrieve messages to/from a NoSQL database like Azure DocumentDB.
 
 ---
