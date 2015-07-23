@@ -11,9 +11,9 @@ This demo introduces how to deploy a Node.js application to Azure from Visual St
 ### Goals ###
 In this demo, you will see how to:
 
-1. Deploy a Node.js app to Azure.
+1. Deploy a Node.js app to Azure
 
-1. Remote debug a Node.js application from Visual Studio.
+1. Remote debug a Node.js application from Visual Studio
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -34,25 +34,25 @@ In this demo, you will see how to:
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Get an [Azure subscription](https://azure.microsoft.com/en-us/pricing/free-trial/).
+1. Get an [Azure subscription](https://azure.microsoft.com/en-us/pricing/free-trial/)
 
-1. Get a [GitHub Account](https://help.github.com/articles/signing-up-for-a-new-github-account/).
+1. Get a [GitHub Account](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
+1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
 
 1. Install [Node.js](https://nodejs.org/download/)
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
 
 1. Create a DocumentDB database account. Details [here] (https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-account/).
 
-1. After the DocumentDB account is created, navigate to the Keys blade of your DocumentDB account and take note of the URI and PRIMARY KEY values as we will use them later on.
+1. After the DocumentDB account is created, navigate to the Keys blade of your DocumentDB account and take note of the URI and PRIMARY KEY values. You will use them later on.
 
 	![Copying the DocumentDB account keys](images/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
 
 	_Copying the DocumentDB account keys_
 
-1. Create a new repository into your GitHub account and import the code inside **source\Begin** folder. Details [here](https://help.github.com/articles/create-a-repo/).
+1. Create a new repository in your GitHub account and import the code from the **source\Begin** folder. Details [here](https://help.github.com/articles/create-a-repo/).
 
 1. Open Visual Studio.
 
@@ -60,7 +60,7 @@ Follow these steps to set up your environment for the demo.
 
 1. In **Server Explorer**, add your Azure credentials.
 
-1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
+1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
@@ -77,7 +77,7 @@ This demo is composed of the following segments:
 <a name="segment1" />
 ### Deploying to Azure with Visual Studio ###
 
-1. In Visual Studio, right-click on the project and select the **Publish** item from the menu.
+1. In Visual Studio, right-click the project and select **Publish...**.
 
 	![Selecting the Publish item from the menu](images/selecting-publish-from-the-menu.png?raw=true "Selecting the Publish item from the menu")
 
@@ -89,19 +89,19 @@ This demo is composed of the following segments:
 
 	_Selecting Microsoft Azure Web Apps as publish target_
 
-1. In the Select Existing Web App dialog box, select **New...** to create a new Web App.
+1. In the Select Existing Web App dialog box, click **New...** to create a new Web App.
 
 	![Selecting the target Web App](images/selecting-the-target-web-app.png?raw=true "Selecting the target Web App")
 
 	_Selecting the target Web App_
 
-1. Fill all the fields in the **Create a Web App on Microsoft Azure** dialog box and click **Create**.
+1. Complete all the fields in the **Create a Web App on Microsoft Azure** dialog box and click **Create**.
 
 	![Creating a new Web App](images/creating-a-new-wep-app.png?raw=true "Creating a new Web App")
 
 	_Creating a new Web App_
 
-1. In the Publish Web dialog box, click on the **Publish** button.
+1. In the Publish Web dialog box, click **Publish**.
 
 	![Publishing the Web App](images/publishing-the-web-app.png?raw=true "Publishing the Web App")
 
@@ -117,7 +117,7 @@ This demo is composed of the following segments:
 
 1. In the **Settings** blade, select **Application settings**.
 
-1. In the **Web app settings** blade, make sure **v4.5** is selected in **.NET Framework version** and select **On** in **Web sockets**.
+1. In the **Web app settings** blade, make sure **v4.5** is selected in **.NET Framework version** and click **On** in **Web sockets**.
 
 	![Enabling Web sockets](images/enabling-web-sockets.png?raw=true "Enabling Web sockets")
 
@@ -150,7 +150,7 @@ This demo is composed of the following segments:
 
 	_Setting up continuous deployment_
 
-1. In the **Continuous Deployment** blade select **Choose Source** and then select **GitHub**.
+1. In the **Continuous Deployment** blade, select **Choose Source** and then select **GitHub**.
 
 	> **Note:** The first time you will need to authorize Azure to access your GitHub information.
 
@@ -171,7 +171,7 @@ This demo is composed of the following segments:
 	_Showing the Deployments blade_
 
 
-1. Go to your local repository, and open the **index.jade** file located inside the **Chatroom\views** folder. 
+1. Go to your local repository and open the **index.jade** file located in the **Chatroom\views** folder. 
 
 1. Update the main title and push it to GitHub.
 
@@ -179,7 +179,7 @@ This demo is composed of the following segments:
 
 	_Updating the index view_
 
-1. Get back to the **Deployments** blade for your Web App and show the new deployment entry.
+1. Go back to the **Deployments** blade for your Web App and show the new deployment entry.
 
 	![Showing the new deployment entry](images/showing-the-new-deployment-entry.png?raw=true "Showing the new deployment entry")
 
@@ -190,15 +190,15 @@ This demo is composed of the following segments:
 
 Node Tools for Visual Studio comes with several advanced debugging features such as conditional breakpoints, “hit count” breakpoints, tracepoints and remote debugging support for Windows.
 
-NTVS has special support for remote debugging of code running on Azure Web Sites. Unlike simple remote debugging, the target machine is not directly accessible over TCP, but NTVS comes with a WebSocket proxy for the debugging protocol that exposes the debugger protocol via HTTP. When you create a new Windows Azure project, the proxy is fully configured for you in Web.Debug.config, and will be enabled on the web site if you publish your project in the "Debug" configuration. If you publish the web site using git, you need to update the Web.config file manually. In the previous section, you published the updated Web.config so in this section you only need to attach the debugger.
+NTVS has special support for remote debugging of code running on Azure Web Sites. Unlike simple remote debugging, the target machine is not directly accessible over TCP, but NTVS comes with a WebSocket proxy for the debugging protocol that exposes the debugger protocol via HTTP. When you create a new Windows Azure project, the proxy is fully configured for you in Web.Debug.config, and will be enabled on the web site if you publish your project in the "Debug" configuration. If you publish the web site using git, you need to update the Web.config file manually. In the previous section, you published the updated Web.config, so in this section you only need to attach the debugger.
 
-1. To attach to the Web App, open **Server Explorer** and locate your web app under **Azure | App Service**, right-click on it and select **Attach Debugger (Node.js)**.
+1. To attach to the Web App, open **Server Explorer** and locate your web app under **Azure | App Service**, right-click it and select **Attach Debugger (Node.js)**.
 
 	![Attaching the debugger](images/attaching-the-debugger.png?raw=true "Attaching the debugger")
 
 	_Attaching the debugger_
 
-1. Open the **socketio.js** file located at the root of the project and set a breakpoint in the **connection** event handler.
+1. Open the **socketio.js** file located in the root of the project and set a breakpoint in the **connection** event handler.
 
 1. Refresh the site in the browser and check if the debugger is working.
 
@@ -206,7 +206,7 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 
 	_Checking that the debugger is working_
 
-1. You can stream the latest logs by right-click on your web app in the **Server Explorer** and select **View Streaming Logs**.
+1. You can stream the latest logs by right-clicking your web app in the **Server Explorer** and selecting **View Streaming Logs**.
 
 	![Streaming logs](images/streaming-logs.png?raw=true "Streaming logs")
 
@@ -217,6 +217,6 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.
+By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to set up remote debugging with Visual Studio to a Node.js application deployed in Azure.
 
 ---
