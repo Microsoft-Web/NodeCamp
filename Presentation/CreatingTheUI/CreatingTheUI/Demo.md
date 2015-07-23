@@ -15,7 +15,7 @@ In this demo, you will see how to:
 
 1. Use Bootstrap
 
-1. Create a UI for a node.js application
+1. Create a UI for a Node.js application
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -36,9 +36,9 @@ In this demo, you will see how to:
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
+1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
 1. Install [Node.js](https://nodejs.org/download/)
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
 
 1. Open Visual Studio.
 
@@ -46,14 +46,9 @@ Follow these steps to set up your environment for the demo.
 
 1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
-	![Installing Missing npm Packages](Images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
-
-<a name="CodeSnippets" />
-### Using the Code Snippets ###
-
-Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can access from within Visual Studio to avoid having to add it manually.
 
 > **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
 
@@ -63,21 +58,21 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 ## Demo ##
 This demo is composed of the following segments:
 
-1. [Using Jade Templates](#segment1)
+1. [Using Jade Templates with Bootstrap](#segment1)
 1. [Creating the chat UI](#segment2)
 
 <a name="segment1" />
-### Using Jade Templates ###
+### Using Jade Templates with Bootstrap ###
 
 1. Navigate to Bootstrap site (http://getbootstrap.com/) and download Bootstrap.
 
 	> **Note:** You can also find the bootstrap zip file at the **source\assets** folder.
 
-1. Extract content of the file and move the content of the **css** folder to the **public/stylesheets** folder, the content of the js folder to the **public/stylesheets** folder and the **fonts** folder to **public**.
+1. Extract content of the file and move the content of the **css** folder to the **public/stylesheets** folder, the content of the js folder to the **public/javascripts** folder and the **fonts** folder to **public**.
 
 1. Open the **layout.jade** file inside the **views** folder.
 
-1. Add the following lines right before the line containing the style.css link.
+1. Add the following lines right before the line containing the style.css link. Make sure to mantain the same indentation level.
 
 	> **Speaking Point:** By adding this references here, any Jade file that extends **layout.jade** will have them.
 
@@ -101,7 +96,7 @@ This demo is composed of the following segments:
 
 1. Open the **index.jade** file and remove all the lines of code under the content block.
 
-1. Now, add the following code below the content block.
+1. Now, add the following code below the content block and with one tab of indentation.
 
 	````HTML
 	.wrap
@@ -133,7 +128,7 @@ This demo is composed of the following segments:
 	  height: 100%
 	````
 
-1. Add the following code to ensure the wrap area takes up the maximum height it can but leaves a 60px margin at the bottom for our footer and message editing area.
+1. Add the following code to ensure the wrap area takes up the maximum height it can, but leave a 60px margin at the bottom for our footer and message editing area.
 
 	````CSS
 	.wrap 
@@ -143,14 +138,14 @@ This demo is composed of the following segments:
 	  margin: 0 auto -60px
 	````
 
-1. Add the following code  to ensure that this space for the editing area is respected and to assign it to the footer.
+1. Add the following code to ensure that the space for the editing area is respected and to assign it to the footer.
 
 	````CSS
 	.push, .footer 
 	  height: 60px
 	````
 
-1. Now, let’s a subtle background color to the footer.
+1. Now, set a subtle background color to the footer.
 
 	````CSS
 	.footer

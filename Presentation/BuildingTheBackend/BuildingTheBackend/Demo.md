@@ -57,7 +57,7 @@ Follow these steps to set up your environment for the demo.
 
 1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
-	![Installing Missing npm Packages](Images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
 
