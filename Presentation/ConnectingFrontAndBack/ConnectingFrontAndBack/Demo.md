@@ -136,7 +136,7 @@ This demo is composed of the following segments:
 
 1. Send a few messages from the two different clients.
 
-	![Sending messages from two different clients](Images/running-the-solution.png?raw=true "Sending messages from two different clients")
+	![Sending messages from two different clients](images/running-the-solution.png?raw=true "Sending messages from two different clients")
 
 	_Sending messages from two different clients_
 
