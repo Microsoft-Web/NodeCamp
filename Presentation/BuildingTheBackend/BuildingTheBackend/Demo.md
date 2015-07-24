@@ -42,7 +42,9 @@ In this demo, you will see how to:
 Follow these steps to set up your environment for the demo.
 
 1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
+
 1. Install [Node.js](https://nodejs.org/download/)
+
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
 
 1. Open Windows Explorer and browse to the **source** folder.
