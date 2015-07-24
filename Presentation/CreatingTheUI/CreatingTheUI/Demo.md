@@ -39,11 +39,8 @@ Follow these steps to set up your environment for the demo:
 1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
 1. Install [Node.js](https://nodejs.org/download/)
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
-
 1. Open Visual Studio.
-
 1. Open the **Chatroom.sln** solution located under **source\Begin**.
-
 1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
