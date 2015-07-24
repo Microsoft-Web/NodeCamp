@@ -34,7 +34,7 @@ In this demo, you will see how to:
 
 <a name="Setup" />
 ### Setup and Configuration ###
-Follow these steps to set up your environment for the demo.
+Follow these steps to set up your environment for the demo:
 
 1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
 1. Install [Node.js](https://nodejs.org/download/)
@@ -44,7 +44,7 @@ Follow these steps to set up your environment for the demo.
 
 1. Open the **Chatroom.sln** solution located under **source\Begin**.
 
-1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
+1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
@@ -64,17 +64,17 @@ This demo is composed of the following segments:
 <a name="segment1" />
 ### Using Jade Templates with Bootstrap ###
 
-1. Navigate to Bootstrap site (http://getbootstrap.com/) and download Bootstrap.
+1. Navigate to the Bootstrap site (http://getbootstrap.com/) and download Bootstrap.
 
-	> **Note:** You can also find the bootstrap zip file at the **source\assets** folder.
+	> **Note:** You can also find the bootstrap zip file in the **source\assets** folder.
 
-1. Extract content of the file and move the content of the **css** folder to the **public/stylesheets** folder, the content of the js folder to the **public/javascripts** folder and the **fonts** folder to **public**.
+1. Extract the content of the file and move the **css** folder content to the **public/stylesheets** folder, the js folder content to the **public/javascripts** folder, and the **fonts** folder to **public**.
 
-1. Open the **layout.jade** file inside the **views** folder.
+1. Open the **layout.jade** file in the **views** folder.
 
-1. Add the following lines right before the line containing the style.css link. Make sure to mantain the same indentation level.
+1. Add the following lines right before the line containing the style.css link. Make sure to maintain the same indentation level.
 
-	> **Speaking Point:** By adding this references here, any Jade file that extends **layout.jade** will have them.
+	> **Speaking Point:** By adding this reference here, any Jade file that extends **layout.jade** will have them.
 
 	````HTML
 	meta(charset="utf-8")
@@ -96,7 +96,7 @@ This demo is composed of the following segments:
 
 1. Open the **index.jade** file and remove all the lines of code under the content block.
 
-1. Now, add the following code below the content block and with one tab of indentation.
+1. Now, add the following code below the content block with one tab of indentation.
 
 	````HTML
 	.wrap
@@ -119,9 +119,9 @@ This demo is composed of the following segments:
 	        button#send-message-btn.btn.btn-primary.btn-lg.btn-block Send Message
 	````
 
-1. Open the **style.styl** file located at **public/stylesheets/**.
+1. Open the **style.styl** file located in **public/stylesheets/**.
 
-1. Add the following code to ensure the whole page takes up 100% of the height.
+1. Add the following code to ensure the page takes up 100% of the height.
 
 	````CSS
 	html, body
@@ -138,14 +138,14 @@ This demo is composed of the following segments:
 	  margin: 0 auto -60px
 	````
 
-1. Add the following code to ensure that the space for the editing area is respected and to assign it to the footer.
+1. Add the following code to ensure that the space for the editing area is respected and assigned to the footer.
 
 	````CSS
 	.push, .footer 
 	  height: 60px
 	````
 
-1. Now, set a subtle background color to the footer.
+1. Now, set a subtle background color for the footer.
 
 	````CSS
 	.footer

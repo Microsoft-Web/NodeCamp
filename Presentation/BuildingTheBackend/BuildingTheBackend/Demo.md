@@ -302,7 +302,7 @@ We then pass the socket.io instance to the module we created.
 
 	````JavaScript
 	var DocumentDBClient = require('documentdb').DocumentClient;
-	var docdbUtils = require('./docdbUtils');
+	var docdbUtils = require('./docDBUtils');
 	````
 
 1. Add the following code snippet below the `console.log('a user connected');`.

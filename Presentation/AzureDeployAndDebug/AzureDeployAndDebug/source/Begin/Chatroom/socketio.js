@@ -1,5 +1,5 @@
 ﻿var DocumentDBClient = require('documentdb').DocumentClient;
-var docdbUtils = require('./docdbUtils');
+var docdbUtils = require('./docDBUtils');
 
 module.exports = function (io, config) {
     io.on('connection', function (socket) {
