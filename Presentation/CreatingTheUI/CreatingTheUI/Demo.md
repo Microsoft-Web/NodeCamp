@@ -151,7 +151,7 @@ This demo is composed of the following segments:
 
 1. Run the solution.
 
-	![Running the solution](Images/running-the-solution.png?raw=true "Running the solution")
+	![Running the solution](images/running-the-solution.png?raw=true "Running the solution")
 
 	_Running the solution_
 

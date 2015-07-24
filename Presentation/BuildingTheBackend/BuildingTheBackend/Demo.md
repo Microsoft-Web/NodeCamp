@@ -49,6 +49,7 @@ Follow these steps to set up your environment for the demo.
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
 1. Open Visual Studio.
 1. Open the **Chatroom.sln** solution located under **source\Begin**.
+
 1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
