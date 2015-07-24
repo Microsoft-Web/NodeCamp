@@ -34,7 +34,7 @@
             <td><a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo.md'>Demos</a></td>
           </tr>
           <tr>
-            <td rowspan="2">Introduction to Express Framework</td>
+            <td rowspan="2">Introduction to Express Framework</td>
             <td rowspan="2">60</td>
             <td><a href='Presentation/IntroToExpress/IntroToExpress.pptx'>Presentation</a></td>
           </tr>
@@ -66,7 +66,7 @@
             <td><a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo.md'>Demos</a></td>
           </tr>
           <tr>
-            <td rowspan="2">Debugging and Deploying on Azure</td>
+            <td rowspan="2">Debugging and Deploying on Azure</td>
             <td rowspan="2">60</td>
             <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>Presentation</a></td>
           </tr>
@@ -91,7 +91,7 @@
             <td>This session shows how to create our first Node.js app as well as a basic HTTP and TCP server. It also demonstrates how to read a file asynchronously. Finally, it shows the use of Node Package Manager.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/IntroToExpress/IntroToExpress.pptx'>Introduction to Express Framework</a></td>
+            <td><a href='Presentation/IntroToExpress/IntroToExpress.pptx'>Introduction to Express Framework</a></td>
             <td>This session will overview the Express framework. It walks us through the creation of a basic REST API. Moreover, it shows us how to add new routes to our application.</td>
           </tr>
           <tr>
@@ -107,7 +107,7 @@
             <td>This session introduces the use of Socket.io in the client side of the application to listen and send messages to the server. Additionally, it shows how to include JS files like JQuery, bootstrap and socket.io to the client side.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>Debugging and Deploying on Azure</a></td>
+            <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>Debugging and Deploying on Azure</a></td>
             <td>This session shows how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.</td>
           </tr>
         </table>
