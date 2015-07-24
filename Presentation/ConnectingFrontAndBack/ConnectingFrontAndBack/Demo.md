@@ -5,15 +5,15 @@
 <a name="Overview" />
 ## Overview ##
 
-This demo introduces the use of Socket.io in the client-side of the application to listen and send messages to the server. Additionally, it shows how to include JS files like JQuery, bootstrap and socket.io to the client adding them in the views.
+This demo introduces the use of Socket.io in the client side of the application to listen and send messages to the server. Additionally, it shows how to include JS files like JQuery, bootstrap and socket.io to the client side, adding them in the views.
 
 <a id="goals" />
 ### Goals ###
 In this demo, you will see how to:
 
-1. Adding libraries to the Frontend
+1. Add libraries to the Frontend
 
-1. Listening and handling Socket.io messages in the Frontend
+1. Listen and handle Socket.io messages in the Frontend
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -32,13 +32,13 @@ In this demo, you will see how to:
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
+1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
 
 1. Open Windows Explorer and browse to the **source** folder.
 
-1. Right-click on **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
+1. Right-click **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
 
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
 
@@ -46,7 +46,7 @@ Follow these steps to set up your environment for the demo.
 
 1. Open the **Chatroom.sln** solution located under **source\Begin**.
 
-1. Install the missing npm packages by right-clicking on the **npm** node of the project and selecting **Install Missing npm Packages...**.
+1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
@@ -71,9 +71,9 @@ This demo is composed of the following segments:
 <a name="segment1" />
 ### Adding libraries to the Frontend ###
 
-1. Open the **layout.jade** file located inside the **views** folder and add the following code.
+1. Open the **layout.jade** file located in the **views** folder and add the following code below the `block content` line.
 
-	> **Speaking Point:** This link to jQuery hosted on the Microsoft Ajax Content Delivery Network. This CDN hosts popular third party JavaScript libraries such as jQuery and enables you to easily add them to your Web applications. You can significantly improve the performance of your Ajax applications by using a CDN. The contents of the CDN are cached on servers located around the world. The CDN supports SSL (HTTPS) in case you need to serve a web page using the Secure Sockets Layer.
+	> **Speaking Point:** This includes the jQuery library hosted on the Microsoft Ajax Content Delivery Network. This CDN hosts popular third party JavaScript libraries such as jQuery and enables you to easily add them to your Web applications. You can significantly improve the performance of your Ajax applications by using a CDN. The contents of the CDN are cached on servers located around the world. The CDN supports SSL (HTTPS) in case you need to serve a web page using the Secure Sockets Layer.
 
 	````JavaScript
 	script(type='text/javascript' src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js')
@@ -88,9 +88,9 @@ This demo is composed of the following segments:
 	script(type='text/javascript' src='/socket.io/socket.io.js')
 	````
 
-1. Create a new **index.js** file inside the **javascripts** folder.
+1. Create a new **index.js** file in the **javascripts** folder.
 
-1. Open the **index.jade** file and add the following code to include the **index.js** file to the view.
+1. Open the **index.jade** file and add the following code at the end to include the **index.js** file to the view.
 
 	````JavaScript
 	block body_end
@@ -100,7 +100,7 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### Listening and handling messages ###
 
-1. Open the **index.js** file inside the **public/javascripts** folder and add the following code.
+1. Open the **index.js** file in the **public/javascripts** folder and add the following code.
 
 	````JavaScript
 	var socket = io();
@@ -132,7 +132,7 @@ This demo is composed of the following segments:
 	});
 	````
 
-1. Run the solution and open a second browser instance. In the second browser instance navigate to the running site URL (e.g. [http://localhost:1337](http://localhost:1337) )
+1. Run the solution and open a second browser instance, navigate to the running site URL (e.g. [http://localhost:1337](http://localhost:1337) )
 
 1. Send a few messages from the two different clients.
 
@@ -145,6 +145,6 @@ This demo is composed of the following segments:
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to use Socket.io in the client to listen and send messages to the server and how to include JS files like JQuery, bootstrap and socket.io to the client adding them in the views.
+By completing this demo, you have learned how to use Socket.io in the client to listen and send messages to the server and how to include JS files like JQuery, bootstrap and socket.io to the client side by adding them in the views.
 
 ---
