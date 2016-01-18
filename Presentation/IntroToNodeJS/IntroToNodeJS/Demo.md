@@ -28,18 +28,18 @@ In this demo, you will see how to:
 
 - [Node.js][1]
 - [Node.js Tools for Visual Studio][2]
-- [Visual Studio Community 2013][3]
+- [Visual Studio Community 2015][3]
 
 [1]: https://nodejs.org/
-[2]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
-[3]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
+[2]: https://www.visualstudio.com/features/node-js-vs
+[3]: https://www.visualstudio.com/products/visual-studio-community-vs
 
 <a name="Setup" />
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284).
-1. Install [Node.js](https://nodejs.org/download/)
+1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
+1. Install [Node.js](https://nodejs.org/en/download/stable)
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 1. Open Windows Explorer and browse to the **source** folder.
 1. Right-click **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
