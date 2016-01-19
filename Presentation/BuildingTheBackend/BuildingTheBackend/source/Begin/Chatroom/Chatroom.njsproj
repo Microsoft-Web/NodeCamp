@@ -5,6 +5,8 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>Chatroom</Name>
     <RootNamespace>Chatroom</RootNamespace>
+    <Environment>DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
+DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1Bm0XDhU2nwsJHnLnJEu4cMIm08Rg==</Environment>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -31,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="public\javascripts\bootstrap.js" />
     <Compile Include="public\javascripts\bootstrap.min.js" />
     <Compile Include="public\javascripts\index.js" />
     <Compile Include="public\javascripts\jquery-2.2.0.min.js" />
@@ -39,14 +40,8 @@
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\bootstrap-theme.css" />
-    <Content Include="public\stylesheets\bootstrap-theme.css.map" />
     <Content Include="public\stylesheets\bootstrap-theme.min.css" />
-    <Content Include="public\stylesheets\bootstrap-theme.min.css.map" />
-    <Content Include="public\stylesheets\bootstrap.css" />
-    <Content Include="public\stylesheets\bootstrap.css.map" />
     <Content Include="public\stylesheets\bootstrap.min.css" />
-    <Content Include="public\stylesheets\bootstrap.min.css.map" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="views\index.jade" />
