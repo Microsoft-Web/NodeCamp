@@ -54,7 +54,6 @@
 					</ol>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
 						<h2>About Node</h2>
@@ -93,6 +92,257 @@
 							<li>Great for writing JavaScript code everywhere!</li>
 						</ul>
 					</section>
+					<section>
+						<h2>Node in the Wild</h2>
+						<ul>
+							<li>Microsoft</li>
+							<li>Yahoo!</li>
+							<li>LinkedIn</li>
+							<li>eBay</li>
+							<li>Dow Jones</li>
+							<li>Cloud9</li>
+							<li>The New York Times, etc</li>
+						</ul>
+					</section>
+					<section>
+						<h2>The Node Community</h2>
+						<ul>
+							<li>Five years after its debut, Node is the third most popular project on GitHub.</li>
+							<li>Over 2 million downloads per month.</li>
+							<li>Over 20 million downloads of v0.10x.</li>
+							<li>Over 81,000 modules on npm.</li>
+							<li>Over 475 meetups worldwide talking about Node.</li>
+							<li>Reference: <a href="http://strongloop.com/node-js/infographic/">http://strongloop.com/node-js/infographic/</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Setting up your environment</h2>
+					</section>
+					<section>
+						<h2>Installing Node on Windows</h2>
+						<ul>
+							<li><a href="http://nodejs.org/">http://nodejs.org/</a> - pre-complied Node.js binaries to install</li>
+							<li><a href="https://github.com/joyent/node/wiki/Installation">https://github.com/joyent/node/wiki/Installation</a> - building it yourself</li>
+							<li>Via Chocolatey – package manager for Windows:
+								<pre><code class="cmd" data-trim contenteditable>
+choco install nodejs.install
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Path Variable</h2>
+						<ul>
+							<li>Double check that the node executable has been added to your PATH system environment variable.</li>
+							<li><a href="https://www.youtube.com/watch?v=W9pg2FHeoq8">https://www.youtube.com/watch?v=W9pg2FHeoq8</a> To see how to change your environment variables on Windows 8 and Windows 8.1.</li>
+							<li>You will want to make sure the following folder has been added to the PATH variable: C:\Program Files (x86)\nodejs\</li>
+						</ul>
+					</section>
+					<section>
+						<h2></h2>
+						<ul>
+							<li>NTVS is a free, open source plugin that turns Visual Studio into a Node.js IDE.</li>
+							<li>It supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally and remotely (Windows/MacOS/Linux), as well Azure Web App and Cloud Service.</li>
+							<li>Designed, developed, and supported by Microsoft and the community.</li>
+							<li><a href="https://github.com/Microsoft/nodejstools">https://github.com/Microsoft/nodejstools</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>First Node application</h2>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Hello World Application</h3>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Basic HTTP Server</h3>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Basic TCP server</h3>
+					</section>
+					<section>
+						<h2>Event Driven Programming</h2>
+						<blockquote cite="https://en.wikipedia.org/wiki/Event-driven_programming">
+							&ldquo;A programming paradigm in which the flow of the program is determined by events such as user actions (mouse clicks, key presses) or messages from other programs.&rdquo; – Wikipedia
+						</blockquote>
+					</section>
+					<section>
+						<h2>Node Event Loop</h2>
+						<ul>
+							<li>Node provides the event loop as part of the language.</li>
+							<li>With Node, there is no call to start the loop.</li>
+							<li>The loop starts and doesn’t end until the last callback is complete.</li>
+							<li>Event loop is run under a single thread therefore sleep() makes everything halt.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Blocking I/O</h2>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require('fs');
+
+var contents = fs.readFileSync('package.json').toString();
+console.log(contents);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Non Blocking I/O</h2>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require('fs');
+
+fs.readFile('package.json', function (err, buf) {
+    console.log(buf.toString());
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Reading file content sync vs async</h3>
+					</section>
+					<section>
+						<h2>Callback Style Programming</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Callback Insanity</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Promises</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Event Emitters</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Streams</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Modules and Exports</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Require() Module Loading System</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Node Package Manager (NPM)</h2>
+					</section>
+					<section>
+						<h2>What is NPM?</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>What is a package.json?</h2>
+						<pre><code class="json" data-trim contenteditable>
+{
+   "name": "Node101",
+   "version": "0.1.0",
+   "description": "MVA Presentation Code",
+   "main": "1_hello_world.js",
+   "author": {
+     "name": "Rami Sayar",
+     "email": ""
+   }
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Popular NPM Modules</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>How does it work?</h2>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Async Module</h2>
+						<p>Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.</p>
+						<pre><code class="javascript" data-trim contenteditable>
+async.map(
+	['file1','file2','file3'],
+	fs.stat,
+	function (err, results) {
+		// results is an array of stats for each file
+	}
+);
+
+async.filter(
+	['file1','file2','file3'],
+	fs.exists,
+	function (results) { /* results is an array of the existing files */ }
+);
+
+async.parallel([ function () {}, function () {} ], callback);
+
+async.series([ function () {}, function () {} ]);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Request Module</h2>
+						<p>Request is designed to be the simplest way possible to make http calls. It supports HTTPS, streaming and follows redirects by default.</p>
+						<pre><code class="javascript" data-trim contenteditable>
+var request = require('request');
+
+request('http://www.microsoft.com', function (error, response, body) {
+	if (!error && response.statusCode == 200) {
+		console.log(body);
+	}
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Demo</h2>
+						<h3>Install and update Node packages through the Node Package Manager</h3>
+					</section>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="https://blog.jcoglan.com/2013/03/30/callbacks-are-imperative-promises-are-functional-nodes-biggest-missed-opportunity/">https://blog.jcoglan.com/2013/03/30/callbacks-are-imperative-promises-are-functional-nodes-biggest-missed-opportunity/</a></li>
+						<li><a href="http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941">http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941</a></li>
+						<li><a href="http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/">http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Microsoft</h2>
+					<p><small>© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
+The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
+</small></p>
 				</section>
 		</div>
 
