@@ -29,23 +29,23 @@ In this demo, you will see how to:
 - [Socket.IO][2]
 - [Azure DocumentDB][3]
 - [Node.js Tools for Visual Studio][4]
-- [Visual Studio Community 2013][5]
+- [Visual Studio Community 2015][5]
 
 [1]: https://nodejs.org/
 [2]: http://socket.io/
 [3]: http://azure.microsoft.com/en-us/services/documentdb/
-[4]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
-[5]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
+[4]: https://www.visualstudio.com/features/node-js-vs
+[5]: https://www.visualstudio.com/products/visual-studio-community-vs
 
 <a name="Setup" />
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
+1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
 
-1. Install [Node.js](https://nodejs.org/download/)
+1. Install [Node.js](https://nodejs.org/en/download/).
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
 1. Open Windows Explorer and browse to the **source** folder.
 
