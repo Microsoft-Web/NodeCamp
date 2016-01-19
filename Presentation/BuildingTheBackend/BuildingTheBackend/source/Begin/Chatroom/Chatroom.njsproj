@@ -5,14 +5,12 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>Chatroom</Name>
     <RootNamespace>Chatroom</RootNamespace>
-    <Environment>DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
-DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1Bm0XDhU2nwsJHnLnJEu4cMIm08Rg==</Environment>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4857b22c-8071-4346-9501-2f7a94f03226</ProjectGuid>
+    <ProjectGuid>2df6d017-9f2e-46c5-9c98-b4861a24430f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>bin\www</StartupFile>
     <SearchPath>
@@ -21,9 +19,9 @@ DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1B
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>True</StartWebBrowser>
+    <StartWebBrowser>true</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,14 +31,22 @@ DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1B
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="public\javascripts\bootstrap.js" />
     <Compile Include="public\javascripts\bootstrap.min.js" />
     <Compile Include="public\javascripts\index.js" />
+    <Compile Include="public\javascripts\jquery-2.2.0.min.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
+    <Content Include="public\stylesheets\bootstrap-theme.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.css.map" />
     <Content Include="public\stylesheets\bootstrap-theme.min.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.min.css.map" />
+    <Content Include="public\stylesheets\bootstrap.css" />
+    <Content Include="public\stylesheets\bootstrap.css.map" />
     <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\bootstrap.min.css.map" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="views\index.jade" />
