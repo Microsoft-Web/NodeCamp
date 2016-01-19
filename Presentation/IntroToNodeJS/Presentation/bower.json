@@ -1,27 +1,22 @@
 {
-  "name": "reveal.js",
-  "version": "3.2.0",
-  "main": [
-    "js/reveal.js",
-    "css/reveal.css"
-  ],
-  "homepage": "http://lab.hakim.se/reveal-js/",
-  "license": "MIT",
-  "description": "The HTML Presentation Framework",
+  "name": "IntroToNodeJS",
+  "homepage": "https://github.com/Microsoft-Web/NodeCamp",
   "authors": [
-    "Hakim El Hattab <hakim.elhattab@gmail.com>"
+    ""
   ],
-  "dependencies": {
-    "headjs": "~1.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
-  },
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test"
-  ]
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~3.2.0"
+  }
 }

@@ -14,23 +14,23 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+		<script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -334,17 +334,15 @@ var fs = require("fs");
 						<p>Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.</p>
 						<pre><code class="javascript" data-trim contenteditable>
 async.map(
-	['file1','file2','file3'],
-	fs.stat,
-	function (err, results) {
-		// results is an array of stats for each file
-	}
+  ['file1','file2','file3'],
+  fs.stat,
+  function (err, results) { /* results is an array of file stats */ }
 );
 
 async.filter(
-	['file1','file2','file3'],
-	fs.exists,
-	function (results) { /* results is an array of the existing files */ }
+  ['file1','file2','file3'],
+  fs.exists,
+  function (results) { /* results is an array of the existing files */ }
 );
 
 async.parallel([ function () {}, function () {} ], callback);
@@ -359,9 +357,9 @@ async.series([ function () {}, function () {} ]);
 var request = require('request');
 
 request('http://www.microsoft.com', function (error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log(body);
-	}
+  if (!error && response.statusCode == 200) {
+    console.log(body);
+  }
 });
 						</code></pre>
 					</section>
@@ -388,8 +386,8 @@ The information herein is for informational purposes only and represents the cur
 				</section>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="bower_components/reveal.js/js/reveal.js"></script>
 
 		<script>
 
@@ -405,12 +403,12 @@ The information herein is for informational purposes only and represents the cur
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 
