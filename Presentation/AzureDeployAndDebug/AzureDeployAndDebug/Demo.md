@@ -166,7 +166,7 @@ This demo is composed of the following segments:
 
 1. Now, under the **Deployment** section you should see the **Active Deployment** box. Click it to open the **Deployments** blade.
 
-	![Showing the Deployments blade](Images/showing-the-deployments-blade.png?raw=true "Showing the Deployments blade")
+	![Showing the Deployments blade](images/showing-the-deployments-blade.png?raw=true "Showing the Deployments blade")
 
 	_Showing the Deployments blade_
 
@@ -175,7 +175,7 @@ This demo is composed of the following segments:
 
 1. Update the main title and push it to GitHub.
 
-	![Updating the index view](Images/updating-the-index-view.png?raw=true "Updating the index view")
+	![Updating the index view](images/updating-the-index-view.png?raw=true "Updating the index view")
 
 	_Updating the index view_
 
