@@ -209,44 +209,68 @@ fs.readFile('package.json', function (err, buf) {
 					<section>
 						<h2>Callback Style Programming</h2>
 						<ul>
-							<li></li>
+							<li>Event loops result in callback-style programming where you break apart a program into its underlying data flow.</li>
+							<li>In other words, you end up splitting your program into smaller and smaller chunks until each chuck is mapped to operation with data.</li>
+							<li>Why? So that you don’t freeze the event loop on long-running operations (such as disk or network I/O).</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Callback Insanity</h2>
-						<ul>
-							<li></li>
-						</ul>
+						<img data-src="img/callback-insanity.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>Promises</h2>
 						<ul>
-							<li></li>
+							<li>A function will return a promise for an object in the future.</li>
+							<li>Promises can be chained together. </li>
+							<li>Simplify programming of async systems.</li>
 						</ul>
+
+						<p>Read More: <a href="http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/">http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/</a></p>
 					</section>
 					<section>
 						<h2>Event Emitters</h2>
 						<ul>
-							<li></li>
+							<li>Allows you to listen for “events” and assign functions to run when events occur.</li>
+							<li>Each emitter can emit different types of events.</li>
+							<li>The “error” event is special.</li>
+							<li>Read More: <a href="http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941">http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941</a></li>
 						</ul>
 					</section>
 					<section>
 						<h2>Streams</h2>
 						<ul>
-							<li></li>
+							<li>Streams represent data streams such as I/O.</li>
+							<li>Streams can be piped together like in Unix.</li>
 						</ul>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require("fs");
+// Read File
+fs.createReadStream("package.json")
+	// Write File
+	.pipe(fs.createWriteStream("out.json"));
+						</code></pre>
 					</section>
 					<section>
 						<h2>Modules and Exports</h2>
 						<ul>
-							<li></li>
+							<li>Node.js has a simple module and dependencies loading system.</li>
+							<li>Unix philosophy -> Node philosophy
+								<ul>
+									<li>Write programs that do one thing and do it well -> Write modules that do one thing and do it well.</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Require() Module Loading System</h2>
 						<ul>
-							<li></li>
+							<li>Call the function “require” with the path of the file or directory containing the module you would like to load.</li>
+							<li>Returns a variable containing all the exported functions.</li>
 						</ul>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require("fs");
+						</code></pre>
 					</section>
 				</section>
 
@@ -257,7 +281,12 @@ fs.readFile('package.json', function (err, buf) {
 					<section>
 						<h2>What is NPM?</h2>
 						<ul>
-							<li></li>
+							<li>Official package manager for Node.</li>
+							<li>Bundled and installed automatically with the environment.</li>
+							<br/>
+							<h4>Frequent Usage:</h4>
+							<li>npm install package_name --save</li>
+							<li>npm update</li>
 						</ul>
 					</section>
 					<section>
@@ -277,14 +306,27 @@ fs.readFile('package.json', function (err, buf) {
 					</section>
 					<section>
 						<h2>Popular NPM Modules</h2>
+						<h4>Most Depended Upon</h4>
 						<ul>
-							<li></li>
+							<li>7053 underscore</li>
+							<li>6458 async</li>
+							<li>5591 request</li>
+							<li>4931 lodash</li>
+							<li>3630 commander</li>
+							<li>3543 express</li>
+							<li>2708 optimist</li>
+							<li>2634 coffee-script</li>
 						</ul>
 					</section>
 					<section>
 						<h2>How does it work?</h2>
 						<ul>
-							<li></li>
+							<li>Reads package.json</li>
+							<li>Installs the dependencies in the local node_modules folder</li>
+							<li>In global mode, it makes a node module accessible to all.</li>
+							<br/>
+							<li>Can install from a folder, tarball, web, etc… </li>
+							<li>Can specify dev or optional dependencies. </li>
 						</ul>
 					</section>
 					<section>
