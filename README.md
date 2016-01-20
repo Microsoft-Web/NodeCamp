@@ -28,10 +28,10 @@
           <tr>
             <td rowspan="2">Introduction to Node.js</td>
             <td rowspan="2">60</td>
-            <td><a href='Presentation/IntroToNodeJS/IntroToNodeJS.pptx'>Presentation</a></td>
+            <td>Presentation (<a href='Presentation/IntroToNodeJS/IntroToNodeJS.pptx'>PPTX</a> | <a href='Presentation/IntroToNodeJS/Presentation'>reveal.js</a>)</td>
           </tr>
           <tr>
-            <td><a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo.md'>Demos</a></td>
+            <td>Demos (<a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Introduction to Express Framework</td>
