@@ -119,7 +119,7 @@ This demo is composed of the following segments:
 
 	_Running the Node.js HTTP server_
 
-1. Open Internet Explorer and navigate to **http://localhost:7000**.
+1. Open Microsoft Edge and navigate to **http://localhost:7000**.
 
 	![Navigating to the HTTP server](images/navigating-to-the-http-server.png?raw=true "Navigating to the HTTP server")
 

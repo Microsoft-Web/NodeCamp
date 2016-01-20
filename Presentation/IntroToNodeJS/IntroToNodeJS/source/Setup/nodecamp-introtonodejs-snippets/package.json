@@ -1,0 +1,21 @@
+{
+	"name": "nodecamp-introtonodejs-snippets",
+	"displayName": "Node Camp - Introduction to Node.js Demo - Code Snippets",
+	"description": "Code snippets for the 'Introduction to Node.js' Node Camp demo",
+	"version": "1.0.0",
+	"publisher": "MicrosoftDX",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	}
+}
