@@ -62,6 +62,12 @@ Follow these steps to set up your environment for the demo.
 
 	_Installing Missing npm Packages_
 
+	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
+
+	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+
+	> _Installing Missing npm Packages_
+
 <a name="CodeSnippets" />
 ### Using the Code Snippets ###
 
