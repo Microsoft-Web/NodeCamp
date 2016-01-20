@@ -71,25 +71,25 @@ This demo is composed of the following segments:
 1. Go to **File | New | Project**.
 1. In the **Templates | JavaScript | Node.js** tab, select the **Blank Node.js Console Application** project. Name it **NodejsConsoleApp**.
 
-	![Creating a new Node.js Application](images/creating-a-new-nodejs-application.png?raw=true "Creating a new Node.js Application")
+	![Creating a new Node.js Application](images/VSCommunity/creating-a-new-nodejs-application.png?raw=true "Creating a new Node.js Application")
 
 	_Creating a new Node.js Console Application_
 
 1. In the **Solution Explorer**, open the **app.js** file.
 
-	![Opening the app.js file](images/opening-the-app-js-file.png?raw=true "Openning the app.js file")
+	![Opening the app.js file](images/VSCommunity/opening-the-app-js-file.png?raw=true "Openning the app.js file")
 
 	_Opening the app.js file_
 
 1. Right-click the project and select **Open Command Prompt Here...** from the menu to open the Node.js Command Prompt in the project's folder.
 
-	![Opening the command prompt in the project's folder](images/opening-the-command-prompt.png?raw=true "Opening the command prompt in the project's folder")
+	![Opening the command prompt in the project's folder](images/VSCommunity/opening-the-command-prompt.png?raw=true "Opening the command prompt in the project's folder")
 
 	_Opening the command prompt in the project's folder_
 
 1. Run **node app.js** in the Command Prompt to execute the Node.js console application.
 
-	![Running the Node.js console app](images/running-the-console-app.png?raw=true "Running the Node.js console app")
+	![Running the Node.js console app](images/VSCommunity/running-the-console-app.png?raw=true "Running the Node.js console app")
 
 	_Running the Node.js console app_
 
@@ -115,13 +115,13 @@ This demo is composed of the following segments:
 
 1. Switch back to the Node.js Command Prompt and run the **node app.js** command again.
 
-	![Running the Node.js HTTP server](images/running-the-http-server.png?raw=true "Running the Node.js HTTP server")
+	![Running the Node.js HTTP server](images/VSCommunity/running-the-http-server.png?raw=true "Running the Node.js HTTP server")
 
 	_Running the Node.js HTTP server_
 
 1. Open Microsoft Edge and navigate to **http://localhost:7000**.
 
-	![Navigating to the HTTP server](images/navigating-to-the-http-server.png?raw=true "Navigating to the HTTP server")
+	![Navigating to the HTTP server](images/VSCommunity/navigating-to-the-http-server.png?raw=true "Navigating to the HTTP server")
 
 	_Navigating to the HTTP server_
 
@@ -132,13 +132,13 @@ This demo is composed of the following segments:
 
 1. Switch back to Visual Studio. Right-click the project name and select **Add | New Item...**.
 
-	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
+	![Creating a new item](images/VSCommunity/creating-a-new-item.png?raw=true "Creating a new item")
 
 	_Creating a new item_
 
 1. In the **Add New Item** dialog box, select **JavaScript file**, name it **server.js** and click **Add**.
 
-	![Creating a new JavaScript file](images/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
+	![Creating a new JavaScript file](images/VSCommunity/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
 
 	_Creating a new JavaScript file_
 
@@ -184,13 +184,13 @@ This demo is composed of the following segments:
 
 1. Back in the Command Prompt, run **node server.js**.
 
-	![Running the TCP server](images/running-the-tcp-server.png?raw=true "Running the TCP server")
+	![Running the TCP server](images/VSCommunity/running-the-tcp-server.png?raw=true "Running the TCP server")
 
 	_Running the TCP server_
 
 1. Open a second Command Prompt and run **node client.js**.
 
-	![Running the TCP client](images/running-the-tcp-client.png?raw=true "Running the TCP client")
+	![Running the TCP client](images/VSCommunity/running-the-tcp-client.png?raw=true "Running the TCP client")
 
 	_Running the TCP client_
 
@@ -214,7 +214,7 @@ This demo is composed of the following segments:
 
 1. Switch back to the Command Prompt and run **node file-reader-sync.js**.
 
-	![Reading a file synchronously](images/reading-a-file-synchronously.png?raw=true "Reading a file synchronously")
+	![Reading a file synchronously](images/VSCommunity/reading-a-file-synchronously.png?raw=true "Reading a file synchronously")
 
 	_Reading a file synchronously_
 
@@ -234,7 +234,7 @@ This demo is composed of the following segments:
 
 1. Run the **node file-reader-async.js** command.
 
-	![Reading a file asynchronously](images/reading-a-file-asynchronously.png?raw=true "Reading a file asynchronously")
+	![Reading a file asynchronously](images/VSCommunity/reading-a-file-asynchronously.png?raw=true "Reading a file asynchronously")
 
 	_Reading a file asynchronously_
 
@@ -248,25 +248,25 @@ Running `npm install <package-name> --save` installs the package and saves the d
 
 1. Run `npm install express --save`.
 
-	![Installing express dependency using npm](images/installing-express-dependency-using-npm.png?raw=true "Installing express dependency using npm")
+	![Installing express dependency using npm](images/VSCommunity/installing-express-dependency-using-npm.png?raw=true "Installing express dependency using npm")
 
 	_Installing express dependency using npm_
 
 1. In Visual Studio show the new express dependency in the **package.json** file and in the **npm** node in the **Solution Explorer**.
 
-	![Showing the installed dependency in Visual Studio](images/showing-the-installed-dependency.png?raw=true "Showing the installed dependency in Visual Studio")
+	![Showing the installed dependency in Visual Studio](images/VSCommunity/showing-the-installed-dependency.png?raw=true "Showing the installed dependency in Visual Studio")
 
 	_Showing the installed dependency in Visual Studio_
 
 1. Right-click the **npm** node in the **Solution Explorer** and select **Install New npm Packages...**.
 
-	![Installing npm packages with Visual Studio](images/installing-npm-packages-with-vs.png?raw=true "Installing npm packages with Visual Studio")
+	![Installing npm packages with Visual Studio](images/VSCommunity/installing-npm-packages-with-vs.png?raw=true "Installing npm packages with Visual Studio")
 
 	_Installing npm packages with Visual Studio_
 
 1. In the **Install New npm Packages** dialog box, search for the **express** package.
 
-	![Searching for the express package in Visual Studio](images/searching-for-express-package-in-vs.png?raw=true "Searching for the express package in Visual Studio")
+	![Searching for the express package in Visual Studio](images/VSCommunity/searching-for-express-package-in-vs.png?raw=true "Searching for the express package in Visual Studio")
 
 	_Searching for the express package in Visual Studio_
 
