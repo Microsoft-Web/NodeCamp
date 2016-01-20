@@ -87,27 +87,27 @@
             <th>Description</th>
           </tr>
           <tr>
-            <td><a href='Presentation/IntroToNodeJS/IntroToNodeJS.pptx'>Introduction to Node.js</a></td>
+            <td><a href='Presentation/IntroToNodeJS'>Introduction to Node.js</a></td>
             <td>This session shows how to create our first Node.js app as well as a basic HTTP and TCP server. It also demonstrates how to read a file asynchronously. Finally, it shows the use of Node Package Manager.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/IntroToExpress/IntroToExpress.pptx'>Introduction to Express Framework</a></td>
+            <td><a href='Presentation/IntroToExpress'>Introduction to Express Framework</a></td>
             <td>This session will overview the Express framework. It walks us through the creation of a basic REST API. Moreover, it shows us how to add new routes to our application.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/BuildingTheBackend/BuildingTheBackend.pptx'>Building the Backend</a></td>
+            <td><a href='Presentation/BuildingTheBackend'>Building the Backend</a></td>
             <td>This session introduces the use of the Socket.IO module that allows for real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use Azure DocumentDB, a NoSQL database, to save and retrieve messages.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/CreatingTheUI/CreatingTheUI.pptx'>Creating the User Interface</a></td>
+            <td><a href='Presentation/CreatingTheUI'>Creating the User Interface</a></td>
             <td>This session introduces the Jade template language and Jade templates to build up views. Additionally, it shows us Bootstrap and how to use it in combination with Jade.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack.pptx'>Connecting the Frontend to the Backend</a></td>
+            <td><a href='Presentation/ConnectingFrontAndBack'>Connecting the Frontend to the Backend</a></td>
             <td>This session introduces the use of Socket.io in the client side of the application to listen and send messages to the server. Additionally, it shows how to include JS files like JQuery, bootstrap and socket.io to the client side.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>Debugging and Deploying on Azure</a></td>
+            <td><a href='Presentation/AzureDeployAndDebug'>Debugging and Deploying on Azure</a></td>
             <td>This session shows how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.</td>
           </tr>
         </table>
