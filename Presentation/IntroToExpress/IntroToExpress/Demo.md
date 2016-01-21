@@ -65,13 +65,13 @@ This demo is composed of the following segments:
 
 1. In the **Templates | JavaScript | Node.js** tab, select the **Basic Node.js Express 4 Application** project. Name it **ExpressApp**.
 
-	![Creating a new Node.js Express Application](images/creating-a-new-express-app.png?raw=true "Creating a new Node.js Express Application")
+	![Creating a new Node.js Express Application](images/VSCommunity/creating-a-new-express-app.png?raw=true "Creating a new Node.js Express Application")
 
 	_Creating a new Node.js Express Application_
 
 1. Open the **app.js** file located in the root of the project.
 
-	![Opening the app.js file](images/opening-the-app-js-file.png?raw=true "Opening the app.js file")
+	![Opening the app.js file](images/VSCommunity/opening-the-app-js-file.png?raw=true "Opening the app.js file")
 
 	_Opening the app.js file_
 
@@ -136,7 +136,7 @@ This demo is composed of the following segments:
 
 	> **Speaking point:** The index route is using the **render** function to respond with a view template.
 
-	![Showing the index.js file](images/showing-the-index-route-file.png?raw=true "Showing the index.js file")
+	![Showing the index.js file](images/VSCommunity/showing-the-index-route-file.png?raw=true "Showing the index.js file")
 
 	_Showing the index.js file_
 
@@ -144,7 +144,7 @@ This demo is composed of the following segments:
 
 	> **Speaking point:** The users route is using the **send** function to respond with a text/html type.
 
-	![Showing the users.js file](images/showing-the-users-route-file.png?raw=true "Showing the users.js file")
+	![Showing the users.js file](images/VSCommunity/showing-the-users-route-file.png?raw=true "Showing the users.js file")
 
 	_Showing the users.js file_
 
@@ -152,7 +152,7 @@ This demo is composed of the following segments:
 
 	> **Speaking point:** Note how we access the **#{title}** parameter passed in by the index route.
 
-	![Showing the index Jade view](images/showing-the-index-jade-view.png?raw=true "Showing the index Jade view")
+	![Showing the index Jade view](images/VSCommunity/showing-the-index-jade-view.png?raw=true "Showing the index Jade view")
 
 	_Showing the index Jade view_
 
@@ -160,13 +160,13 @@ This demo is composed of the following segments:
 
 1. Show the results from your browser.
 	
-	![Showing the index output](images/showing-the-index-output.png?raw=true "Showing the index output")
+	![Showing the index output](images/VSCommunity/showing-the-index-output.png?raw=true "Showing the index output")
 
 	_Showing the index output_
 
 1. Navigate to the users route to show the output.
 
-	![Showing the users output](images/showing-the-users-output.png?raw=true "Showing the users output")
+	![Showing the users output](images/VSCommunity/showing-the-users-output.png?raw=true "Showing the users output")
 
 	_Showing the users output_
 
@@ -179,13 +179,13 @@ This demo is composed of the following segments:
 
 1. Right-click the **routes** folder and select **Add | New Item...**.
 
-	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
+	![Creating a new item](images/VSCommunity/creating-a-new-item.png?raw=true "Creating a new item")
 
 	_Creating a new item_
 
 1. In the **Add New Item** dialog box, select **JavaScript file**, name it **contacts.js** and click **Add**.
 
-	![Creating a new JavaScript file](images/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
+	![Creating a new JavaScript file](images/VSCommunity/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
 
 	_Creating a new JavaScript file_
 
@@ -213,7 +213,7 @@ This demo is composed of the following segments:
 
 	> **Speaking point:** Here we are mapping the **contacts** route to the module to attend the request.
 
-	![Configuring a /contacts route](images/contacts-route.png?raw=true "Configuring a /contacts route")
+	![Configuring a /contacts route](images/VSCommunity/contacts-route.png?raw=true "Configuring a /contacts route")
 
 	_Configuring a /contacts route_
 
@@ -221,7 +221,7 @@ This demo is composed of the following segments:
 
 1. Access the new /contacts route and show the Json result.
 	
-	![Showing the new contacts route](images/showing-the-contacts-route.png?raw=true "Showing the new contacts route")
+	![Showing the new contacts route](images/VSCommunity/showing-the-contacts-route.png?raw=true "Showing the new contacts route")
 
 	_Showing the new contacts route_
 
