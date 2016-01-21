@@ -62,6 +62,12 @@ Follow these steps to set up your environment for the demo.
 
 	_Installing Missing npm Packages_
 
+	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
+
+	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+
+	> _Installing Missing npm Packages_
+
 <a name="CodeSnippets" />
 ### Using the Code Snippets ###
 
@@ -366,7 +372,7 @@ We then pass the socket.io instance to the module we created.
 <a name="segment3" />
 ### Creating a DocumentDB database account ###
 
-1. Sign in to the online [Microsoft Azure Preview portal](https://portal.azure.com/).
+1. Sign in to the online [Microsoft Azure portal](https://portal.azure.com/).
 
 1. In the Jumpbar, click **New**, then **Data + Storage**, and **Azure DocumentDB**.
 

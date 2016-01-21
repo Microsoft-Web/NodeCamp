@@ -6,7 +6,7 @@
     <Name>Chatroom</Name>
     <RootNamespace>Chatroom</RootNamespace>
     <Environment>DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
-DOCUMENT_DB_AUTH_KEY=DI3cDESndDA2ufp5438g9N+SuATn3g3sQHi080GzTyDRHUDuQQOkHC5pf1Bm0XDhU2nwsJHnLnJEu4cMIm08Rg==</Environment>
+DOCUMENT_DB_AUTH_KEY={your-document-db-primary-access-key}</Environment>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
