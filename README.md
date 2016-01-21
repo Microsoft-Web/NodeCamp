@@ -36,10 +36,10 @@
           <tr>
             <td rowspan="2">Introduction to Express Framework</td>
             <td rowspan="2">60</td>
-            <td><a href='Presentation/IntroToExpress/IntroToExpress.pptx'>Presentation</a></td>
+            <td>Presentation (<a href='Presentation/IntroToExpress/IntroToExpress.pptx'>PPTX</a> | <a href='Presentation/IntroToExpress/Presentation'>reveal.js</a>)</td>
           </tr>
           <tr>
-            <td><a href='Presentation/IntroToExpress/IntroToExpress/Demo.md'>Demos</a></td>
+            <td>Demos (<a href='Presentation/IntroToExpress/IntroToExpress/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/IntroToExpress/IntroToExpress/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Building the Backend</td>
