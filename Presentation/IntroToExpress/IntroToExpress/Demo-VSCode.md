@@ -158,7 +158,7 @@ This demo is composed of the following segments:
 
 	_Showing the index Jade view_
 
-1. Run the application using Visual Studio Code debugger. To do this, you'll first need to setup your debugging launch configuration file - **launch.json**. Bring up the **Debug** view by clicking on the Debugging icon in the View Bar on the side of Visual Studio Code. Click on the Configure gear icon and select **Node.js** as your Debug Environment and this will generate a **launch.json**. Make sure that the **Lunch** configuration is selected in the dropdown and press **F5** to start debugging. For more infomation, see the [Debugging](https://code.visualstudio.com/Docs/editor/debugging) documentation).
+1. Run the application using Visual Studio Code debugger. To do this, you will first need to setup your debugging launch configuration file (**launch.json**). Bring up the **Debug** view by clicking on the Debugging icon in the View Bar on the side of Visual Studio Code. Click on the Configure gear icon and select **Node.js** as your Debug Environment; this will generate a **launch.json**. Make sure that the **Lunch** configuration is selected in the dropdown and press **F5** to start debugging. For more infomation, see the [Debugging](https://code.visualstudio.com/Docs/editor/debugging) documentation.
 
 	![Launching the application in Debug mode with Visual Studio Code](images/VSCode/launching-the-app-in-debug-mode-with-vscode.png?raw=true "Launching the application in Debug mode with Visual Studio Code")
 
