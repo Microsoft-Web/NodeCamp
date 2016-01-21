@@ -81,7 +81,7 @@ This demo is composed of the following segments:
 
 1. Run **code .** to open the current directory with **Visual Studio Code**.
 
-1. In the **Explore** panel, create a new **app.js** file by clicking the **New File** icon and fill its content with the following code snippet.
+1. In the **Explore** view, create a new **app.js** file by clicking the **New File** icon and fill its content with the following code snippet.
 
 	(Code Snippet - _NodeJsIntroduction-HelloWorld_)
 
@@ -136,7 +136,7 @@ This demo is composed of the following segments:
 <a name="segment3" />
 ### Creating a basic TCP server ###
 
-1. Switch back to Visual Studio Code. In the **Explore** panel, create a new **server.js** file by clicking the **New File** icon and fill its content with the following code snippet.
+1. Switch back to Visual Studio Code. In the **Explore** view, create a new **server.js** file by clicking the **New File** icon and fill its content with the following code snippet.
 
 	(Code Snippet - _NodeJsIntroduction-TcpServer_)
 
@@ -252,7 +252,7 @@ Running `npm install <package-name> --save` installs the package and saves the d
 
 	_Installing express dependency using npm_
 
-1. In Visual Studio Code show the new express dependency in the **package.json** file and in the **node_modules** folder in the **Explore** panel.
+1. In Visual Studio Code show the new express dependency in the **package.json** file and in the **node_modules** folder in the **Explore** view.
 
 	![Showing the installed dependency in Visual Studio Code](images/VSCode/showing-the-installed-dependency.png?raw=true "Showing the installed dependency in Visual Studio Code")
 
