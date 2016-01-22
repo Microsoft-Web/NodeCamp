@@ -14,23 +14,23 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/theme/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../_layouts/reveal.js/css/print/pdf.css' : '../../_layouts/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+		<script src="../../_layouts/reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -84,7 +84,7 @@
 						<ul>
 							<li>Add it to the package.json</li>
 							<li>In Visual Studio > right click NPM to add module
-								<img data-src="img/add-npm-module-in-visual-studio.png" alt="Down arrow">
+								<img data-src="images/add-npm-module-in-visual-studio.png" alt="Down arrow">
 							</li>
 							<li>Or from the command prompt
 								<pre><code class="cmd" data-trim contenteditable>
@@ -123,7 +123,7 @@ npm install --save socket.io
 							<li>Tunable consistency</li>
 							<li>Designed to scale</li>
 						</ul>
-						<img data-src="img/azure-documentdb-cloud.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-documentdb-cloud.png" alt="Down arrow" style="border:none;background:none;">
 					</section>
 					<section>
 						<h2>DocumentDB</h2>
@@ -160,11 +160,11 @@ npm install --save socket.io
 					</section>
 					<section>
 						<h2>DocumentDB: A Document Store</h2>
-						<img data-src="img/azure-documentdb-a-document-store.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-documentdb-a-document-store.png" alt="Down arrow" style="border:none;background:none;">
 					</section>
 					<section>
 						<h2>DocumentDB: The Basics</h2>
-						<img data-src="img/azure-documentdb-the-basics.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-documentdb-the-basics.png" alt="Down arrow" style="border:none;background:none;">
 					</section>
 					<section>
 						<h2>Demo</h2>
@@ -189,7 +189,7 @@ npm install --save socket.io
 						<ul>
 							<li>Add it to the package.json</li>
 							<li>In Visual Studio > right click NPM to add module
-								<img data-src="img/add-npm-module-in-visual-studio.png" alt="Down arrow">
+								<img data-src="images/add-npm-module-in-visual-studio.png" alt="Down arrow">
 							</li>
 							<li>Or from the command prompt
 								<pre><code class="cmd" data-trim contenteditable>
@@ -208,8 +208,8 @@ The information herein is for informational purposes only and represents the cur
 				</section>
 		</div>
 
-		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
-		<script src="bower_components/reveal.js/js/reveal.js"></script>
+		<script src="../../_layouts/reveal.js/lib/js/head.min.js"></script>
+		<script src="../../_layouts/reveal.js/js/reveal.js"></script>
 
 		<script>
 
@@ -225,12 +225,12 @@ The information herein is for informational purposes only and represents the cur
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true }
+					{ src: '../../_layouts/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../_layouts/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../_layouts/reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 
