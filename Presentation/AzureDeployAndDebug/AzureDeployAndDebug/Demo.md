@@ -22,13 +22,13 @@ In this demo, you will see how to:
 - [Microsoft Azure][2]
 - [Azure DocumentDB][3]
 - [Node.js Tools for Visual Studio][4]
-- [Visual Studio Community 2013][5]
+- [Visual Studio Community 2015][5]
 
 [1]: https://nodejs.org/
 [2]: http://azure.microsoft.com/
 [3]: http://azure.microsoft.com/en-us/services/documentdb/
-[4]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
-[5]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
+[4]: https://www.visualstudio.com/features/node-js-vs
+[5]: https://www.visualstudio.com/products/visual-studio-community-vs
 
 <a name="Setup" />
 ### Setup and Configuration ###
@@ -38,11 +38,11 @@ Follow these steps to set up your environment for the demo.
 
 1. Get a [GitHub Account](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
+1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
 
-1. Install [Node.js](https://nodejs.org/download/)
+1. Install [Node.js](https://nodejs.org/en/download/).
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
 1. Create a DocumentDB database account. Details [here] (https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-account/).
 
@@ -66,6 +66,13 @@ Follow these steps to set up your environment for the demo.
 
 	_Installing Missing npm Packages_
 
+
+	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
+
+	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+
+	> _Installing Missing npm Packages_
+
 <a name="Demo" />
 ## Demo ##
 This demo is composed of the following segments:
@@ -83,23 +90,23 @@ This demo is composed of the following segments:
 
 	_Selecting the Publish item from the menu_
 
-1. In the Publish Web dialog box, select **Microsoft Azure Web Apps** as the publish target.
+1. In the Publish Web dialog box, select **Microsoft Azure App Service** as the publish target.
 
-	![Selecting Microsoft Azure Web Apps as publish target](images/selecting-web-apps-as-target.png?raw=true "Selecting Microsoft Azure Web Apps as publish target")
+	![Selecting Microsoft Azure App Service as publish target](images/selecting-app-service-as-target.png?raw=true "Selecting Microsoft Azure App Service as publish target")
 
-	_Selecting Microsoft Azure Web Apps as publish target_
+	_Selecting Microsoft Azure App Service as publish target_
 
-1. In the Select Existing Web App dialog box, click **New...** to create a new Web App.
+1. In the App Service dialog box, click **New...** to create a new App Service.
 
-	![Selecting the target Web App](images/selecting-the-target-web-app.png?raw=true "Selecting the target Web App")
+	![Selecting the target App Service](images/selecting-the-target-app-service.png?raw=true "Selecting the target App Service")
 
-	_Selecting the target Web App_
+	_Selecting the target App Service_
 
-1. Complete all the fields in the **Create a Web App on Microsoft Azure** dialog box and click **Create**.
+1. Complete all the fields in the **Create App Service** dialog box and click **Create**.
 
-	![Creating a new Web App](images/creating-a-new-wep-app.png?raw=true "Creating a new Web App")
+	![Creating a new App Service](images/creating-a-new-app-service.png?raw=true "Creating a new App Service")
 
-	_Creating a new Web App_
+	_Creating a new App Service_
 
 1. In the Publish Web dialog box, click **Publish**.
 
@@ -109,7 +116,7 @@ This demo is composed of the following segments:
 
 1. Open a web browser and navigate to the [Azure Portal](https://portal.azure.com/).
 
-1. In the Azure Portal locate your new Web App and open the **Settings** blade.
+1. In the Azure Portal locate your new App Service and open the **Settings** blade.
 
 	![Navigating to the settings blade](images/navigating-to-the-settings-blade.png?raw=true "Navigating to the settings blade")
 
@@ -117,7 +124,7 @@ This demo is composed of the following segments:
 
 1. In the **Settings** blade, select **Application settings**.
 
-1. In the **Web app settings** blade, make sure **v4.5** is selected in **.NET Framework version** and click **On** in **Web sockets**.
+1. In the **Web app settings** blade, make sure **v4.6** is selected in **.NET Framework version** and click **On** in **Web sockets**.
 
 	![Enabling Web sockets](images/enabling-web-sockets.png?raw=true "Enabling Web sockets")
 

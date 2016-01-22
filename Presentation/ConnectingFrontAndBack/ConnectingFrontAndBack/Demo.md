@@ -21,20 +21,22 @@ In this demo, you will see how to:
 - [Node.js][1]
 - [Socket.IO][2]
 - [Node.js Tools for Visual Studio][3]
-- [Visual Studio Community 2013][4]
+- [Visual Studio Community 2015][4]
 
 [1]: https://nodejs.org/
 [2]: http://socket.io/
-[3]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
-[4]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
+[3]: https://www.visualstudio.com/features/node-js-vs
+[4]: https://www.visualstudio.com/products/visual-studio-community-vs
 
 <a name="Setup" />
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
+1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
+1. Install [Node.js](https://nodejs.org/en/download/).
+
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
 1. Open Windows Explorer and browse to the **source** folder.
 
@@ -51,6 +53,12 @@ Follow these steps to set up your environment for the demo.
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
+
+	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
+
+	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+
+	> _Installing Missing npm Packages_
 
 <a name="CodeSnippets" />
 ### Using the Code Snippets ###
