@@ -151,7 +151,7 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### Deploying to Azure with GitHub ###
 
-1. Go back to the [Azure Portal](https://portal.azure.com/). In your Web App blade, locate the **Deployment** section and click **Set up continuous deployment**.
+1. Go back to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
 
 	![Setting up continuous deployment](images/setting-up-continuos-deployment.png?raw=true "Setting up continuous deployment")
 
@@ -171,7 +171,7 @@ This demo is composed of the following segments:
 
 	_Selecting the repository_
 
-1. Now, under the **Deployment** section you should see the **Active Deployment** box. Click it to open the **Deployments** blade.
+1. Now, the **Deployments** blade should open, else navigate to the **Continuous deployment** option again in the **Settings** blade. Show that the initial commit is the current active deployment.
 
 	![Showing the Deployments blade](images/showing-the-deployments-blade.png?raw=true "Showing the Deployments blade")
 
@@ -192,6 +192,12 @@ This demo is composed of the following segments:
 
 	_Showing the new deployment entry_
 
+1. Navigate to the site to show that its was updated.
+
+	![Showing the updated site](images/showing-the-updated-site.png?raw=true "Showing the updated site")
+
+	_Showing the updated site_
+
 <a name="segment3" />
 ### Remote debugging a node application with Visual Studio and Azure ###
 
@@ -204,6 +210,12 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 	![Attaching the debugger](images/attaching-the-debugger.png?raw=true "Attaching the debugger")
 
 	_Attaching the debugger_
+
+	> **Note:** If an error shows up while trying to attach the debugger to the Web App, it might be related with an issue with the Nodejs Tools (e.g. issue [#125](https://github.com/Microsoft/nodejstools/issues/125)). In order to workaround this issue, try attaching without Server Explorer by following  [this](https://github.com/Microsoft/nodejstools/wiki/Advanced-Debugging#attaching-without-server-explorer) document.
+
+	> ![Could not attach error](images/could-not-attach-error.png?raw=true "Could not attach error")
+
+	> _Could not attach error_
 
 1. Open the **socketio.js** file located in the root of the project and set a breakpoint in the **connection** event handler.
 
