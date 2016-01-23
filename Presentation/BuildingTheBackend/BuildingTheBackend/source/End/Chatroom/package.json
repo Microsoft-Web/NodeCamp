@@ -11,15 +11,15 @@
     "email": ""
   },
   "dependencies": {
-    "body-parser": "~1.14.2",
-    "cookie-parser": "~1.4.1",
-    "debug": "~2.2.0",
-    "documentdb": "~1.5.1",
-    "express": "~4.13.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0",
-    "socket.io": "~1.4.4",
-    "stylus": "0.53.0"
+    "body-parser": "^1.8.4",
+    "cookie-parser": "^1.4.1",
+    "debug": "^2.2.0",
+    "documentdb": "^1.5.1",
+    "express": "^4.9.8",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.1.7",
+    "socket.io": "^1.4.4",
+    "stylus": "^0.42.3"
   }
 }

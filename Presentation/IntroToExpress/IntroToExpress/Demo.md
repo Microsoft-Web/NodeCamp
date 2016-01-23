@@ -23,20 +23,20 @@ In this demo, you will see:
 - [Node.js][1]
 - [Express][2]
 - [Node.js Tools for Visual Studio][3]
-- [Visual Studio Community 2013][4]
+- [Visual Studio Community 2015][4]
 
 [1]: https://nodejs.org/
 [2]: http://expressjs.com/
-[3]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
-[4]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
+[3]: https://www.visualstudio.com/features/node-js-vs
+[4]: https://www.visualstudio.com/products/visual-studio-community-vs
 
 <a name="Setup" />
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
-1. Install [Node.js](https://nodejs.org/download/)
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
+1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
+1. Install [Node.js](https://nodejs.org/en/download/)
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 1. Open Windows Explorer and browse to the **source** folder.
 1. Right-click **Setup.cmd** and select **Run as administrator** to launch the setup process that will configure your environment and install the Visual Studio code snippets for this demo.
 1. If the User Account Control dialog box is shown, confirm the action to proceed.
@@ -65,15 +65,9 @@ This demo is composed of the following segments:
 
 1. In the **Templates | JavaScript | Node.js** tab, select the **Basic Node.js Express 4 Application** project. Name it **ExpressApp**.
 
-	![Creating a new Node.js Express Application](images/Creating-a-new-express-app.png?raw=true "Creating a new Node.js Express Application")
+	![Creating a new Node.js Express Application](images/creating-a-new-express-app.png?raw=true "Creating a new Node.js Express Application")
 
 	_Creating a new Node.js Express Application_
-
-	> **Note:** If the **Node.js Tools for Visual Studio** dialog box shows up, click **Yes** in order to install the dependencies in the background.
-
-	> ![Installing the dependencies](images/installing-the-dependencies.png?raw=true "Installing the dependencies")
-
-	> _Installing the dependencies_
 
 1. Open the **app.js** file located in the root of the project.
 

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsConsoleApp", "NodejsConsoleApp\NodejsConsoleApp.njsproj", "{782D7FD7-C2AD-4104-9B0C-2A4E9A3AE8C3}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsConsoleApp", "NodejsConsoleApp\NodejsConsoleApp.njsproj", "{4256BFB7-367B-4F07-90FA-4A913982F39B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{782D7FD7-C2AD-4104-9B0C-2A4E9A3AE8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{782D7FD7-C2AD-4104-9B0C-2A4E9A3AE8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{782D7FD7-C2AD-4104-9B0C-2A4E9A3AE8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{782D7FD7-C2AD-4104-9B0C-2A4E9A3AE8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4256BFB7-367B-4F07-90FA-4A913982F39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4256BFB7-367B-4F07-90FA-4A913982F39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4256BFB7-367B-4F07-90FA-4A913982F39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4256BFB7-367B-4F07-90FA-4A913982F39B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
