@@ -125,7 +125,7 @@ foreach ($node in $vscontent.VSContent.Content)
         "XML" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\XML\My Xml Snippets" }
         "XAML" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\XAML\My XAML Snippets" }
 		"HTML" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\Visual Web Developer\My HTML Snippets" } 
-		"CSS" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion3\Code Snippets\Visual Web Developer\My CSS Snippets" } 
+		"CSS" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\Visual Web Developer\My CSS Snippets" } 
         "JavaScript" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\JavaScript\My Code Snippets" }  
 		"csharp" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\Visual C#\My Code Snippets" } 
         "vb" { $codeSnippetLocation = "$documentsFolder\$visualStudioVersion\Code Snippets\Visual Basic\My Code Snippets" } 

@@ -24,23 +24,23 @@ In this demo, you will see how to:
 - [Jade][2]
 - [Bootstrap][3]
 - [Node.js Tools for Visual Studio][4]
-- [Visual Studio Community 2013][5]
+- [Visual Studio Community 2015][5]
 
 [1]: https://nodejs.org/
 [2]: http://jade-lang.com/
 [3]: http://getbootstrap.com/
-[4]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
-[5]: https://www.visualstudio.com/en-us/features/node-js-vs.aspx
+[4]: https://www.visualstudio.com/features/node-js-vs
+[5]: https://www.visualstudio.com/products/visual-studio-community-vs
 
 <a name="Setup" />
 ### Setup and Configuration ###
 Follow these steps to set up your environment for the demo:
 
-1. Install [Visual Studio Community 2013](https://go.microsoft.com/fwlink/?LinkId=517284)
+1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
 
-1. Install [Node.js](https://nodejs.org/download/)
+1. Install [Node.js](https://nodejs.org/en/download/).
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs)
+1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
 
 1. Open Visual Studio.
 
@@ -51,6 +51,12 @@ Follow these steps to set up your environment for the demo:
 	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
+
+	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
+
+	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+
+	> _Installing Missing npm Packages_
 
 > **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
 
@@ -83,6 +89,12 @@ This demo is composed of the following segments:
 	meta(http-equiv="X-UA-Compatible" content="IE=edge")
 	link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')
 	link(rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css')
+	````
+
+1. Add the following code at the end of the file inside the body block.
+
+	````HTML
+    script(type='text/javascript' src='/javascripts/bootstrap.min.js')
 	````
 
 1. Then, add the following line at the end to create a new block.
@@ -119,6 +131,13 @@ This demo is composed of the following segments:
 	        input(type="text" id="message-box" class="form-control input-lg" placeholder="Write a message here..." rows="3")
 	      .col-xs-4.col-sm-3
 	        button#send-message-btn.btn.btn-primary.btn-lg.btn-block Send Message
+	````
+
+1. Now, add the following code at the end of the file without indentation (i.e.: at the same level of the _content_ block).
+
+	````HTML
+	block body_end
+	  script(type='text/javascript' src='/javascripts/index.js')
 	````
 
 1. Open the **style.styl** file located in **public/stylesheets/**.
