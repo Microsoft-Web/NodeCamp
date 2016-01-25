@@ -164,5 +164,61 @@
 			"},"
 		],
 		"description": "Building The Backend DocumentDB Utils GetOrCreateCollection"
+	},
+	"Building The Backend DocumentDB Save Messages": {
+		"prefix": "BuildingTheBackend-DocDBSaveMessages",
+		"body": [
+			"docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {",
+			"\tif (err) {",
+			"\t\tconsole.warn(err.message);",
+			"\t} else {",
+			"\t\tvar documentDefinition = { content: msg };",
+			"\t\tdocDbClient.createDocument(collection._self, documentDefinition, function (err, o) {",
+			"\t\t\tif (err) {",
+			"\t\t\t\tconsole.warn(err.message);",
+			"\t\t\t} else {",
+			"\t\t\t\tconsole.log(\"chat message inserted into db: \" + msg);",
+			"\t\t\t}",
+			"\t\t});",
+			"\t}",
+			"});"
+		],
+		"description": "Building The Backend DocumentDB Save Messages"
+	},
+	"Building The Backend DocumentDB Load Messages": {
+		"prefix": "BuildingTheBackend-DocDBLoadMessages",
+		"body": [
+			"docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {",
+			"\tif (err) {",
+			"\t\tconsole.warn(err.message);",
+			"\t} else {",
+			"\t\tdocDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')",
+			"\t\t\t.forEach(function (err, msg) {",
+			"\t\t\t\tif (msg) {",
+			"\t\t\t\t\tconsole.log('emitting chat');",
+			"\t\t\t\t\tsocket.emit('chat', msg.content);",
+			"\t\t\t\t}",
+			"\t\t\t});",
+			"\t}",
+			"});"
+		],
+		"description": "Building The Backend DocumentDB Load Messages"
+	},
+	"Building The Backend DocumentDB Initialization": {
+		"prefix": "BuildingTheBackend-DocDBInitialization",
+		"body": [
+			"var DocumentDBClient = require('documentdb').DocumentClient;",
+			"var docdbUtils = require('./docDBUtils');"
+		],
+		"description": "Building The Backend DocumentDB Initialization"
+	},
+	"Building The Backend DocumentDB Client Initialization": {
+		"prefix": "BuildingTheBackend-DocDBClientInitialization",
+		"body": [
+			"var docDbClient = new DocumentDBClient(process.env.DOCUMENT_DB_HOST, {",
+			"\tmasterKey: process.env.DOCUMENT_DB_AUTH_KEY",
+			"});"
+		],
+		"description": "Building The Backend DocumentDB Client Initialization"
 	}
 }
