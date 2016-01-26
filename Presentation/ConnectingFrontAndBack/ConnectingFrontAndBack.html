@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Connecting the Frontend to the Backend</title>
+
+		<meta name="description" content="This session introduces the use of Socket.IO in the client side of the application to listen and send messages to the server. Additionally, it shows how to include JS files like JQuery, Bootstrap and Socket.IO to the client side, adding them in the views.">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../_layouts/reveal.js/css/print/pdf.css' : '../../_layouts/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../../_layouts/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Connecting the Frontend to the Backend</h1>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>Adding Libraries to the Frontend (jQuery, Socket.IO)</li>
+						<li>Listening and Sending Messages</li>
+					</ol>
+				</section>
+				
+								
+				<section>
+					<h2>Demo</h2>
+					<h3>Adding Libraries to the FrontEnd</h3>
+				</section>
+
+				<section>
+					<section>
+						<h2>Listening and Sending Messages</h2>
+					</section>
+					<section>
+						<h2>Without real-time</h2>
+						<img data-src="images/without-real-time.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>With real-time</h2>
+						<img data-src="images/with-real-time.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Basically...</h2>
+						<img data-src="images/socket-io.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Introducing Socket.IO</h2>
+						<ul>
+							<li>Abstraction over transports</li>
+                            <li>Event-based communication</li> 
+							<li>Broadcast or target specific client</li>
+						</ul>
+					</section>
+					<section>
+						<h2>What does Socket.IO do?</h2>
+						<ul>
+							<li>Client to Server persistent connection over HTTP</li>
+                            <li>Easily build multi-user, real-time web applications</li> 
+							<li>Auto-negotiates transport</li>
+							<li>Open Source on GitHub</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Socket.IO Messages</h2>
+						<ul>
+							<li>Clients subscribe to channels/namespaces</li>
+                            <li>Can send a variety of data types to multiple clients</li> 
+							<li>Realtime</li>
+							<li>Binary Streaming – think video, images</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Listening and handling messages</h3>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Microsoft</h2>
+					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
+The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
+</small></p>
+				</section>
+		</div>
+
+		<script src="../../_layouts/reveal.js/lib/js/head.min.js"></script>
+		<script src="../../_layouts/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../_layouts/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../_layouts/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../_layouts/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
