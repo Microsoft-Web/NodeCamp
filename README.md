@@ -52,7 +52,7 @@
           <tr>
             <td rowspan="2">Creating the User Interface</td>
             <td rowspan="2">60</td>
-            <td><a href='Presentation/CreatingTheUI/CreatingTheUI.pptx'>Presentation</a></td>
+            <td>Presentation (<a href='Presentation/CreatingTheUI/CreatingTheUI.pptx'>PPTX</a> | <a href='Presentation/CreatingTheUI/CreatingTheUI.html'>reveal.js</a>)</td>
           </tr>
           <tr>
             <td><a href='Presentation/CreatingTheUI/CreatingTheUI/Demo.md'>Demos</a></td>
