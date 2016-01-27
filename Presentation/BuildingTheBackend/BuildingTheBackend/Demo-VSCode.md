@@ -50,21 +50,13 @@ Follow these steps to set up your environment for the demo.
  * **Mac**: `$HOME/.vscode/extensions` 
  * **Linux**: `$HOME/.vscode/extensions`
 
-1. Open Visual Studio.
+1. Open a **command prompt/terminal** according to your platform in the **source/Begin/Chatroom** folder.
 
-1. Open the **Chatroom.sln** solution located under **source\Begin**.
+1. Run **npm install** to install all the missing dependencies.
 
-1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
-
-	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/VSCode/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
-
-	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
-
-	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
-
-	> _Installing Missing npm Packages_
 
 <a name="CodeSnippets" />
 ### Using the Code Snippets ###
@@ -89,41 +81,25 @@ This demo is composed of the following segments:
 <a name="segment1" />
 ### Creating a chat server with Socket.IO ###
 
-1. Right-click the **npm** node of the project and select **Install New npm Packages...**.
+1. In the command prompt/terminal run **npm install --save socket.io** to install the socket.io package.
 
-	![Installing Node packages](images/installing-node-packages.png?raw=true "Installing Node packages")
+	> **Note:** This will install socket.io to your project and add it to the package.json file.
 
-	_Installing new Node package_
-
-1. Search for **Socket.IO**. Select the top result and make sure the **Add to package.json** check box is selected before installing the package. 
-
-	> **Note:** This will install socket.io to your project and add it to the package.json file. You can achieve the same by running the `npm install --save socket.io` command.
-
-	![Installing Socket.IO package](images/installing-socket-io-package.png?raw=true "Installing Socket.IO package")
+	![Installing Socket.IO package](images/VSCode/installing-socket-io-package.png?raw=true "Installing Socket.IO package")
 
 	_Installing Socket.IO package_
 
-1. Show the **package.json** file located in the root folder of the project.
+1. Run **code .** to open the current directory with **Visual Studio Code**.
 
-	![Showing the package.json file](images/showing-the-package-json-file.png?raw=true "Showing the package.json file")
+1. In the **Explore** view, open the **package.json** file located in the root of the folder.
+
+	![Showing the package.json file](images/VSCode/showing-the-package-json-file.png?raw=true "Showing the package.json file")
 
 	_Showing the package.json file_
 
-1. Right-click the project and select **Add | New Item...**.
+1. In the **Explore** view, create a new **socketio.js** file by clicking the **New File** icon and fill its content with the following code snippet.
 
-	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
-
-	_Creating a new item_
-
-1. In the **Add New Item** dialog box, select **JavaScript file**, name it **socketio.js** and click **Add**.
-
-	![Creating a new JavaScript file](images/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
-
-	_Creating a new JavaScript file_
-
-1. Copy the following code snippet in the **socketio.js** file you created.
-
-	> **Speaking point:** We will log each user entering the chatroom by hooking a callback function to be executed on every single “connection” event via WebSocket to our HTTP server. 
+	> **Speaking point:** We will log each user entering the chatroom by hooking a callback function to be executed on every single "connection" event via WebSocket to our HTTP server. 
 
 	(Code Snippet - _BuildingTheBackend-SocketioOnConnection_)
 
@@ -134,6 +110,10 @@ This demo is composed of the following segments:
 		 });
 	};
 	````
+
+	![Creating a new socketio.js file](images/VSCode/creating-a-new-socketiojs-file.png?raw=true "Creating a new socketio.js file")
+
+	_Creating a new socketio.js file_
 
 1. Add the following code snippet inside the callback of the **connection** event.
 
@@ -149,7 +129,7 @@ This demo is composed of the following segments:
 
 1. Add the following code snippet inside the callback of the **connection** event below the **disconnect** event handler.
 
-	> **Speaking point:** Socket.IO gives us a function called **emit** that we can use to send an event. We will use it to broadcast any message received on the “chat” channel to all the other connections on this socket.
+	> **Speaking point:** Socket.IO gives us a function called **emit** that we can use to send an event. We will use it to broadcast any message received on the "chat" channel to all the other connections on this socket.
 
 	(Code Snippet - _BuildingTheBackend-SocketioOnChat_)
 
@@ -171,22 +151,30 @@ We then pass the socket.io instance to the module we created.
 	require('../socketio')(io);
 	````
 
-1. Run the application from Visual Studio opening two browser instances. Show that messages are being broadcasted to all the connections on the socket.
+1. Run the application using Visual Studio Code debugger. To do this, you will first need to setup your debugging launch configuration file (**launch.json**). Bring up the **Debug** view by clicking on the Debugging icon in the View Bar on the side of Visual Studio Code. Click on the Configure gear icon and select **Node.js** as your Debug Environment; this will generate a **launch.json**. Make sure that the **Lunch** configuration is selected in the dropdown and press **F5** to start debugging. For more infomation, see the [Debugging](https://code.visualstudio.com/Docs/editor/debugging) documentation.
 
-	![Testing socket.io](images/testing-socket-io.png?raw=true "Testing socket.io")
+	![Launching the application in Debug mode with Visual Studio Code](images/VSCode/launching-the-app-in-debug-mode-with-vscode.png?raw=true "Launching the application in Debug mode with Visual Studio Code")
+
+	_Launching the application in Debug mode with Visual Studio Code_
+
+1. Open two instances of your browser, navigate to **http://localhost:3000** and show that messages are being broadcasted to all the connections on the socket.
+
+	![Testing socket.io](images/VSCode/testing-socket-io.png?raw=true "Testing socket.io")
 
 	_Testing socket.io_
+
+1. Switch back to Visual Studio Code and stop the debugger.
 
 <a name="segment2" />
 ### Saving messages to an Azure DocumentDB database ###
 
-1. Install the **documentdb** package as you did with the **socket.IO** package in the previous step.
+1. Switch back to the command prompt/terminal and run **npm install --save documentdb** to install the documentdb package.
 
-	![Installing documentdb package](images/installing-documentdb-package.png?raw=true "Installing documentdb package")
+	![Installing documentdb package](images/VSCode/installing-documentdb-package.png?raw=true "Installing documentdb package")
 
 	_Installing documentdb package_
 
-1. Add a new JavaScript file named **docDBUtils.js** to the project.
+1. Go back to Visual Studio Code. In the **Explore** view, add a new JavaScript file named **docDBUtils.js**.
 
 	> **Speaking Point:**  We will create a few helper functions in this new file.
 
@@ -375,13 +363,13 @@ We then pass the socket.io instance to the module we created.
 
 1. In the Jumpbar, click **New**, then **Data + Storage**, and **Azure DocumentDB**.
 
-	![Creating a new DocumentDB account](images/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
+	![Creating a new DocumentDB account](images/VSCode/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
 
 	_Creating a new DocumentDB account_
 
 1. In the **New DocumentDB account** blade, specify the desired configuration for the DocumentDB account.
 
-	![Setting up the new DocumentDB account](images/setting-up-the-new-documentdb-account.png?raw=true "Setting up the new DocumentDB account")
+	![Setting up the new DocumentDB account](images/VSCode/setting-up-the-new-documentdb-account.png?raw=true "Setting up the new DocumentDB account")
 
 	_Setting up the new DocumentDB account_
 
@@ -389,38 +377,38 @@ We then pass the socket.io instance to the module we created.
 
 1. After the DocumentDB account is created, it is ready to use with the default settings in the online portal. Now navigate to the Keys blade of your DocumentDB account; we will use these values in the web application we create next.
 
-	![Copying the DocumentDB account keys](images/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
+	![Copying the DocumentDB account keys](images/VSCode/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
 
 	_Copying the DocumentDB account keys_
 
 <a name="segment4" />
 ### Configuring local environment variables ###
 
-1. Right-click the project and select **Properties**.
+1. Switch back to Visual Studio Code and open the **launch.json** file located in the **.vscode** folder.
 
-	![Opening the project properties](images/opening-the-project-properties.png?raw=true "Opening the project properties")
-
-	_Opening the project properties_
-
-1. In the Environment Variables section, add the following variables in each file, replacing the values with those obtained in the previous section.
+1. Add the following variables inside the **configurations/env** node, replacing the values with those obtained in the previous section.
 
 	````C#
-	DOCUMENT_DB_HOST=https://{your-document-db}.documents.azure.com:443/
-DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
+	"DOCUMENT_DB_HOST": "https://{your-document-db}.documents.azure.com:443/",
+    "DOCUMENT_DB_AUTH_KEY": "{Your-DocumentDb-primary-key}"
 	````
 
-	![Setting up the Environment Variables](images/setting-up-the-env-variables.png?raw=true "Setting up the Environment Variables")
+	![Setting up the Environment Variables](images/VSCode/setting-up-the-env-variables.png?raw=true "Setting up the Environment Variables")
 
 	_Setting up the Environment Variables_
 
 
-1. Run the application from Visual Studio and send a few messages.
+1. Run the application using the Visual Studio Code debugger.
 
-1. Restart the application and show how the messages you sent are retrieved from the DocumentDB account.
+1. Open your browser, navigate to **http://localhost:3000** and send a few messages.
 
-	![Retrieving messages from DocumentDB](images/retrieving-messages-from-documentdb.png?raw=true "Retrieving messages from DocumentDB")
+1. Restart the browser and navigate again to **http://localhost:3000**. Show how the messages you sent are retrieved from the DocumentDB account.
+
+	![Retrieving messages from DocumentDB](images/VSCode/retrieving-messages-from-documentdb.png?raw=true "Retrieving messages from DocumentDB")
 
 	_Retrieving messages from DocumentDB_
+
+1. Switch back to Visual Studio Code and stop the debugger.
 
 ---
 
