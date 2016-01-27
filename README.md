@@ -47,7 +47,7 @@
             <td>Presentation (<a href='Presentation/BuildingTheBackend/BuildingTheBackend.pptx'>PPTX</a> | <a href='Presentation/BuildingTheBackend/BuildingTheBackend.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td><a href='Presentation/BuildingTheBackend/BuildingTheBackend/Demo.md'>Demos</a></td>
+            <td>Demos (<a href='Presentation/BuildingTheBackend/BuildingTheBackend/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/BuildingTheBackend/BuildingTheBackend/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Creating the User Interface</td>
