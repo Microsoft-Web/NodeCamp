@@ -58,13 +58,13 @@ Follow these steps to set up your environment for the demo.
 
 1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
-	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/VSCommunity/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
 
 	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
 
-	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+	> ![Path Too Long Warning](images/VSCommunity/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
 
 	> _Installing Missing npm Packages_
 
@@ -92,7 +92,7 @@ This demo is composed of the following segments:
 
 1. Right-click the **npm** node of the project and select **Install New npm Packages...**.
 
-	![Installing Node packages](images/installing-node-packages.png?raw=true "Installing Node packages")
+	![Installing Node packages](images/VSCommunity/installing-node-packages.png?raw=true "Installing Node packages")
 
 	_Installing new Node package_
 
@@ -100,25 +100,25 @@ This demo is composed of the following segments:
 
 	> **Note:** This will install socket.io to your project and add it to the package.json file. You can achieve the same by running the `npm install --save socket.io` command.
 
-	![Installing Socket.IO package](images/installing-socket-io-package.png?raw=true "Installing Socket.IO package")
+	![Installing Socket.IO package](images/VSCommunity/installing-socket-io-package.png?raw=true "Installing Socket.IO package")
 
 	_Installing Socket.IO package_
 
 1. Show the **package.json** file located in the root folder of the project.
 
-	![Showing the package.json file](images/showing-the-package-json-file.png?raw=true "Showing the package.json file")
+	![Showing the package.json file](images/VSCommunity/showing-the-package-json-file.png?raw=true "Showing the package.json file")
 
 	_Showing the package.json file_
 
 1. Right-click the project and select **Add | New Item...**.
 
-	![Creating a new item](images/creating-a-new-item.png?raw=true "Creating a new item")
+	![Creating a new item](images/VSCommunity/creating-a-new-item.png?raw=true "Creating a new item")
 
 	_Creating a new item_
 
 1. In the **Add New Item** dialog box, select **JavaScript file**, name it **socketio.js** and click **Add**.
 
-	![Creating a new JavaScript file](images/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
+	![Creating a new JavaScript file](images/VSCommunity/creating-a-new-js-file.png?raw=true "Creating a new JavaScript file")
 
 	_Creating a new JavaScript file_
 
@@ -174,7 +174,7 @@ We then pass the socket.io instance to the module we created.
 
 1. Run the application from Visual Studio opening two browser instances. Show that messages are being broadcasted to all the connections on the socket.
 
-	![Testing socket.io](images/testing-socket-io.png?raw=true "Testing socket.io")
+	![Testing socket.io](images/VSCommunity/testing-socket-io.png?raw=true "Testing socket.io")
 
 	_Testing socket.io_
 
@@ -183,7 +183,7 @@ We then pass the socket.io instance to the module we created.
 
 1. Install the **documentdb** package as you did with the **socket.IO** package in the previous step.
 
-	![Installing documentdb package](images/installing-documentdb-package.png?raw=true "Installing documentdb package")
+	![Installing documentdb package](images/VSCommunity/installing-documentdb-package.png?raw=true "Installing documentdb package")
 
 	_Installing documentdb package_
 
@@ -376,13 +376,13 @@ We then pass the socket.io instance to the module we created.
 
 1. In the Jumpbar, click **New**, then **Data + Storage**, and **Azure DocumentDB**.
 
-	![Creating a new DocumentDB account](images/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
+	![Creating a new DocumentDB account](images/VSCommunity/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
 
 	_Creating a new DocumentDB account_
 
 1. In the **New DocumentDB account** blade, specify the desired configuration for the DocumentDB account.
 
-	![Setting up the new DocumentDB account](images/setting-up-the-new-documentdb-account.png?raw=true "Setting up the new DocumentDB account")
+	![Setting up the new DocumentDB account](images/VSCommunity/setting-up-the-new-documentdb-account.png?raw=true "Setting up the new DocumentDB account")
 
 	_Setting up the new DocumentDB account_
 
@@ -390,7 +390,7 @@ We then pass the socket.io instance to the module we created.
 
 1. After the DocumentDB account is created, it is ready to use with the default settings in the online portal. Now navigate to the Keys blade of your DocumentDB account; we will use these values in the web application we create next.
 
-	![Copying the DocumentDB account keys](images/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
+	![Copying the DocumentDB account keys](images/VSCommunity/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
 
 	_Copying the DocumentDB account keys_
 
@@ -399,7 +399,7 @@ We then pass the socket.io instance to the module we created.
 
 1. Right-click the project and select **Properties**.
 
-	![Opening the project properties](images/opening-the-project-properties.png?raw=true "Opening the project properties")
+	![Opening the project properties](images/VSCommunity/opening-the-project-properties.png?raw=true "Opening the project properties")
 
 	_Opening the project properties_
 
@@ -410,7 +410,7 @@ We then pass the socket.io instance to the module we created.
 DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 	````
 
-	![Setting up the Environment Variables](images/setting-up-the-env-variables.png?raw=true "Setting up the Environment Variables")
+	![Setting up the Environment Variables](images/VSCommunity/setting-up-the-env-variables.png?raw=true "Setting up the Environment Variables")
 
 	_Setting up the Environment Variables_
 
@@ -419,7 +419,7 @@ DOCUMENT_DB_AUTH_KEY={Your-DocumentDb-primary-key}
 
 1. Restart the application and show how the messages you sent are retrieved from the DocumentDB account.
 
-	![Retrieving messages from DocumentDB](images/retrieving-messages-from-documentdb.png?raw=true "Retrieving messages from DocumentDB")
+	![Retrieving messages from DocumentDB](images/VSCommunity/retrieving-messages-from-documentdb.png?raw=true "Retrieving messages from DocumentDB")
 
 	_Retrieving messages from DocumentDB_
 
