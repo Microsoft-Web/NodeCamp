@@ -68,7 +68,7 @@
           <tr>
             <td rowspan="2">Debugging and Deploying on Azure</td>
             <td rowspan="2">60</td>
-            <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>Presentation</a></td>
+            <td>Presentation (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>PPTX</a> | <a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.html'>HTML</a>)</td>
           </tr>
           <tr>
             <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo.md'>Demos</a></td>
