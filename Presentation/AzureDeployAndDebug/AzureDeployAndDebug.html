@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Debugging and Deploying on Azure</title>
+
+		<meta name="description" content="This session introduces how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../_layouts/reveal.js/css/print/pdf.css' : '../../_layouts/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../../_layouts/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Debugging and Deploying on Azure</h1>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>Azure Web Apps Overview</li>
+						<li>Deploying to Azure with Visual Studio</li>
+						<li>Deploying to Azure with GitHub</li>
+						<li>Remote debugging with Visual Studio</li>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<h2>Azure Web Apps Overview</h2>
+					</section>
+					<section>
+						<h2>Develop apps with...</h2>
+						<table style="font-size:64%;margin-top:2%">
+							<tbody>
+								<tr>
+									<td>.NET</td>
+									<td>Node.js</td>
+									<td>PHP</td>
+								</tr>
+								<tr>
+									<td>Python</td>
+									<td>Java</td>
+								</tr>
+							</tbody>
+						</table>
+						<img data-src="images/azure-web-apps.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Azure Apps</h2>
+						<ul>
+							<li>Easy to deploy a variety of different web sites: node, python, php, asp.net, etc.</li>
+                            <li>Can install some software from the gallery like WordPress or preconfigured stacks (MEAN stack)</li> 
+							<li>Has a few limitations such as cannot configure ports, compile native modules for Node</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Azure Apps</h2>
+						<ul>
+							<li>Can configure custom domains</li>
+                            <li>Can add FTP users</li> 
+							<li>Can run multiple web sites</li>
+							<li>Ideal for a production / staging environment</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Deploying to Azure with Visual Studio</h2>
+					</section>
+					<section>
+						<h2>Visual Studio + App Service Web Apps</h2>
+						<ul>
+							<li>Create Azure Resources during File / New</li>
+                            <li>Create Web App during deploy</li> 
+							<li>Manage with Server Explorer</li>
+						</ul>
+						<img data-src="images/visual-studio-azure-service-web-apps.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Deploying to Azure with Visual Studio</h3>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Deploying to Azure with GitHub</h2>
+					</section>
+					<section>
+						<h2>Continuous Deployment</h2>
+						<img data-src="images/continuous-deployment.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Source Control</h2>
+						<p>Choose your own adventure!</p>
+						<img data-src="images/source-control.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Deployments</h2>
+						<img data-src="images/deployments.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Deploying to Azure with GitHub</h3>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Remote debugging with Visual Studio</h2>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Remote Debugging a Node.js application with Visual Studio and Azure</h3>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Get started</h2>
+						<p>Visit <a href="https://azure.microsoft.com/">azure.microsoft.com</a></p>
+						<img data-src="images/get-started.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+				</section>
+				
+				<section style="text-align: left;">
+					<h2>Microsoft</h2>
+					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
+The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
+</small></p>
+				</section>
+		</div>
+
+		<script src="../../_layouts/reveal.js/lib/js/head.min.js"></script>
+		<script src="../../_layouts/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../_layouts/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../_layouts/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../_layouts/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
