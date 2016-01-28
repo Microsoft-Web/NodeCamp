@@ -1,0 +1,25 @@
+
+{
+	"Connecting The Frontend To The Backend Append Messages Received": {
+		"prefix": "ConnectingFrontAndBack - AppendMessagesReceived",
+		"body": [
+			"socket.on('chat', function (msg) {",
+			"\t$('#messages').append($('<p>').text(msg));",
+			"});"
+		],
+		"description": "Connecting The Frontend To The Backend Append Messages Received"
+	},
+	"Connecting The Frontend To The Backend Send Messages": {
+		"prefix": "ConnectingFrontAndBack - SendMessages",
+		"body": [
+			"$('#send-message-btn').click(function () {",
+			"\tvar msg = $('#message-box').val();",
+			"\tsocket.emit('chat', msg);",
+			"\t$('#messages').append($('<p>').text(msg));",
+			"\t$('#message-box').val('');",
+			"\treturn false;",
+			"});"
+		],
+		"description": "Connecting The Frontend To The Backend Send Messages"
+	}
+}
