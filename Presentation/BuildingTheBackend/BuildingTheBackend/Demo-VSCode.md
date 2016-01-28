@@ -65,7 +65,6 @@ Throughout the demo document, you will be instructed to insert code blocks. For 
 
 > **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing the code that results from completing the steps in the demo. You can use this folder as guidance if you need additional help as you work through this demo.
 
-
 ---
 
 <a name="Demo" />

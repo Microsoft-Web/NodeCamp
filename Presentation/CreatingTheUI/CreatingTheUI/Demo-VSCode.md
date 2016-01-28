@@ -23,42 +23,42 @@ In this demo, you will see how to:
 - [Node.js][1]
 - [Jade][2]
 - [Bootstrap][3]
-- [Node.js Tools for Visual Studio][4]
-- [Visual Studio Community 2015][5]
+- [Visual Studio Code][4]
 
 [1]: https://nodejs.org/
 [2]: http://jade-lang.com/
 [3]: http://getbootstrap.com/
-[4]: https://www.visualstudio.com/features/node-js-vs
-[5]: https://www.visualstudio.com/products/visual-studio-community-vs
+[4]: https://code.visualstudio.com/
 
 <a name="Setup" />
 ### Setup and Configuration ###
-Follow these steps to set up your environment for the demo:
+Follow these steps to set up your environment for the demo.
 
-1. Install [Visual Studio Community 2015](https://go.microsoft.com/fwlink/?LinkId=691978).
+1. Download [Visual Studio Code](https://code.visualstudio.com/Download) for your platform and follow the [installation and setting up instructions](https://code.visualstudio.com/Docs/editor/setup).
 
-1. Install [Node.js](https://nodejs.org/en/download/).
+1. Install [Node.js](https://nodejs.org/download/).
 
-1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
+1. Open File Explorer and browse to the **source/Setup** folder.
 
-1. Open Visual Studio.
+1. Copy the **nodecamp-creatingtheui-snippets** folder and paste it into the Visual Studio Code Extensions folder to install the JavaScript snippets for this demo. Depending on your platform it is located:
+ * **Windows**: `%USERPROFILE%\.vscode\extensions`
+ * **Mac**: `$HOME/.vscode/extensions` 
+ * **Linux**: `$HOME/.vscode/extensions`
 
-1. Open the **Chatroom.sln** solution located under **source\Begin**.
+1. Open a **command prompt/terminal** according to your platform in the **source/Begin/Chatroom** folder.
 
-1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
+1. Run **npm install** to install all the missing dependencies.
 
-	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/VSCode/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
 
-	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
+<a name="CodeSnippets" />
+### Using the Code Snippets ###
 
-	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+Throughout the demo document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as code snippets, which you can access from within Visual Studio Code to avoid having to add it manually.
 
-	> _Installing Missing npm Packages_
-
-> **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing a Visual Studio solution with the code that results from completing the steps in the demo. You can use these solutions as guidance if you need additional help as you work through this demo.
+> **Note:** This demo is accompanied by a starting solution located in the **Begin** folder that allows you to follow the demo. Inside the source code you will also find an **End** folder containing the code that results from completing the steps in the demo. You can use this folder as guidance if you need additional help as you work through this demo.
 
 ---
 
@@ -84,6 +84,8 @@ This demo is composed of the following segments:
 
 	> **Speaking Point:** By adding this reference here, any Jade file that extends **layout.jade** will have them.
 
+	(Code Snippet - _CreatingTheUI-AddingBootstrapCSS_)
+	
 	````HTML
 	meta(charset="utf-8")
 	meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -93,6 +95,8 @@ This demo is composed of the following segments:
 
 1. Add the following code at the end of the file inside the body block.
 
+	(Code Snippet - _CreatingTheUI-AddingBootstrapJS_)
+
 	````HTML
     script(type='text/javascript' src='/javascripts/bootstrap.min.js')
 	````
@@ -101,6 +105,8 @@ This demo is composed of the following segments:
 
 	> **Speaking Point:** By doing this, any Jade file that extends **layout.jade** can also add script tags right before the end of the body tag.
 
+	(Code Snippet - _CreatingTheUI-CreateNewBlock_)
+	
 	````HTML
 	block body_end
 	````
@@ -111,6 +117,8 @@ This demo is composed of the following segments:
 1. Open the **index.jade** file and remove all the lines of code under the content block.
 
 1. Now, add the following code below the content block with one tab of indentation.
+
+	(Code Snippet - _CreatingTheUI-AddHeader_)
 
 	````HTML
 	.wrap
@@ -123,6 +131,8 @@ This demo is composed of the following segments:
 
 1. Add the following code with the same indentation as the wrap div.
 
+	(Code Snippet - _CreatingTheUI-AddInputAndButton_)
+
 	````HTML
 	.footer
 	  .container-fluid
@@ -134,6 +144,8 @@ This demo is composed of the following segments:
 	````
 
 1. Now, add the following code at the end of the file without indentation (i.e.: at the same level of the _content_ block).
+
+	(Code Snippet - _CreatingTheUI-AddJS_)
 
 	````HTML
 	block body_end
@@ -175,7 +187,7 @@ This demo is composed of the following segments:
 
 1. Run the solution.
 
-	![Running the solution](images/running-the-solution.png?raw=true "Running the solution")
+	![Running the solution](images/VSCode/running-the-solution.png?raw=true "Running the solution")
 
 	_Running the solution_
 
