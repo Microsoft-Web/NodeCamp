@@ -74,7 +74,7 @@ This demo is composed of the following segments:
 
 1. Navigate to the Bootstrap site (http://getbootstrap.com/) and download Bootstrap.
 
-	> **Note:** You can also find the bootstrap zip file in the **source\assets** folder.
+	> **Note:** You can also find the bootstrap.zip file in the **source\assets** folder.
 
 1. Extract the content of the file and move the **css** folder content to the **public/stylesheets** folder, the js folder content to the **public/javascripts** folder, and the **fonts** folder to **public**.
 

@@ -1,0 +1,21 @@
+{
+	"name": "nodecamp-creatingtheui-snippets",
+	"displayName": "Node Camp - Creating the User Interface - Code Snippets",
+	"description": "Code snippets for the 'Creating the User Interface' Node Camp demo",
+	"version": "1.0.0",
+	"publisher": "MicrosoftDX",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "jade",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	}
+}
