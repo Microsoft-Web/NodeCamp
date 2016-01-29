@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Building the Backend</title>
+
+		<meta name="description" content="This session introduces the use of the Socket.IO module that allows for real-time bidirectional communication. Here we see how to connect, broadcast and receive messages in a chat app. It also shows how to use Azure DocumentDB, a NoSQL database, to save and retrieve messages.">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../_layouts/reveal.js/css/print/pdf.css' : '../../_layouts/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../../_layouts/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Building the Backend</h1>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>What are Web Sockets?</li>
+						<li>Using Socket.IO to connect users, broadcast and receive messages</li>
+						<li>Using a NoSQL Database</li>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<h2>What are Web Sockets?</h2>
+					</section>
+					<section>
+						<h2>What are Web Sockets??</h2>
+						<ul>
+							<li>A Websocket is a protocol designed to allow web applications to create a full-duplex channel over TCP (i.e. to have bi-directional communication) between the web browser and a web server</li>
+							<li>It is fully compatible with HTTP and uses TCP port number 80</li>
+							<li>WebSockets allowed web applications to become real-time and support advanced interactions between the client and the server</li>
+							<li>It is supposed by several browsers including Microsoft Edge, Internet Explorer, Google Chrome, Firefox, Safari and Opera</li>
+						</ul>
+					</section>
+					<section>
+						<h2>What is Socket.IO?</h2>
+						<ul>
+							<li>Socket.IO is a simple JavaScript library and node.js module that allows you to create real-time bidirectional event-based communication apps simply and quickly</li>
+							<li>It simplifies the process of using WebSockets significantly. We will be using Socket.IO v1.0 to make our chatroom app</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Using Socket.IO to connect users, broadcast and receive messages</h2>
+					</section>
+					<section>
+						<h2>Implementing Socket.IO</h2>	
+						<ul>
+							<li>Add it to the package.json</li>
+							<li>In Visual Studio > right click NPM to add module
+								<img data-src="images/add-npm-module-in-visual-studio.png" alt="Down arrow">
+							</li>
+							<li>Or from the command prompt
+								<pre><code class="cmd" data-trim contenteditable>
+npm install --save socket.io
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Using Socket I.O to connect users, send and receive messages</h3>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Using a NoSQL Database</h2>
+					</section>
+					<section>
+						<h2>About NoSQL databases</h2>
+						<ul>
+							<li>Not only SQL</li>
+							<li>Different types: document based, graph databases, key-value stores, etc.</li>
+							<li>DocumentDB, MongoDB, Couchbase, HBase, Cassandra</li>
+							<li>Object oriented APIs</li>
+							<li>Good for large amounts of data, can be scaled</li>
+						</ul>
+					</section>
+					<section>
+						<h2>DocumentDB</h2>
+						<ul>
+							<li>Particularly suited for web and mobile applications</li>
+							<li>Schema-less, NoSQL document database</li>
+							<li>Fully managed, with provisioned capacity</li>
+							<li>Stored entities are JSON documents</li>
+							<li>Tunable consistency</li>
+							<li>Designed to scale</li>
+						</ul>
+						<img data-src="images/azure-documentdb-cloud.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>DocumentDB</h2>
+						<ul>
+							<li>NoSQL document database-as-a-service</li>
+							<li>First of its kind database service to offer native support for JavaScript, SQL query and transactions over JSON documents</li>
+						</ul>
+						<table style="font-size:64%;margin-top:2%">
+							<thead>
+								<tr>
+									<th>Rich Query and Transactions over JSON Data</th>
+									<th>Reliable &amp; Predictable Performance</th>
+									<th>Rapid Development</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Query JSON data with no secondary indices</td>
+									<td>Fast, predictable performance</td>
+									<td>Build with familiar tools – REST, JSON, JavaScript</td>
+								</tr>
+								<tr>
+									<td>Native JavaScript transactional processing</td>
+									<td>Tunable consistency</td>
+									<td>Easy to start and fully-managed</td>
+								</tr>
+								<tr>
+									<td>Familiar SQL-based query language</td>
+									<td>Elastic scale</td>
+									<td>Enterprise-grade Azure platform</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>DocumentDB: A Document Store</h2>
+						<img data-src="images/azure-documentdb-a-document-store.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>DocumentDB: The Basics</h2>
+						<img data-src="images/azure-documentdb-the-basics.png" alt="Down arrow" style="border:none;background:none;">
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Saving messages to Azure DocumentDB</h3>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Setting environment variables</h3>
+					</section>
+					<section>
+						<h2>Using MongoDB</h2>
+						<ol>
+							<li>Need to create a mongodb </li>
+							<li>3rd party sources like MongoHQ or MongoLab</li>
+							<li>Use the MongoLab add on in Azure</li>
+							<li>Can customize and manually use via VM</li>
+							<li>Need the mongodb URI for connection</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Add Support for MongoDB</h2>	
+						<ul>
+							<li>Add it to the package.json</li>
+							<li>In Visual Studio > right click NPM to add module
+								<img data-src="images/add-npm-module-in-visual-studio.png" alt="Down arrow">
+							</li>
+							<li>Or from the command prompt
+								<pre><code class="cmd" data-trim contenteditable>
+npm install --save mongodb
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Microsoft</h2>
+					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
+The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
+</small></p>
+				</section>
+		</div>
+
+		<script src="../../_layouts/reveal.js/lib/js/head.min.js"></script>
+		<script src="../../_layouts/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../_layouts/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../_layouts/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../_layouts/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

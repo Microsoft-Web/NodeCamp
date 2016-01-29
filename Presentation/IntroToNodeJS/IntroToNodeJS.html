@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Node.js</title>
+
+		<meta name="description" content="This session shows how to create our first Node.js app">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../_layouts/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../_layouts/reveal.js/css/print/pdf.css' : '../../_layouts/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../../_layouts/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Introduction to Node.js</h1>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>About Node</li>
+						<li>Setting up your environment</li>
+						<li>First Node application</li>
+						<li>Node Package Manager (NPM)</li>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<h2>About Node</h2>
+					</section>
+					<section>
+						<h2>What is Node?</h2>
+						<ul>
+							<li>Node.js is a runtime environment and library for running JavaScript applications outside the browser.</li>
+							<li>Node.js is mostly used to run real-time server applications and shines through its performance using non-blocking I/O and asynchronous events.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>About Node</h2>
+						<ul>
+							<li>Leverage skills with JavaScript now on the server side</li>
+							<li>Unified development environment/language</li>
+							<li>High Performance JavaScript Engines – V8</li>
+							<li>Open source, created in 2009 by Ryan Dahl</li>
+							<li>Windows, Linux, Mac OSX</li>
+						</ul>
+					</section>
+					<section>
+						<h2>When to use Node</h2>
+						<ul>
+							<li>
+								Node is great for streaming or event-based real-time applications like:
+								<ul>
+									<li>Chat Applications</li>
+									<li>Real time applications and collaborative environments</li>
+									<li>Game Servers</li>
+									<li>Ad Servers</li>
+									<li>Streaming Servers</li>
+								</ul>
+							</li>
+							<li>Node is great for when you need high levels of concurrency but little dedicated CPU time.</li>
+							<li>Great for writing JavaScript code everywhere!</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Node in the Wild</h2>
+						<ul>
+							<li>Microsoft</li>
+							<li>Yahoo!</li>
+							<li>LinkedIn</li>
+							<li>eBay</li>
+							<li>Dow Jones</li>
+							<li>Cloud9</li>
+							<li>The New York Times, etc</li>
+						</ul>
+					</section>
+					<section>
+						<h2>The Node Community</h2>
+						<ul>
+							<li>Five years after its debut, Node is the third most popular project on GitHub.</li>
+							<li>Over 2 million downloads per month</li>
+							<li>Over 20 million downloads of v0.10x</li>
+							<li>Over 81,000 modules on npm</li>
+							<li>Over 475 meetups worldwide talking about Node</li>
+							<li>Reference: <a href="http://strongloop.com/node-js/infographic/">http://strongloop.com/node-js/infographic/</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Setting up your environment</h2>
+					</section>
+					<section>
+						<h2>Installing Node on Windows</h2>
+						<ul>
+							<li><a href="http://nodejs.org/">http://nodejs.org/</a> - pre-complied Node.js binaries to install</li>
+							<li><a href="https://github.com/joyent/node/wiki/Installation">https://github.com/joyent/node/wiki/Installation</a> - building it yourself</li>
+							<li>Via Chocolatey – package manager for Windows:
+								<pre><code class="cmd" data-trim contenteditable>
+choco install nodejs.install
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Path Variable</h2>
+						<ul>
+							<li>Double check that the node executable has been added to your PATH system environment variable</li>
+							<li><a href="https://www.youtube.com/watch?v=W9pg2FHeoq8">https://www.youtube.com/watch?v=W9pg2FHeoq8</a> To see how to change your environment variables on Windows 8 and Windows 8.1</li>
+							<li>You will want to make sure the following folder has been added to the PATH variable: C:\Program Files (x86)\nodejs\</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Installing Node.js Tools for Visual Studio</h2>
+						<ul>
+							<li>NTVS is a free, open source plugin that turns Visual Studio into a Node.js IDE.</li>
+							<li>It supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally and remotely (Windows/MacOS/Linux), as well Azure Web App and Cloud Service</li>
+							<li>Designed, developed, and supported by Microsoft and the community</li>
+							<li><a href="https://github.com/Microsoft/nodejstools">https://github.com/Microsoft/nodejstools</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>First Node application</h2>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Hello World Application</h3>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Basic HTTP Server</h3>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Basic TCP server</h3>
+					</section>
+					<section>
+						<h2>Event Driven Programming</h2>
+						<blockquote cite="https://en.wikipedia.org/wiki/Event-driven_programming">
+							&ldquo;A programming paradigm in which the flow of the program is determined by events such as user actions (mouse clicks, key presses) or messages from other programs.&rdquo; – Wikipedia
+						</blockquote>
+					</section>
+					<section>
+						<h2>Node Event Loop</h2>
+						<ul>
+							<li>Node provides the event loop as part of the language</li>
+							<li>With Node, there is no call to start the loop</li>
+							<li>The loop starts and doesn’t end until the last callback is complete</li>
+							<li>Event loop is run under a single thread therefore sleep() makes everything halt</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Blocking I/O</h2>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require('fs');
+
+var contents = fs.readFileSync('package.json').toString();
+console.log(contents);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Non Blocking I/O</h2>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require('fs');
+
+fs.readFile('package.json', function (err, buf) {
+    console.log(buf.toString());
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Demo</h2>
+						<h3>Reading file content sync vs async</h3>
+					</section>
+					<section>
+						<h2>Callback Style Programming</h2>
+						<ul>
+							<li>Event loops result in callback-style programming where you break apart a program into its underlying data flow</li>
+							<li>In other words, you end up splitting your program into smaller and smaller chunks until each chuck is mapped to operation with data</li>
+							<li>Why? So that you don’t freeze the event loop on long-running operations (such as disk or network I/O)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Callback Insanity</h2>
+						<img data-src="images/callback-insanity.png" alt="Down arrow">
+					</section>
+					<section>
+						<h2>Promises</h2>
+						<ul>
+							<li>A function will return a promise for an object in the future</li>
+							<li>Promises can be chained together</li>
+							<li>Simplify programming of async systems</li>
+						</ul>
+
+						<p>Read More: <a href="http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/">http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/</a></p>
+					</section>
+					<section>
+						<h2>Event Emitters</h2>
+						<ul>
+							<li>Allows you to listen for “events” and assign functions to run when events occur</li>
+							<li>Each emitter can emit different types of events</li>
+							<li>The “error” event is special</li>
+							<li>Read More: <a href="http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941">http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Streams</h2>
+						<ul>
+							<li>Streams represent data streams such as I/O</li>
+							<li>Streams can be piped together like in Unix</li>
+						</ul>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require("fs");
+// Read File
+fs.createReadStream("package.json")
+	// Write File
+	.pipe(fs.createWriteStream("out.json"));
+						</code></pre>
+					</section>
+					<section>
+						<h2>Modules and Exports</h2>
+						<ul>
+							<li>Node.js has a simple module and dependencies loading system</li>
+							<li>Unix philosophy -> Node philosophy
+								<ul>
+									<li>Write programs that do one thing and do it well -> Write modules that do one thing and do it well</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Require() Module Loading System</h2>
+						<ul>
+							<li>Call the function “require” with the path of the file or directory containing the module you would like to load</li>
+							<li>Returns a variable containing all the exported functions</li>
+						</ul>
+						<pre><code class="javascript" data-trim contenteditable>
+var fs = require("fs");
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Node Package Manager (NPM)</h2>
+					</section>
+					<section>
+						<h2>What is NPM?</h2>
+						<ul>
+							<li>Official package manager for Node</li>
+							<li>Bundled and installed automatically with the environment</li>
+							<br/>
+							<h4>Frequent Usage:</h4>
+							<li>npm install package_name --save</li>
+							<li>npm update</li>
+						</ul>
+					</section>
+					<section>
+						<h2>What is a package.json?</h2>
+						<pre><code class="json" data-trim contenteditable>
+{
+   "name": "Node101",
+   "version": "0.1.0",
+   "description": "MVA Presentation Code",
+   "main": "1_hello_world.js",
+   "author": {
+     "name": "Rami Sayar",
+     "email": ""
+   }
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Popular NPM Modules</h2>
+						<h4>Most Depended Upon</h4>
+						<ul>
+							<li>7053 underscore</li>
+							<li>6458 async</li>
+							<li>5591 request</li>
+							<li>4931 lodash</li>
+							<li>3630 commander</li>
+							<li>3543 express</li>
+							<li>2708 optimist</li>
+							<li>2634 coffee-script</li>
+						</ul>
+					</section>
+					<section>
+						<h2>How does it work?</h2>
+						<ul>
+							<li>Reads package.json</li>
+							<li>Installs the dependencies in the local node_modules folder</li>
+							<li>In global mode, it makes a node module accessible to all</li>
+							<br/>
+							<li>Can install from a folder, tarball, web, etc.</li>
+							<li>Can specify dev or optional dependencies</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Async Module</h2>
+						<p>Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript</p>
+						<pre><code class="javascript" data-trim contenteditable>
+async.map(
+  ['file1','file2','file3'],
+  fs.stat,
+  function (err, results) { /* results is an array of file stats */ }
+);
+
+async.filter(
+  ['file1','file2','file3'],
+  fs.exists,
+  function (results) { /* results is an array of the existing files */ }
+);
+
+async.parallel([ function () {}, function () {} ], callback);
+
+async.series([ function () {}, function () {} ]);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Request Module</h2>
+						<p>Request is designed to be the simplest way possible to make http calls. It supports HTTPS, streaming and follows redirects by default</p>
+						<pre><code class="javascript" data-trim contenteditable>
+var request = require('request');
+
+request('http://www.microsoft.com', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body);
+  }
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Demo</h2>
+						<h3>Install and update Node packages through the Node Package Manager</h3>
+					</section>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="https://blog.jcoglan.com/2013/03/30/callbacks-are-imperative-promises-are-functional-nodes-biggest-missed-opportunity/">https://blog.jcoglan.com/2013/03/30/callbacks-are-imperative-promises-are-functional-nodes-biggest-missed-opportunity/</a></li>
+						<li><a href="http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941">http://code.tutsplus.com/tutorials/using-nodes-event-module--net-35941</a></li>
+						<li><a href="http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/">http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/</a></li>
+					</ul>
+				</section>
+				<section style="text-align: left;">
+					<h2>Microsoft</h2>
+					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
+The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
+</small></p>
+				</section>
+		</div>
+
+		<script src="../../_layouts/reveal.js/lib/js/head.min.js"></script>
+		<script src="../../_layouts/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../_layouts/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../_layouts/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../_layouts/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../_layouts/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
