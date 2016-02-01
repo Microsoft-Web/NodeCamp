@@ -33,7 +33,7 @@ In this demo, you will see:
 Follow these steps to set up your environment for the demo.
 
 1. Download [Visual Studio Code](https://code.visualstudio.com/Download) for your platform and follow the [installation and setting up instructions](https://code.visualstudio.com/Docs/editor/setup).
-1. Install [Node.js](https://nodejs.org/download/).
+1. Install [Node.js](https://nodejs.org/en/download/).
 1. Open File Explorer and browse to the **source/Setup** folder.
 1. Copy the **nodecamp-introtoexpress-snippets** folder and paste it into the Visual Studio Code Extensions folder to install the JavaScript snippets for this demo. Depending on your platform it is located:
  * **Windows**: `%USERPROFILE%\.vscode\extensions`
