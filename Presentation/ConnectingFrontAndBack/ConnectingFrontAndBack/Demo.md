@@ -96,9 +96,9 @@ This demo is composed of the following segments:
 	script(type='text/javascript' src='/socket.io/socket.io.js')
 	````
 
-1. Create a new **index.js** file in the **javascripts** folder.
+1. Create a new **index.js** file in the **public/javascripts** folder.
 
-1. Open the **index.jade** file and add the following code at the end to include the **index.js** file to the view.
+1. Open the **index.jade** file under the **views** folder and add the following code at the end to include the **index.js** file to the view.
 
 	````JavaScript
 	block body_end
