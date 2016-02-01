@@ -50,13 +50,13 @@ Follow these steps to set up your environment for the demo.
 
 1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
-	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/VSCommunity/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
 
 	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
 
-	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+	> ![Path Too Long Warning](images/VSCommunity/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
 
 	> _Installing Missing npm Packages_
 
@@ -144,7 +144,7 @@ This demo is composed of the following segments:
 
 1. Send a few messages from the two different clients.
 
-	![Sending messages from two different clients](images/running-the-solution.png?raw=true "Sending messages from two different clients")
+	![Sending messages from two different clients](images/VSCommunity/running-the-solution.png?raw=true "Sending messages from two different clients")
 
 	_Sending messages from two different clients_
 
