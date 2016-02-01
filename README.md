@@ -55,7 +55,7 @@
             <td>Presentation (<a href='Presentation/CreatingTheUI/CreatingTheUI.pptx'>PPTX</a> | <a href='Presentation/CreatingTheUI/CreatingTheUI.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td><a href='Presentation/CreatingTheUI/CreatingTheUI/Demo.md'>Demos</a></td>
+            <td>Demos (<a href='Presentation/CreatingTheUI/CreatingTheUI/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/CreatingTheUI/CreatingTheUI/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Connecting the Frontend to the Backend</td>
