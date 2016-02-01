@@ -63,7 +63,7 @@
             <td>Presentation (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack.pptx'>PPTX</a> | <a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td><a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo.md'>Demos</a></td>
+            <td>Demos (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Debugging and Deploying on Azure</td>
