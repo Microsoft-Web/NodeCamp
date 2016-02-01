@@ -78,7 +78,9 @@ This demo is composed of the following segments:
 
 1. Extract the content of the file and move the **css** folder content to the **public/stylesheets** folder, the js folder content to the **public/javascripts** folder, and the **fonts** folder to **public**.
 
-1. Open the **layout.jade** file in the **views** folder.
+1. In the command prompt/terminal, run **code .** to open the current directory with **Visual Studio Code**.
+
+1. In the **Explore** view, Open the **layout.jade** file located in the **views** folder.
 
 1. Add the following lines right before the line containing the style.css link. Make sure to maintain the same indentation level.
 
@@ -185,11 +187,20 @@ This demo is composed of the following segments:
 	  background-color: #f5f5f5
 	````
 
-1. Run the solution.
+	
+1. Run the application using Visual Studio Code debugger. To do this, you will first need to setup your debugging launch configuration file (**launch.json**). Bring up the **Debug** view by clicking on the Debugging icon in the View Bar on the side of Visual Studio Code. Click on the Configure gear icon and select **Node.js** as your Debug Environment; this will generate a **launch.json**. Make sure that the **Lunch** configuration is selected in the dropdown and press **F5** to start debugging. For more infomation, see the [Debugging](https://code.visualstudio.com/Docs/editor/debugging) documentation.
+
+	![Launching the application in Debug mode with Visual Studio Code](images/VSCode/launching-the-app-in-debug-mode-with-vscode.png?raw=true "Launching the application in Debug mode with Visual Studio Code")
+
+	_Launching the application in Debug mode with Visual Studio Code_
+
+1. Open your browser and navigate to **http://localhost:3000**.
 
 	![Running the solution](images/VSCode/running-the-solution.png?raw=true "Running the solution")
 
 	_Running the solution_
+
+1. Switch back to Visual Studio Code and stop the debugger.
 
 ---
 
