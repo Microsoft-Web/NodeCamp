@@ -50,7 +50,7 @@ Follow these steps to set up your environment for the demo.
 1. Run **npm install** to install all the missing dependencies.
 
 	![Installing Missing npm Packages](images/VSCode/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
-
+	
 	_Installing Missing npm Packages_
 
 <a name="CodeSnippets" />
