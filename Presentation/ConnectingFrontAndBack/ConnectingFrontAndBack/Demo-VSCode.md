@@ -74,7 +74,9 @@ This demo is composed of the following segments:
 1.  In the **Explore** view, open the **layout.jade** file located in the **views** folder and add the following code below the `block content` line.
 
 	> **Speaking Point:** This includes the jQuery library hosted on the Microsoft Ajax Content Delivery Network. This CDN hosts popular third party JavaScript libraries such as jQuery and enables you to easily add them to your Web applications. You can significantly improve the performance of your Ajax applications by using a CDN. The contents of the CDN are cached on servers located around the world. The CDN supports SSL (HTTPS) in case you need to serve a web page using the Secure Sockets Layer.
-
+	
+	(Code Snippet - _ConnectingFrontAndBack - AddJQueryLib_)
+	
 	````JavaScript
 	script(type='text/javascript' src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js')
 	````
@@ -82,6 +84,8 @@ This demo is composed of the following segments:
 1. Now, add the following code to include bootstrap and socket.io client.
 
 	> **Speaking Point:** Socket.io provides its own client, that's why you are targeting the file located in the socket.io folder.
+
+	(Code Snippet - _ConnectingFrontAndBack - AddBootstrapAndSocketIOLibs_)
 
 	````JavaScript
 	script(type='text/javascript' src='/javascripts/bootstrap.min.js')
@@ -95,6 +99,8 @@ This demo is composed of the following segments:
 
 1. In the **Explore** view, open the **index.jade** file located in the **views** folder and add the following code at the end to include the **index.js** file to the view.
 
+	(Code Snippet - _ConnectingFrontAndBack - IncludeIndexFile_)
+
 	````JavaScript
 	block body_end
 		script(type='text/javascript' src='/javascripts/index.js')
@@ -104,6 +110,8 @@ This demo is composed of the following segments:
 ### Listening and handling messages ###
 
 1. Open the **index.js** file in the **public/javascripts** folder and add the following code.
+
+	(Code Snippet - _ConnectingFrontAndBack - SocketIO_)
 
 	````JavaScript
 	var socket = io();

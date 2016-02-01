@@ -1,25 +1,11 @@
 
 {
-	"Connecting The Frontend To The Backend Append Messages Received": {
-		"prefix": "ConnectingFrontAndBack - AppendMessagesReceived",
+	"Connecting The Frontend To The Backend Include index.js file": {
+		"prefix": "ConnectingFrontAndBack - IncludeIndexFile",
 		"body": [
-			"socket.on('chat', function (msg) {",
-			"\t$('#messages').append($('<p>').text(msg));",
-			"});"
+	        "block body_end",
+		    "\tscript(type='text/javascript' src='/javascripts/index.js')"
 		],
-		"description": "Connecting The Frontend To The Backend Append Messages Received"
-	},
-	"Connecting The Frontend To The Backend Send Messages": {
-		"prefix": "ConnectingFrontAndBack - SendMessages",
-		"body": [
-			"$('#send-message-btn').click(function () {",
-			"\tvar msg = $('#message-box').val();",
-			"\tsocket.emit('chat', msg);",
-			"\t$('#messages').append($('<p>').text(msg));",
-			"\t$('#message-box').val('');",
-			"\treturn false;",
-			"});"
-		],
-		"description": "Connecting The Frontend To The Backend Send Messages"
+		"description": "Connecting The Frontend To The Backend Include index.js file"
 	}
 }
