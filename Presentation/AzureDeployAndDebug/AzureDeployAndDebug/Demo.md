@@ -48,7 +48,7 @@ Follow these steps to set up your environment for the demo.
 
 1. After the DocumentDB account is created, navigate to the Keys blade of your DocumentDB account and take note of the URI and PRIMARY KEY values. You will use them later on.
 
-	![Copying the DocumentDB account keys](images/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
+	![Copying the DocumentDB account keys](images/VSCommunity/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
 
 	_Copying the DocumentDB account keys_
 
@@ -62,14 +62,14 @@ Follow these steps to set up your environment for the demo.
 
 1. Install the missing npm packages by right-clicking the **npm** node of the project and selecting **Install Missing npm Packages...**.
 
-	![Installing Missing npm Packages](images/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
+	![Installing Missing npm Packages](images/VSCommunity/installing-missing-npm-packages.png?raw=true "Installing Missing npm Packages")
 
 	_Installing Missing npm Packages_
 
 
 	> **Note:** If the **Path Too Long Warning** dialog box appears, click on the **Do nothing, but warn me next time it happens** option.
 
-	> ![Path Too Long Warning](images/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
+	> ![Path Too Long Warning](images/VSCommunity/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
 
 	> _Installing Missing npm Packages_
 
@@ -86,31 +86,31 @@ This demo is composed of the following segments:
 
 1. In Visual Studio, right-click the project and select **Publish...**.
 
-	![Selecting the Publish item from the menu](images/selecting-publish-from-the-menu.png?raw=true "Selecting the Publish item from the menu")
+	![Selecting the Publish item from the menu](images/VSCommunity/selecting-publish-from-the-menu.png?raw=true "Selecting the Publish item from the menu")
 
 	_Selecting the Publish item from the menu_
 
 1. In the Publish Web dialog box, select **Microsoft Azure App Service** as the publish target.
 
-	![Selecting Microsoft Azure App Service as publish target](images/selecting-app-service-as-target.png?raw=true "Selecting Microsoft Azure App Service as publish target")
+	![Selecting Microsoft Azure App Service as publish target](images/VSCommunity/selecting-app-service-as-target.png?raw=true "Selecting Microsoft Azure App Service as publish target")
 
 	_Selecting Microsoft Azure App Service as publish target_
 
 1. In the App Service dialog box, click **New...** to create a new App Service.
 
-	![Selecting the target App Service](images/selecting-the-target-app-service.png?raw=true "Selecting the target App Service")
+	![Selecting the target App Service](images/VSCommunity/selecting-the-target-app-service.png?raw=true "Selecting the target App Service")
 
 	_Selecting the target App Service_
 
 1. Complete all the fields in the **Create App Service** dialog box and click **Create**.
 
-	![Creating a new App Service](images/creating-a-new-app-service.png?raw=true "Creating a new App Service")
+	![Creating a new App Service](images/VSCommunity/creating-a-new-app-service.png?raw=true "Creating a new App Service")
 
 	_Creating a new App Service_
 
 1. In the Publish Web dialog box, click **Publish**.
 
-	![Publishing the Web App](images/publishing-the-web-app.png?raw=true "Publishing the Web App")
+	![Publishing the Web App](images/VSCommunity/publishing-the-web-app.png?raw=true "Publishing the Web App")
 
 	_Publishing the Web App_
 
@@ -118,7 +118,7 @@ This demo is composed of the following segments:
 
 1. In the Azure Portal locate your new App Service and open the **Settings** blade.
 
-	![Navigating to the settings blade](images/navigating-to-the-settings-blade.png?raw=true "Navigating to the settings blade")
+	![Navigating to the settings blade](images/VSCommunity/navigating-to-the-settings-blade.png?raw=true "Navigating to the settings blade")
 
 	_Navigating to the settings blade_
 
@@ -126,25 +126,25 @@ This demo is composed of the following segments:
 
 1. In the **Web app settings** blade, make sure **v4.6** is selected in **.NET Framework version** and click **On** in **Web sockets**.
 
-	![Enabling Web sockets](images/enabling-web-sockets.png?raw=true "Enabling Web sockets")
+	![Enabling Web sockets](images/VSCommunity/enabling-web-sockets.png?raw=true "Enabling Web sockets")
 
 	_Enabling Web sockets_
 
 1. Scroll down to the **App settings** section and add **DOCUMENT_DB_HOST** and **DOCUMENT_DB_AUTH_KEY** keys with the URI and PRIMARY KEY values from the DocumentDB account created in the Setup section.
 
-	![Adding the DocumentDB settings](images/adding-the-documentdb-settings.png?raw=true "Adding the DocumentDB settings")
+	![Adding the DocumentDB settings](images/VSCommunity/adding-the-documentdb-settings.png?raw=true "Adding the DocumentDB settings")
 
 	_Adding the DocumentDB settings_
 
 1. Click **Save** at the top of the **Web app settings** blade and navigate to the site using two browser instances.
 
-	![Saving the new settings](images/saving-the-new-settings.png?raw=true "Saving the new settings")
+	![Saving the new settings](images/VSCommunity/saving-the-new-settings.png?raw=true "Saving the new settings")
 
 	_Saving the new settings_
 
 1. Introduce a message from each browser instance and show that it is being broadcasted to the other instance.
 
-	![Testing the chatroom app](images/testing-the-chatroom-app.png?raw=true "Testing the chatroom app")
+	![Testing the chatroom app](images/VSCommunity/testing-the-chatroom-app.png?raw=true "Testing the chatroom app")
 
 	_Testing the chatroom app_
 
@@ -153,7 +153,7 @@ This demo is composed of the following segments:
 
 1. Go back to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
 
-	![Setting up continuous deployment](images/setting-up-continuos-deployment.png?raw=true "Setting up continuous deployment")
+	![Setting up continuous deployment](images/VSCommunity/setting-up-continuos-deployment.png?raw=true "Setting up continuous deployment")
 
 	_Setting up continuous deployment_
 
@@ -161,19 +161,19 @@ This demo is composed of the following segments:
 
 	> **Note:** The first time you will need to authorize Azure to access your GitHub information.
 
-	![Selecting GitHub as source](images/selecting-github-as-source.png?raw=true "Selecting GitHub as source")
+	![Selecting GitHub as source](images/VSCommunity/selecting-github-as-source.png?raw=true "Selecting GitHub as source")
 
 	_Selecting GitHub as source_
 
 1. Select the repository you created in the setup section from the list, leave **master** as the branch to deploy and click **OK**.
 
-	![Selecting the repository](images/selecting-the-repository.png?raw=true "Selecting the repository")
+	![Selecting the repository](images/VSCommunity/selecting-the-repository.png?raw=true "Selecting the repository")
 
 	_Selecting the repository_
 
 1. Now, the **Deployments** blade should open, else navigate to the **Continuous deployment** option again in the **Settings** blade. Show that the initial commit is the current active deployment.
 
-	![Showing the Deployments blade](images/showing-the-deployments-blade.png?raw=true "Showing the Deployments blade")
+	![Showing the Deployments blade](images/VSCommunity/showing-the-deployments-blade.png?raw=true "Showing the Deployments blade")
 
 	_Showing the Deployments blade_
 
@@ -182,19 +182,19 @@ This demo is composed of the following segments:
 
 1. Update the main title and push it to GitHub.
 
-	![Updating the index view](images/updating-the-index-view.png?raw=true "Updating the index view")
+	![Updating the index view](images/VSCommunity/updating-the-index-view.png?raw=true "Updating the index view")
 
 	_Updating the index view_
 
 1. Go back to the **Deployments** blade for your Web App and show the new deployment entry.
 
-	![Showing the new deployment entry](images/showing-the-new-deployment-entry.png?raw=true "Showing the new deployment entry")
+	![Showing the new deployment entry](images/VSCommunity/showing-the-new-deployment-entry.png?raw=true "Showing the new deployment entry")
 
 	_Showing the new deployment entry_
 
 1. Navigate to the site to show that its was updated.
 
-	![Showing the updated site](images/showing-the-updated-site.png?raw=true "Showing the updated site")
+	![Showing the updated site](images/VSCommunity/showing-the-updated-site.png?raw=true "Showing the updated site")
 
 	_Showing the updated site_
 
@@ -207,13 +207,13 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 
 1. To attach to the Web App, open **Server Explorer** and locate your web app under **Azure | App Service**, right-click it and select **Attach Debugger (Node.js)**.
 
-	![Attaching the debugger](images/attaching-the-debugger.png?raw=true "Attaching the debugger")
+	![Attaching the debugger](images/VSCommunity/attaching-the-debugger.png?raw=true "Attaching the debugger")
 
 	_Attaching the debugger_
 
 	> **Note:** If an error shows up while trying to attach the debugger to the Web App, it might be related with an issue with the Nodejs Tools (e.g. issue [#125](https://github.com/Microsoft/nodejstools/issues/125)). In order to workaround this issue, try attaching without Server Explorer by following  [this](https://github.com/Microsoft/nodejstools/wiki/Advanced-Debugging#attaching-without-server-explorer) document.
 
-	> ![Could not attach error](images/could-not-attach-error.png?raw=true "Could not attach error")
+	> ![Could not attach error](images/VSCommunity/could-not-attach-error.png?raw=true "Could not attach error")
 
 	> _Could not attach error_
 
@@ -221,13 +221,13 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 
 1. Refresh the site in the browser and check if the debugger is working.
 
-	![Checking that the debugger is working](images/checking-that-the-debugger-is-working.png?raw=true "Checking that the debugger is working")
+	![Checking that the debugger is working](images/VSCommunity/checking-that-the-debugger-is-working.png?raw=true "Checking that the debugger is working")
 
 	_Checking that the debugger is working_
 
 1. You can stream the latest logs by right-clicking your web app in the **Server Explorer** and selecting **View Streaming Logs**.
 
-	![Streaming logs](images/streaming-logs.png?raw=true "Streaming logs")
+	![Streaming logs](images/VSCommunity/streaming-logs.png?raw=true "Streaming logs")
 
 	_Streaming logs_
 
