@@ -71,7 +71,7 @@
             <td>Presentation (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>PPTX</a> | <a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td><a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo.md'>Demos</a></td>
+            <td>Demos (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
         </table>
       </div>
@@ -108,7 +108,7 @@
           </tr>
           <tr>
             <td><a href='Presentation/AzureDeployAndDebug'>Debugging and Deploying on Azure</a></td>
-            <td>This session shows how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.</td>
+            <td>This session shows how to deploy a Node.js application to Azure from Visual Studio Community as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio Community to a Node.js application deployed in Azure.</td>
           </tr>
         </table>
       </div>
