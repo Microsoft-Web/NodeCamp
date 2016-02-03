@@ -1,0 +1,110 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "databaseAccountName": {
+            "type": "string",
+            "metadata": {
+                "description": "The DocumentDB database account name."
+            }
+        },
+        "siteName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the web app that you wish to create."
+            }
+        },
+        "appServicePlanName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the App Service plan to use for hosting the web app."
+            }
+        },
+        "siteLocation": {
+            "type": "string",
+            "metadata": {
+                "description": "The location to use for creating the web app and hosting plan."
+            }
+        },
+        "pricingTier": {
+            "type": "string",
+            "allowedValues": [
+                "Free",
+                "Shared",
+                "Basic",
+                "Standard"
+            ],
+            "defaultValue": "Free",
+            "metadata": {
+                "description": "The pricing tier for the hosting plan."
+            }
+        },
+        "workerSize": {
+            "type": "string",
+            "allowedValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "defaultValue": "0",
+            "metadata": {
+                "description": "The instance size of the hosting plan (small, medium, or large)."
+            }
+        }
+    },
+    "variables": {
+        "databaseAccountTier": "Standard"
+    },
+    "resources": [
+        {
+            "apiVersion": "2015-04-08",
+            "type": "Microsoft.DocumentDb/databaseAccounts",
+            "name": "[parameters('databaseAccountName')]",
+            "location": "[parameters('siteLocation')]",
+            "properties": {
+                "name": "[parameters('databaseAccountName')]",
+                "databaseAccountOfferType": "[variables('databaseAccountTier')]"
+            }
+        },
+        {
+            "apiVersion": "2014-06-01",
+            "name": "[parameters('appServicePlanName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "location": "[parameters('siteLocation')]",
+            "properties": {
+                "name": "[parameters('appServicePlanName')]",
+                "sku": "[parameters('pricingTier')]"
+            }
+        },
+        {
+            "apiVersion": "2015-08-01",
+            "name": "[parameters('siteName')]",
+            "type": "Microsoft.Web/sites",
+            "location": "[parameters('siteLocation')]",
+            "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('appServicePlanName'))]"
+            ],
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('appServicePlanName'))]": "empty"
+            },
+            "properties": {
+                "name": "[parameters('siteName')]",
+                "serverFarmId": "[parameters('appServicePlanName')]",
+                "siteConfig": {
+                    "netFrameworkVersion": "v4.6",
+                    "webSocketsEnabled": true,
+                    "appSettings": [
+                        {
+                            "Name": "DOCUMENTDB_ENDPOINT",
+                            "Value": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', parameters('databaseAccountName'))).documentEndpoint]"
+                        },
+                        {
+                            "Name": "DOCUMENTDB_PRIMARY_KEY",
+                            "Value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', parameters('databaseAccountName')), '2015-04-08').primaryMasterKey]"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
