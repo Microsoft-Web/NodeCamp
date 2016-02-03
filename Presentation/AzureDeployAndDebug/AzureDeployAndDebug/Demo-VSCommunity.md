@@ -1,5 +1,5 @@
 ﻿<a name="title" />
-# Deploying and Debugging on Azure #
+# Provisioning, Deploying and Debugging on Azure #
 
 ---
 <a name="Overview" />

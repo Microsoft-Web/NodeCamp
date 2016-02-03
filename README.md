@@ -66,7 +66,7 @@
             <td>Demos (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
-            <td rowspan="2">Debugging and Deploying on Azure</td>
+            <td rowspan="2">Provisioning, Deploying and Debugging on Azure</td>
             <td rowspan="2">60</td>
             <td>Presentation (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>PPTX</a> | <a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.html'>HTML</a>)</td>
           </tr>
@@ -107,8 +107,8 @@
             <td>This session introduces the use of Socket.io in the client side of the application to listen and send messages to the server. Additionally, it shows how to include JS files like JQuery, bootstrap and socket.io to the client side.</td>
           </tr>
           <tr>
-            <td><a href='Presentation/AzureDeployAndDebug'>Debugging and Deploying on Azure</a></td>
-            <td>This session shows how to deploy a Node.js application to Azure from Visual Studio Community as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio Community to a Node.js application deployed in Azure.</td>
+            <td><a href='Presentation/AzureDeployAndDebug'>Provisioning, Deploying and Debugging on Azure</a></td>
+            <td>This session shows how to deploy a Node.js application to Azure from Visual Studio Community as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio Community to a Node.js application deployed in Azure and how to use Node.js Azure CLI to manage your resources in Azure.</td>
           </tr>
         </table>
       </div>
