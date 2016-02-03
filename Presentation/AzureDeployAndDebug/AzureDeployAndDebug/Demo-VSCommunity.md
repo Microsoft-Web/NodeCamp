@@ -5,7 +5,7 @@
 <a name="Overview" />
 ## Overview ##
 
-This demo introduces how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure.
+This demo introduces how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure and how to use Node.js Azure CLI to manage your resources in Azure. 
 
 <a id="goals" />
 ### Goals ###
@@ -15,6 +15,8 @@ In this demo, you will see how to:
 
 1. Remote debug a Node.js application from Visual Studio
 
+1. Manage your Azure resources using the Node.js Azure CLI
+
 <a name="technologies" />
 ### Key Technologies ###
 
@@ -23,12 +25,14 @@ In this demo, you will see how to:
 - [Azure DocumentDB][3]
 - [Node.js Tools for Visual Studio][4]
 - [Visual Studio Community 2015][5]
+- [Node.js Azure CLI Resource Manager][6]
 
 [1]: https://nodejs.org/
 [2]: http://azure.microsoft.com/
 [3]: http://azure.microsoft.com/en-us/services/documentdb/
 [4]: https://www.visualstudio.com/features/node-js-vs
 [5]: https://www.visualstudio.com/products/visual-studio-community-vs
+[6]: https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/
 
 <a name="Setup" />
 ### Setup and Configuration ###
@@ -43,14 +47,6 @@ Follow these steps to set up your environment for the demo.
 1. Install [Node.js](https://nodejs.org/en/download/).
 
 1. Install [Node.js Tools for Visual Studio](http://aka.ms/getntvs).
-
-1. Create a DocumentDB database account. Details [here] (https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-account/).
-
-1. After the DocumentDB account is created, navigate to the Keys blade of your DocumentDB account and take note of the URI and PRIMARY KEY values. You will use them later on.
-
-	![Copying the DocumentDB account keys](images/VSCommunity/copying-the-keys.png?raw=true "Copying the DocumentDB account keys")
-
-	_Copying the DocumentDB account keys_
 
 1. Create a new repository in your GitHub account and import the code from the **source\Begin** folder. Details [here](https://help.github.com/articles/create-a-repo/).
 
@@ -72,16 +68,56 @@ Follow these steps to set up your environment for the demo.
 	> ![Path Too Long Warning](images/VSCommunity/path-too-long-warning-dialog-box.png?raw=true "Path Too Long Warning")
 
 	> _Installing Missing npm Packages_
+	
+1. Install [Node.js Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/#install-and-use-nodejs-and-npm)
 
 <a name="Demo" />
 ## Demo ##
 This demo is composed of the following segments:
 
-1. [Deploying to Azure with Visual Studio](#segment1)
-1. [Deploying to Azure with GitHub](#segment2)
-1. [Remote debugging a node application with Visual Studio and Azure](#segment3)
+1. [Provisioning Azure resources using Node.js Azure CLI](#segment1)
+1. [Deploying to Azure with Visual Studio](#segment2)
+1. [Deploying to Azure with GitHub](#segment3)
+1. [Remote debugging a node application with Visual Studio and Azure](#segment4)
 
 <a name="segment1" />
+### Provisioning Azure resources using Node.js Azure CLI ###
+> **Note:** In the following section you will see how to use the Azure CLI tool to create the Azure resources for the web app. If you want you can use the [Azure Portal](https://portal.azure.com/) to perform the same operations.
+
+1. In the command prompt/terminal run **azure login** to authenticate interactively.
+
+	![Azure Interactive Login](images/VSCode/cli-azure-interactive-login.png?raw=true "Azure Interactive Login")
+
+1. Copy the code offered to you, above, and open a browser to http://aka.ms/devicelogin. Enter the code, and then you are prompted to enter the username and password for the identity you want to use. When that process completes, the command shell completes the log in process. It might look something like:
+
+	![Interactive Login completed](images/VSCode/cli-azure-interactive-login-complete.png?raw=true "Interactive Login completed")
+
+	> **Note:** Interactive authentication is used in this case because it works with either school/work or Microsoft accounts. If you have a school/work account you can also use the non-interactive authentication method, as it's explained [here](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-connect/#use-non-interactive-log-in-with-a-work-or-school-account)
+
+1. Run **azure config mode arm** to switch to Azure CLI Resource Manager commands.
+
+1. Run **azure group create -n "chatroomRG" -l "East US"** to create a new Resource Group named _chatroomRM_. 
+
+	![Creating a new Azure Resource Group](images/VSCode/creating-azure-resource-group.png?raw=true "Creating a new Azure Resource Group")
+	
+	_Creating a new Azure Resource Group_
+	
+1. Open the file **azuredeploy.parameters.json** located in the **source/Assets** folder and enter parameter values suitable for your environment:
+
+	- **documentDbAccountName**: The name of the DocumentDB database. Use only lowercase letters, numbers and '-' character.
+	- **siteName**: With the name of the web app that you wish to create.
+	- **appServicePlanName**: With the name of the App Service plan to use for hosting the web app.
+	- **East US**: If you want to use a different location for the web app and the service plan.
+	
+	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
+
+1. Run **azure group deployment create -f ..\..\Assets\azuredeploy.json -e ..\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to execute the deploy and create the Azure resources (Azure Web App and Azure DocumentDB).
+
+	![Creating the Azure Resources](images/VSCode/creating-azure-web-app.png?raw=true "Creating the Azure Resources")
+	
+	_Creating the Azure Resources_
+
+<a name="segment2" />
 ### Deploying to Azure with Visual Studio ###
 
 1. In Visual Studio, right-click the project and select **Publish...**.
@@ -148,7 +184,7 @@ This demo is composed of the following segments:
 
 	_Testing the chatroom app_
 
-<a name="segment2" />
+<a name="segment3" />
 ### Deploying to Azure with GitHub ###
 
 1. Go back to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
@@ -198,7 +234,7 @@ This demo is composed of the following segments:
 
 	_Showing the updated site_
 
-<a name="segment3" />
+<a name="segment4" />
 ### Remote debugging a node application with Visual Studio and Azure ###
 
 Node Tools for Visual Studio comes with several advanced debugging features such as conditional breakpoints, “hit count” breakpoints, tracepoints and remote debugging support for Windows.
@@ -236,6 +272,6 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to set up remote debugging with Visual Studio to a Node.js application deployed in Azure.
+By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to set up remote debugging with Visual Studio to a Node.js application deployed in Azure and how to provision Azure resources using the Node.js Azure CLI Resource Manager.
 
 ---

@@ -92,11 +92,11 @@ This demo is composed of the following segments:
 	
 	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
 
-1. Run **azure group deployment create -f ..\..\Assets\azuredeploy.json -e ..\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to create the Azure Web App
+1. Run **azure group deployment create -f ..\..\Assets\azuredeploy.json -e ..\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to execute the deploy and create the Azure resources (Azure Web App and Azure DocumentDB).
 
-	![Creating a new Azure Web App](images/VSCode/creating-azure-web-app.png?raw=true "Creating a new Azure Web App")
+	![Creating the Azure Resources](images/VSCode/creating-azure-web-app.png?raw=true "Creating the Azure Resources")
 	
-	_Creating a new Azure Web App_
+	_Creating the Azure Resources_
 
 	
 <a name="segment2" />
@@ -167,6 +167,6 @@ This demo is composed of the following segments:
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to deploy a Node.js application to Azure from GitHub. Additionally, you have learned how provision Azure resources using the Node.js Azure CLI Resource Manager.
+By completing this demo, you have learned how to deploy a Node.js application to Azure from GitHub. Additionally, you have learned how to provision Azure resources using the Node.js Azure CLI Resource Manager.
 
 ---
