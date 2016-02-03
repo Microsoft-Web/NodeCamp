@@ -132,17 +132,11 @@ This demo is composed of the following segments:
 
 	_Selecting Microsoft Azure App Service as publish target_
 
-1. In the App Service dialog box, click **New...** to create a new App Service.
+1. In the App Service dialog box, select the Web App you created in the previous step and click **OK**
 
 	![Selecting the target App Service](images/VSCommunity/selecting-the-target-app-service.png?raw=true "Selecting the target App Service")
 
 	_Selecting the target App Service_
-
-1. Complete all the fields in the **Create App Service** dialog box and click **Create**.
-
-	![Creating a new App Service](images/VSCommunity/creating-a-new-app-service.png?raw=true "Creating a new App Service")
-
-	_Creating a new App Service_
 
 1. In the Publish Web dialog box, click **Publish**.
 
@@ -150,33 +144,7 @@ This demo is composed of the following segments:
 
 	_Publishing the Web App_
 
-1. Open a web browser and navigate to the [Azure Portal](https://portal.azure.com/).
-
-1. In the Azure Portal locate your new App Service and open the **Settings** blade.
-
-	![Navigating to the settings blade](images/VSCommunity/navigating-to-the-settings-blade.png?raw=true "Navigating to the settings blade")
-
-	_Navigating to the settings blade_
-
-1. In the **Settings** blade, select **Application settings**.
-
-1. In the **Web app settings** blade, make sure **v4.6** is selected in **.NET Framework version** and click **On** in **Web sockets**.
-
-	![Enabling Web sockets](images/VSCommunity/enabling-web-sockets.png?raw=true "Enabling Web sockets")
-
-	_Enabling Web sockets_
-
-1. Scroll down to the **App settings** section and add **DOCUMENT_DB_HOST** and **DOCUMENT_DB_AUTH_KEY** keys with the URI and PRIMARY KEY values from the DocumentDB account created in the Setup section.
-
-	![Adding the DocumentDB settings](images/VSCommunity/adding-the-documentdb-settings.png?raw=true "Adding the DocumentDB settings")
-
-	_Adding the DocumentDB settings_
-
-1. Click **Save** at the top of the **Web app settings** blade and navigate to the site using two browser instances.
-
-	![Saving the new settings](images/VSCommunity/saving-the-new-settings.png?raw=true "Saving the new settings")
-
-	_Saving the new settings_
+1. Navigate to the site using two browser instances.
 
 1. Introduce a message from each browser instance and show that it is being broadcasted to the other instance.
 
@@ -187,7 +155,7 @@ This demo is composed of the following segments:
 <a name="segment3" />
 ### Deploying to Azure with GitHub ###
 
-1. Go back to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
+1. Go to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
 
 	![Setting up continuous deployment](images/VSCommunity/setting-up-continuos-deployment.png?raw=true "Setting up continuous deployment")
 
