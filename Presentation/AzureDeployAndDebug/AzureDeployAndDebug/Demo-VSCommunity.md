@@ -109,13 +109,41 @@ This demo is composed of the following segments:
 	- **appServicePlanName**: With the name of the App Service plan to use for hosting the web app.
 	- **East US**: If you want to use a different location for the web app and the service plan.
 	
+	
 	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
 
+	````json
+	{
+		"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+		"contentVersion": "1.0.0.0",
+		"parameters": {
+			"databaseAccountName": { 
+			    "value": "documentDbAccountName"
+			},
+			"siteName": {
+			    "value": "siteName"
+			},
+			"appServicePlanName": {
+			    "value": "appServicePlanName"
+			},
+			"siteLocation": {
+			    "value": "East US"
+			}
+		}
+	}
+	````
+	
 1. Run **azure group deployment create -f ..\\..\Assets\azuredeploy.json -e ..\\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to execute the deploy and create the Azure resources (Azure Web App and Azure DocumentDB).
 
 	![Creating the Azure Resources](images/VSCode/creating-azure-web-app.png?raw=true "Creating the Azure Resources")
 	
 	_Creating the Azure Resources_
+
+1. Go to the [Azure Portal](https://portal.azure.com/) and check that the Resource Group was successfully deployed.
+
+	![Checking Azure Resources](images/VSCommunity/checking-azure-resources.png?raw=true "Checking Azure Resources")
+
+	_Checking Azure Resources_
 
 <a name="segment2" />
 ### Deploying to Azure with Visual Studio ###
@@ -155,7 +183,7 @@ This demo is composed of the following segments:
 <a name="segment3" />
 ### Deploying to Azure with GitHub ###
 
-1. Go to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
+1. Go back to the [Azure Portal](https://portal.azure.com/). In the Settings blade of your Web App, locate the **Publishing** section and click **Continuous deployment**.
 
 	![Setting up continuous deployment](images/VSCommunity/setting-up-continuos-deployment.png?raw=true "Setting up continuous deployment")
 
