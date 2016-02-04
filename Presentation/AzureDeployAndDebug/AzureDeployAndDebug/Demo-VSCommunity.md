@@ -5,7 +5,7 @@
 <a name="Overview" />
 ## Overview ##
 
-This demo introduces how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure and how to use Node.js Azure CLI to manage your resources in Azure. 
+This demo introduces how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio to a Node.js application deployed in Azure and how to use Azure CLI to manage your resources in Azure. 
 
 <a id="goals" />
 ### Goals ###
@@ -15,7 +15,7 @@ In this demo, you will see how to:
 
 1. Remote debug a Node.js application from Visual Studio
 
-1. Manage your Azure resources using the Node.js Azure CLI
+1. Manage your Azure resources using the Azure CLI
 
 <a name="technologies" />
 ### Key Technologies ###
@@ -25,7 +25,7 @@ In this demo, you will see how to:
 - [Azure DocumentDB][3]
 - [Node.js Tools for Visual Studio][4]
 - [Visual Studio Community 2015][5]
-- [Node.js Azure CLI Resource Manager][6]
+- [Azure CLI][6]
 
 [1]: https://nodejs.org/
 [2]: http://azure.microsoft.com/
@@ -69,19 +69,19 @@ Follow these steps to set up your environment for the demo.
 
 	> _Installing Missing npm Packages_
 	
-1. Install [Node.js Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/#install-and-use-nodejs-and-npm)
+1. Install [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/#install-and-use-nodejs-and-npm)
 
 <a name="Demo" />
 ## Demo ##
 This demo is composed of the following segments:
 
-1. [Provisioning Azure resources using Node.js Azure CLI](#segment1)
+1. [Provisioning Azure resources using Azure CLI](#segment1)
 1. [Deploying to Azure with Visual Studio](#segment2)
 1. [Deploying to Azure with GitHub](#segment3)
 1. [Remote debugging a node application with Visual Studio and Azure](#segment4)
 
 <a name="segment1" />
-### Provisioning Azure resources using Node.js Azure CLI ###
+### Provisioning Azure resources using Azure CLI ###
 > **Note:** In the following section you will see how to use the Azure CLI tool to create the Azure resources for the web app. If you want you can use the [Azure Portal](https://portal.azure.com/) to perform the same operations.
 
 1. In the command prompt/terminal run **azure login** to authenticate interactively.
@@ -240,6 +240,6 @@ NTVS has special support for remote debugging of code running on Azure Web Sites
 <a name="summary" />
 ## Summary ##
 
-By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to set up remote debugging with Visual Studio to a Node.js application deployed in Azure and how to provision Azure resources using the Node.js Azure CLI Resource Manager.
+By completing this demo, you have learned how to deploy a Node.js application to Azure from Visual Studio as well as from GitHub. Additionally, you have learned how to set up remote debugging with Visual Studio to a Node.js application deployed in Azure and how to provision Azure resources using Azure CLI Resource Manager.
 
 ---
