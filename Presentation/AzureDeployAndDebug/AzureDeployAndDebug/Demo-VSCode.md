@@ -92,7 +92,7 @@ This demo is composed of the following segments:
 	
 	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
 
-1. Run **azure group deployment create -f ..\..\Assets\azuredeploy.json -e ..\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to execute the deploy and create the Azure resources (Azure Web App and Azure DocumentDB).
+1. Run **azure group deployment create -f ..\\..\Assets\azuredeploy.json -e ..\\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to execute the deploy and create the Azure resources (Azure Web App and Azure DocumentDB).
 
 	![Creating the Azure Resources](images/VSCode/creating-azure-web-app.png?raw=true "Creating the Azure Resources")
 	
