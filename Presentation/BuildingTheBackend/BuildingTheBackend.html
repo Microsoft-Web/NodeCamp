@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 	<head>
@@ -20,6 +20,9 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
 
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="../../_layouts/custom.css">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -40,11 +43,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-state="title">
 					<h1>Building the Backend</h1>
 				</section>
 
-				<section>
+				<section data-state="agenda">
 					<h2>Agenda</h2>
 					<ol>
 						<li>What are Web Sockets?</li>
@@ -54,7 +57,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>What are Web Sockets?</h2>
 					</section>
 					<section>
@@ -76,7 +79,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Using Socket.IO to connect users, broadcast and receive messages</h2>
 					</section>
 					<section>
@@ -93,14 +96,14 @@ npm install --save socket.io
 							</li>
 						</ul>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Using Socket I.O to connect users, send and receive messages</h3>
 					</section>
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Using a NoSQL Database</h2>
 					</section>
 					<section>
@@ -123,7 +126,7 @@ npm install --save socket.io
 							<li>Tunable consistency</li>
 							<li>Designed to scale</li>
 						</ul>
-						<img data-src="images/azure-documentdb-cloud.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-documentdb-cloud.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>DocumentDB</h2>
@@ -160,17 +163,17 @@ npm install --save socket.io
 					</section>
 					<section>
 						<h2>DocumentDB: A Document Store</h2>
-						<img data-src="images/azure-documentdb-a-document-store.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-documentdb-a-document-store.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>DocumentDB: The Basics</h2>
-						<img data-src="images/azure-documentdb-the-basics.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-documentdb-the-basics.png" alt="Down arrow">
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Saving messages to Azure DocumentDB</h3>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Setting environment variables</h3>
 					</section>
@@ -200,8 +203,8 @@ npm install --save mongodb
 					</section>
 				</section>
 
-				<section style="text-align: left;">
-					<h2>Microsoft</h2>
+				<section style="text-align: left;"  data-state="the-end">
+                    <img data-src="../../_layouts/MicrosoftLogo.png" />
 					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
 The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
 </small></p>
