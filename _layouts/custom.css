@@ -1,0 +1,63 @@
+body {
+  background: rgb(1,113,176);
+  background-color: rgb(1,113,176); 
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #e7ad52; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #e7ad52; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #e7ad52; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #e7ad52; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #f3d7ac; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #f3d7ac; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #f3d7ac; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #f3d7ac; }
+
+
+.reveal section img {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+
+html.agenda body {
+    background: rgb(29,67,128);
+    background-color: rgb(29,67,128);
+}
+
+html.title body {
+    background-color: rgb(40,159,215);
+    background: rgb(40,159,215);
+}
+
+html.demo body {
+    background: rgb(60,69,79);
+    background-color: rgb(60,69,79);
+}
+
+html.the-end body {
+    background: black;
+    background-color: black;
+}

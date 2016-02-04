@@ -20,6 +20,9 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
 
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="../../_layouts/custom.css">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -40,11 +43,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-state="title">
 					<h1>Provisioning, Deploying and Debugging on Azure</h1>
 				</section>
 
-				<section>
+				<section data-state="agenda">
 					<h2>Agenda</h2>
 					<ol>
 						<li>Azure Web Apps Overview</li>
@@ -56,7 +59,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Azure Web Apps Overview</h2>
 					</section>
 					<section>
@@ -74,7 +77,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<img data-src="images/azure-web-apps.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/azure-web-apps.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>Azure Apps</h2>
@@ -96,7 +99,7 @@
 				</section>
 
                 <section>
-                    <section>
+                    <section data-state="head">
                         <h2>Provisioning Azure Resources using Azure CLI</h2>
                     </section>
                     <section>
@@ -154,14 +157,14 @@ azuredeploy.parameters.json chatroomRG chatroomDeploy
                             </li>
                         </ul>
                     </section>
-                    <section>
+                    <section data-state="demo">
                         <h2>Demo</h2>
                         <h3>Provisioning Azure Resources using Azure CLI</h3>
                     </section>
                 </section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Deploying to Azure with Visual Studio</h2>
 					</section>
 					<section>
@@ -171,42 +174,42 @@ azuredeploy.parameters.json chatroomRG chatroomDeploy
                             <li>Create Web App during deploy</li>
 							<li>Manage with Server Explorer</li>
 						</ul>
-						<img data-src="images/visual-studio-azure-service-web-apps.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/visual-studio-azure-service-web-apps.png" alt="Down arrow">
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Deploying to Azure with Visual Studio</h3>
 					</section>
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Deploying to Azure with GitHub</h2>
 					</section>
 					<section>
 						<h2>Continuous Deployment</h2>
-						<img data-src="images/continuous-deployment.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/continuous-deployment.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>Source Control</h2>
 						<p>Choose your own adventure!</p>
-						<img data-src="images/source-control.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/source-control.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>Deployments</h2>
-						<img data-src="images/deployments.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/deployments.png" alt="Down arrow">
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Deploying to Azure with GitHub</h3>
 					</section>
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Remote debugging with Visual Studio</h2>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Remote Debugging a Node.js application with Visual Studio and Azure</h3>
 					</section>
@@ -216,11 +219,11 @@ azuredeploy.parameters.json chatroomRG chatroomDeploy
 					<section>
 						<h2>Get started</h2>
 						<p>Visit <a href="https://azure.microsoft.com/">azure.microsoft.com</a></p>
-						<img data-src="images/get-started.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/get-started.png" alt="Down arrow">
 					</section>
 				</section>
 
-				<section style="text-align: left;">
+				<section style="text-align: left;" data-state="the-end">
 					<h2>Microsoft</h2>
 					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
 The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
