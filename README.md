@@ -108,7 +108,7 @@
           </tr>
           <tr>
             <td><a href='Presentation/AzureDeployAndDebug'>Provisioning, Deploying and Debugging on Azure</a></td>
-            <td>This session shows how to deploy a Node.js application to Azure from Visual Studio Community as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio Community to a Node.js application deployed in Azure and how to use Node.js Azure CLI to manage your resources in Azure.</td>
+            <td>This session shows how to deploy a Node.js application to Azure from Visual Studio Community as well as from GitHub. Additionally, it explains how to do remote debugging with Visual Studio Community to a Node.js application deployed in Azure and how to use Azure CLI to manage your resources in Azure.</td>
           </tr>
         </table>
       </div>
