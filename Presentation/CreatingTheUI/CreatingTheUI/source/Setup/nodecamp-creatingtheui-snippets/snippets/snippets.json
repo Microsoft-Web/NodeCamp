@@ -1,0 +1,60 @@
+{
+	"Creating The UI Adding Bootstrap CSS": {
+		"prefix": "CreatingTheUI-AddingBootstrapCSS",
+		"body": [
+			"meta(charset=\"utf-8\")",
+			"meta(http-equiv=\"X-UA-Compatible\" content=\"IE=edge\")",
+			"link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')",
+			"link(rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css')"
+		],
+		"description": "Creating The UI Adding Bootstrap CSS"
+	},
+	"Creating The UI Adding Bootstrap JS": {
+		"prefix": "CreatingTheUI-AddingBootstrapJS",
+		"body": [
+			"script(type='text/javascript' src='/javascripts/bootstrap.min.js')"
+		],
+		"description": "Creating The UI Adding Bootstrap JS"
+	},
+	"Creating The UI Create New Block": {
+		"prefix": "CreatingTheUI-CreateNewBlock",
+		"body": [
+			"block body_end"
+		],
+		"description": "Creating The UI Create New Block"
+	},
+	"Creating The UI Add Header": {
+		"prefix": "CreatingTheUI-AddHeader",
+		"body": [
+			".wrap",
+			"\t.container-fluid",
+			"\t\th1 Welcome to the Node Chatroom",
+			"\t\t#messages",
+			"",
+			"\t\t.push"
+		],
+		"description": "Creating The UI Add Header"
+	},
+	"Creating The UI Add Input And Button": {
+		"prefix": "CreatingTheUI-AddInputAndButton",
+		"body": [
+			".footer",
+			"\t.container-fluid",
+			"\t\t.row",
+			"\t\t\t.col-xs-8.col-sm-9",
+			"\t\t\t\tinput(type=\"text\" id=\"message-box\" class=\"form-control input-lg\" placeholder=\"Write a message here...\" rows=\"3\")",
+			"\t\t\t.col-xs-4.col-sm-3",
+			"\t\t\t\tbutton#send-message-btn.btn.btn-primary.btn-lg.btn-block Send Message"
+		],
+		"description": "Creating The UI Add Input And Button"
+	},
+	"Creating The UI Add JS": {
+		"prefix": "CreatingTheUI-AddJS",
+		"body": [
+			"block body_end",
+			"\tscript(type='text/javascript' src='/javascripts/index.js')"
+		],
+		"description": "Creating The UI Add JS"
+	}
+}
+

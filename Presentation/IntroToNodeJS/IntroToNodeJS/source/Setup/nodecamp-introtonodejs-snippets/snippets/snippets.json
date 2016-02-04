@@ -1,0 +1,84 @@
+{
+	"Node JS Introduction Hello World": {
+		"prefix": "NodeJsIntroduction-HelloWorld",
+		"body": [
+			"console.log('Hello world');"
+		],
+		"description": "Node JS Introduction Hello World"
+	},
+	"Node JS Introduction Create HTTP Server": {
+		"prefix": "NodeJsIntroduction-CreateHttpServer",
+		"body": [
+			"var http = require('http');",
+			"",
+			"var server = http.createServer(function (request, response) {",
+			"\tresponse.writeHead(200, { \"Content-Type\": \"text/plain\" });",
+			"\tresponse.end(\"Hello World\\n\");",
+			"});",
+			"",
+			"server.listen(7000, \"127.0.0.1\");",
+			"",
+			"console.log('Navigate to http://localhost:7000');"
+		],
+		"description": "Node JS Introduction Create HTTP Server"
+	},
+	"Node JS Introduction File Reader Async": {
+		"prefix": "NodeJsIntroduction-FileReaderAsync",
+		"body": [
+			"var fs = require('fs');",
+			"",
+			"fs.readFile('package.json', function (err, buf) {",
+			"\tconsole.log(buf.toString());",
+			"});"
+		],
+		"description": "Node JS Introduction File Reader Async"
+	},
+	"Node JS Introduction File Reader Sync": {
+		"prefix": "NodeJsIntroduction-FileReaderSync",
+		"body": [
+			"var fs = require('fs');",
+			"",
+			"var contents = fs.readFileSync('package.json').toString();",
+			"console.log(contents);"
+		],
+		"description": "Node JS Introduction File Reader Sync"
+	},
+	"Node JS Introduction TCP Client": {
+		"prefix": "NodeJsIntroduction-TcpClient",
+		"body": [
+			"var net = require('net');",
+			"",
+			"var client = new net.Socket();",
+			"",
+			"client.connect(7000, \"127.0.0.1\");",
+			"",
+			"client.on('data', function (data) {",
+			"\tconsole.log('Data: ' + data);",
+			"\tclient.destroy();",
+			"});",
+			"",
+			"// Add a 'close' event handler for the client socket",
+			"client.on('close', function () {",
+			"\tconsole.log('Connection closed');",
+			"});"
+		],
+		"description": "Node JS Introduction TCP Client"
+	},
+	"Node JS Introduction TCP Server": {
+		"prefix": "NodeJsIntroduction-TcpServer",
+		"body": [
+			"var net = require('net');",
+			"",
+			"// The handler argument is automatically set as a listener for the 'connection' event",
+			"var server = net.createServer(function (socket) {"
+			"\tconsole.log(\"Connection from \" + socket.remoteAddress);",
+			"\tsocket.end(\"Hello World\\n\");",
+			"});",
+			"",
+			"server.listen(7000, \"127.0.0.1\");",
+			"",
+			"console.log('TCP server running at 127.0.0.1:7000');"
+		],
+		"description": "Node JS Introduction TCP Server"
+	}
+}

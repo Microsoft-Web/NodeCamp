@@ -1,0 +1,11 @@
+
+{
+	"Connecting The Frontend To The Backend Include index.js file": {
+		"prefix": "ConnectingFrontAndBack - IncludeIndexFile",
+		"body": [
+	        "block body_end",
+		    "\tscript(type='text/javascript' src='/javascripts/index.js')"
+		],
+		"description": "Connecting The Frontend To The Backend Include index.js file"
+	}
+}

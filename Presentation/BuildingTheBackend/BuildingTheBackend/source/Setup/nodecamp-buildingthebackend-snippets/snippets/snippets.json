@@ -1,0 +1,224 @@
+{
+	"Node JS Socket.IO MongoDB Save Message": {
+		"prefix": "NodeJsSocketIO-mongoDB-save-message",
+		"body": [
+			"mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {",
+			"\tif (err) {",
+			"\t\tconsole.warn(err.message);",
+			"\t} else {",
+			"\t\tvar collection = db.collection('chat messages');",
+			"\t\tcollection.insert({ content: msg }, function (err, o) {",
+			"\t\t\tif (err) { console.warn(err.message); }",
+			"\t\t\telse { console.log(\"chat message inserted into db: \" + msg); }",
+			"\t\t});",
+			"\t}",
+			"});"
+		],
+		"description": "Node JS Socket.IO MongoDB Save Message"
+	},
+	"Node JS Socket.IO MongoDB Retrieve Messages": {
+		"prefix": "NodeJsSocketIO-mongoDB-retrieve-messages",
+		"body": [
+			"mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {",
+			"\tif (err){",
+			"\t\tconsole.warn(err.message);",
+			"\t} else {",
+			"\t\tvar collection = db.collection('chat messages');",
+			"\t\tvar stream = collection.find().sort().limit(10).stream();",
+			"\t\tstream.on('data', function (chat) { console.log('emitting chat'); socket.emit('chat', chat.content); });",
+			"\t}",
+			"});"
+		],
+		"description": "Node JS Socket.IO MongoDB Retrieve Messages"
+	},
+	"Building The Backend Socket.IO On Disconnect": {
+		"prefix": "BuildingTheBackend-SocketioOnDisconnect",
+		"body": [
+			"socket.on('disconnect', function () {",
+			"\tconsole.log('user disconnected');",
+			"});"
+		],
+		"description": "Building The Backend Socket.IO On Disconnect"
+	},
+	"Building The Backend Socket.IO On Connection": {
+		"prefix": "BuildingTheBackend-SocketioOnConnection",
+		"body": [
+			"module.exports = function (io, config) {",
+			"\tio.on('connection', function (socket) {",
+			"\t\tconsole.log('a user connected');",
+			"\t});",
+			"};"
+		],
+		"description": "Building The Backend Socket.IO On Connection"
+	},
+	"Building The Backend Socket.IO On Chat": {
+		"prefix": "BuildingTheBackend-SocketioOnChat",
+		"body": [
+			"socket.on('chat', function (msg) {",
+			"\tsocket.broadcast.emit('chat', msg);",
+			"});"
+		],
+		"description": "Building The Backend Socket.IO On Chat"
+	},
+	"Building The Backend Socket.IO Initialization": {
+		"prefix": "BuildingTheBackend-SocketioInitialization",
+		"body": [
+			"var io = require('socket.io')(server);",
+			"require('../socketio')(io);"
+		],
+		"description": "Building The Backend Socket.IO Initialization"
+	},
+	"Building The Backend DocumentDB Utils Structure": {
+		"prefix": "BuildingTheBackend-DocDBUtilsStructure",
+		"body": [
+			"var DocDBUtils = {",
+			"};",
+			"",
+			"module.exports = DocDBUtils;"
+		],
+		"description": "Building The Backend DocumentDB Utils Structure"
+	},
+	"Building The Backend DocumentDB Utils InitCollection": {
+		"prefix": "BuildingTheBackend-DocDBUtilsInitCollection",
+		"body": [
+			"initCollection: function (client, databaseId, collectionId, callback) {",
+			"\tvar self = this;",
+			"",
+			"\tDocDBUtils.getOrCreateDatabase(client, databaseId, function (err, db) {",
+			"\t\tif (err) {",
+			"\t\t\tcallback(err);",
+			"\t\t} else {",
+			"\t\t\tDocDBUtils.getOrCreateCollection(client, db._self, collectionId, callback);",
+			"\t\t}",
+			"\t});",
+			"}"
+		],
+		"description": "Building The Backend DocumentDB Utils InitCollection"
+	},
+	"Building The Backend DocumentDB Utils GetOrCreateDatabase": {
+		"prefix": "BuildingTheBackend-DocDBUtilsGetOrCreateDatabase",
+		"body": [
+			"getOrCreateDatabase: function (client, databaseId, callback) {",
+			"\tvar querySpec = {",
+			"\t\tquery: 'SELECT * FROM root r WHERE r.id=@id',",
+			"\t\tparameters: [{",
+			"\t\t\tname: '@id',",
+			"\t\t\tvalue: databaseId",
+			"\t\t}]",
+			"\t};",
+			"",
+			"\tclient.queryDatabases(querySpec).toArray(function (err, results) {",
+			"\t\tif (err) {",
+			"\t\t\tcallback(err);",
+			"\t\t} else {",
+			"\t\t\tif (results.length === 0) {",
+			"\t\t\t\tvar databaseSpec = {",
+			"\t\t\t\t\tid: databaseId",
+			"\t\t\t\t};",
+			"",
+			"\t\t\t\tclient.createDatabase(databaseSpec, function (err, created) {",
+			"\t\t\t\t\tcallback(null, created);",
+			"\t\t\t\t});",
+			"\t\t\t} else {",
+			"\t\t\t\tcallback(null, results[0]);",
+			"\t\t\t}",
+			"\t\t}",
+			"\t});",
+			"},"
+		],
+		"description": "Building The Backend DocumentDB Utils GetOrCreateDatabase"
+	},
+	"Building The Backend DocumentDB Utils GetOrCreateCollection": {
+		"prefix": "BuildingTheBackend-DocDBUtilsGetOrCreateCollection",
+		"body": [
+			"getOrCreateCollection: function (client, databaseLink, collectionId, callback) {",
+			"\tvar querySpec = {",
+			"\t\tquery: 'SELECT * FROM root r WHERE r.id=@id',",
+			"\t\tparameters: [{",
+			"\t\t\tname: '@id',",
+			"\t\t\tvalue: collectionId",
+			"\t\t}]",
+			"\t};",
+			"",
+			"\tclient.queryCollections(databaseLink, querySpec).toArray(function (err, results) {",
+			"\t\tif (err) {",
+			"\t\t\tcallback(err);",
+			"\t\t} else {",
+			"\t\t\tif (results.length === 0) {",
+			"\t\t\t\tvar collectionSpec = {",
+			"\t\t\t\t\tid: collectionId",
+			"\t\t\t\t};",
+			"",
+			"\t\t\t\tvar requestOptions = {",
+			"\t\t\t\t\tofferType: 'S1'",
+			"\t\t\t\t};",
+			"",
+			"\t\t\t\tclient.createCollection(databaseLink, collectionSpec, requestOptions, function (err, created) {",
+			"\t\t\t\t\tcallback(null, created);",
+			"\t\t\t\t});",
+			"\t\t\t} else {",
+			"\t\t\t\tcallback(null, results[0]);",
+			"\t\t\t}",
+			"\t\t}",
+			"\t});",
+			"},"
+		],
+		"description": "Building The Backend DocumentDB Utils GetOrCreateCollection"
+	},
+	"Building The Backend DocumentDB Save Messages": {
+		"prefix": "BuildingTheBackend-DocDBSaveMessages",
+		"body": [
+			"docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {",
+			"\tif (err) {",
+			"\t\tconsole.warn(err.message);",
+			"\t} else {",
+			"\t\tvar documentDefinition = { content: msg };",
+			"\t\tdocDbClient.createDocument(collection._self, documentDefinition, function (err, o) {",
+			"\t\t\tif (err) {",
+			"\t\t\t\tconsole.warn(err.message);",
+			"\t\t\t} else {",
+			"\t\t\t\tconsole.log(\"chat message inserted into db: \" + msg);",
+			"\t\t\t}",
+			"\t\t});",
+			"\t}",
+			"});"
+		],
+		"description": "Building The Backend DocumentDB Save Messages"
+	},
+	"Building The Backend DocumentDB Load Messages": {
+		"prefix": "BuildingTheBackend-DocDBLoadMessages",
+		"body": [
+			"docdbUtils.initCollection(docDbClient, 'chatroom', 'messages', function (err, collection) {",
+			"\tif (err) {",
+			"\t\tconsole.warn(err.message);",
+			"\t} else {",
+			"\t\tdocDbClient.queryDocuments(collection._self, 'SELECT r.content FROM root r')",
+			"\t\t\t.forEach(function (err, msg) {",
+			"\t\t\t\tif (msg) {",
+			"\t\t\t\t\tconsole.log('emitting chat');",
+			"\t\t\t\t\tsocket.emit('chat', msg.content);",
+			"\t\t\t\t}",
+			"\t\t\t});",
+			"\t}",
+			"});"
+		],
+		"description": "Building The Backend DocumentDB Load Messages"
+	},
+	"Building The Backend DocumentDB Initialization": {
+		"prefix": "BuildingTheBackend-DocDBInitialization",
+		"body": [
+			"var DocumentDBClient = require('documentdb').DocumentClient;",
+			"var docdbUtils = require('./docDBUtils');"
+		],
+		"description": "Building The Backend DocumentDB Initialization"
+	},
+	"Building The Backend DocumentDB Client Initialization": {
+		"prefix": "BuildingTheBackend-DocDBClientInitialization",
+		"body": [
+			"var docDbClient = new DocumentDBClient(process.env.DOCUMENT_DB_HOST, {",
+			"\tmasterKey: process.env.DOCUMENT_DB_AUTH_KEY",
+			"});"
+		],
+		"description": "Building The Backend DocumentDB Client Initialization"
+	}
+}

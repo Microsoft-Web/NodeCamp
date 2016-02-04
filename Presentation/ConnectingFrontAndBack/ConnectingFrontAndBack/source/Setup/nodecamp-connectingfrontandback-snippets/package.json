@@ -1,0 +1,25 @@
+{
+	"name": "nodecamp-connectingfrontandback-snippets",
+	"displayName": "Node Camp - Connecting the Frontend to the Backend - Code Snippets",
+	"description": "Code snippets for the 'Connecting the Frontend to the Backend' Node Camp demo",
+	"version": "1.0.0",
+	"publisher": "MicrosoftDX",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+            {
+                "language": "jade",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            }
+		]
+	}
+}

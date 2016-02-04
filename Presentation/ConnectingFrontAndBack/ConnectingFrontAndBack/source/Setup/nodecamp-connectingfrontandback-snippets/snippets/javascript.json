@@ -1,0 +1,46 @@
+{
+    "Connecting The Frontend To The Backend Add JQuery Lib to Frontend": {
+        "prefix": "ConnectingFrontAndBack - AddJQueryLib",
+        "body": [
+            "script(type='text/javascript' src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js')"
+        ],
+        "description": "Connecting The Frontend To The Backend Add JQuery Lib to Frontend"
+    },
+    "Connecting The Frontend To The Backend Add Bootstrap and Socket.IO libs": {
+        "prefix": "ConnectingFrontAndBack - AddBootstrapAndSocketIOLibs",
+        "body": [
+            "script(type='text/javascript' src='/javascripts/bootstrap.min.js')", 
+            "script(type='text/javascript' src='/socket.io/socket.io.js')"
+        ],
+        "description": "Connecting The Frontend To The Backend Add Bootstrap and Socket.IO libs"
+    },
+    "Connecting The Frontend To The Backend Socket IO": {
+        "prefix": "ConnectingFrontAndBack - SocketIO",
+        "body": [
+            "var socket = io();"
+        ],
+        "description": "Connecting The Frontend To The Backend Socket IO"
+    },
+    "Connecting The Frontend To The Backend Append Messages Received": {
+        "prefix": "ConnectingFrontAndBack - AppendMessagesReceived",
+        "body": [
+            "socket.on('chat', function (msg) {",
+            "\t$('#messages').append($('<p>').text(msg));",
+            "});"
+        ],
+        "description": "Connecting The Frontend To The Backend Append Messages Received"
+    },
+    "Connecting The Frontend To The Backend Send Messages": {
+        "prefix": "ConnectingFrontAndBack - SendMessages",
+        "body": [
+            "$('#send-message-btn').click(function () {",
+            "\tvar msg = $('#message-box').val();",
+            "\tsocket.emit('chat', msg);",
+            "\t$('#messages').append($('<p>').text(msg));",
+            "\t$('#message-box').val('');",
+            "\treturn false;",
+            "});"
+        ],
+        "description": "Connecting The Frontend To The Backend Send Messages"
+    }
+}

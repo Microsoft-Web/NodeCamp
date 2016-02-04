@@ -1,0 +1,21 @@
+{
+	"name": "nodecamp-introtoexpress-snippets",
+	"displayName": "Node Camp - Introduction to Express Framework - Code Snippets",
+	"description": "Code snippets for the 'Introduction to Express Framework' Node Camp demo",
+	"version": "1.0.0",
+	"publisher": "MicrosoftDX",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	}
+}
