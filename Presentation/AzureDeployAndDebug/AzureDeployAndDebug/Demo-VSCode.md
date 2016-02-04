@@ -85,14 +85,14 @@ This demo is composed of the following segments:
 	
 1. Open the file **azuredeploy.parameters.json** located in the **source/Assets** folder and enter parameter values suitable for your environment:
 
-	- **documentDbAccountName**: The name of the DocumentDB database. Use only lowercase letters, numbers and '-' character.
-	- **siteName**: With the name of the web app that you wish to create.
-	- **appServicePlanName**: With the name of the App Service plan to use for hosting the web app.
-	- **East US**: If you want to use a different location for the web app and the service plan.
-	
-	
-	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
+	- **documentDbAccountName**: the name of the DocumentDB account. Use only lowercase letters, numbers and '-' character.
+	- **siteName**: the name of the Web App that you wish to create.
+	- **appServicePlanName**: the name of the App Service plan to use for hosting the web app.
+	- **East US**: If you want to use a different location for the Web App and the Service Plan.
 
+	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
+	
+	
 	````json
 	{
 		"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
@@ -120,7 +120,7 @@ This demo is composed of the following segments:
 	
 	_Creating the Azure Resources_
 
-1. Go to the [Azure Portal](https://portal.azure.com/) and check that the Resource Group was successfully deployed.
+1. Go to the [Azure Portal](https://portal.azure.com/) and check that the Resource Group was successfully provisioned.
 
 	![Checking Azure Resources](images/VSCommunity/checking-azure-resources.png?raw=true "Checking Azure Resources")
 
