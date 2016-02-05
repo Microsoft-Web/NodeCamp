@@ -101,6 +101,10 @@
                       {
                         "Name": "DOCUMENT_DB_AUTH_KEY",
                         "Value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', parameters('databaseAccountName')), '2015-04-08').primaryMasterKey]"
+                      },
+                      {
+                        "Name": "WEBSITE_NODE_DEFAULT_VERSION",
+                        "Value": "4.2.3"
                       }
                     ]
                 }
