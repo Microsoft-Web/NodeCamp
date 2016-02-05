@@ -94,14 +94,14 @@
                     "netFrameworkVersion": "v4.6",
                     "webSocketsEnabled": true,
                     "appSettings": [
-                        {
-                            "Name": "DOCUMENTDB_ENDPOINT",
-                            "Value": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', parameters('databaseAccountName'))).documentEndpoint]"
-                        },
-                        {
-                            "Name": "DOCUMENTDB_PRIMARY_KEY",
-                            "Value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', parameters('databaseAccountName')), '2015-04-08').primaryMasterKey]"
-                        }
+                      {
+                        "Name": "DOCUMENT_DB_HOST",
+                        "Value": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', parameters('databaseAccountName'))).documentEndpoint]"
+                      },
+                      {
+                        "Name": "DOCUMENT_DB_AUTH_KEY",
+                        "Value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', parameters('databaseAccountName')), '2015-04-08').primaryMasterKey]"
+                      }
                     ]
                 }
             }
