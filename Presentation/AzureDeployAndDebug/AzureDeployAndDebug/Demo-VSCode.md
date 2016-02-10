@@ -155,6 +155,8 @@ This demo is composed of the following segments:
 
 	_Showing the Deployments blade_
 
+	> **Speaking point:** In order to make the continuous integration work, a _deploy.cmd_ file must be provided. The Begin solution already includes a deployment script file, but in case you need to create a new one it can be achieved with the Azure CLI tool by running **azure config mode asm** to switch to Azure Service Manager and then **azure site deploymentscript --node** to generate a new deploy.cmd file
+	
 1. In the command prompt/terminal run **code .** to open the current directory (your local Git repository) with **Visual Studio Code**.
 
 1. In the **Explore** view, open the **index.jade** file located in the **views** folder. 

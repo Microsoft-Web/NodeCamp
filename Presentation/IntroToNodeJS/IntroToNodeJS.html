@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 	<head>
@@ -20,6 +20,9 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
 
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="../../_layouts/custom.css">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -40,11 +43,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-state="title">
 					<h1>Introduction to Node.js</h1>
 				</section>
 
-				<section>
+				<section data-state="agenda">
 					<h2>Agenda</h2>
 					<ol>
 						<li>About Node</li>
@@ -55,7 +58,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>About Node</h2>
 					</section>
 					<section>
@@ -118,7 +121,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Setting up your environment</h2>
 					</section>
 					<section>
@@ -156,15 +159,15 @@ choco install nodejs.install
 					<section>
 						<h2>First Node application</h2>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Hello World Application</h3>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Basic HTTP Server</h3>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Basic TCP server</h3>
 					</section>
@@ -202,7 +205,7 @@ fs.readFile('package.json', function (err, buf) {
 });
 						</code></pre>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Reading file content sync vs async</h3>
 					</section>
@@ -275,7 +278,7 @@ var fs = require("fs");
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Node Package Manager (NPM)</h2>
 					</section>
 					<section>
@@ -364,7 +367,7 @@ request('http://www.microsoft.com', function (error, response, body) {
 						</code></pre>
 					</section>
 
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Install and update Node packages through the Node Package Manager</h3>
 					</section>
@@ -378,8 +381,8 @@ request('http://www.microsoft.com', function (error, response, body) {
 						<li><a href="http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/">http://spin.atomicobject.com/2012/03/14/nodejs-and-asynchronous-programming-with-promises/</a></li>
 					</ul>
 				</section>
-				<section style="text-align: left;">
-					<h2>Microsoft</h2>
+				<section style="text-align: left;" data-state="the-end">
+                    <img data-src="../../_layouts/MicrosoftLogo.png" />
 					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
 The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
 </small></p>

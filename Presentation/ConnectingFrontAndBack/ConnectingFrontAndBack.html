@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 	<head>
@@ -20,6 +20,9 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../_layouts/reveal.js/lib/css/zenburn.css">
 
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="../../_layouts/custom.css">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -40,11 +43,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-state="title">
 					<h1>Connecting the Frontend to the Backend</h1>
 				</section>
 
-				<section>
+				<section data-state="agenda">
 					<h2>Agenda</h2>
 					<ol>
 						<li>Adding Libraries to the Frontend (jQuery, Socket.IO)</li>
@@ -53,26 +56,26 @@
 				</section>
 				
 								
-				<section>
+				<section data-state="demo">
 					<h2>Demo</h2>
 					<h3>Adding Libraries to the FrontEnd</h3>
 				</section>
 
 				<section>
-					<section>
+					<section data-state="head">
 						<h2>Listening and Sending Messages</h2>
 					</section>
 					<section>
 						<h2>Without real-time</h2>
-						<img data-src="images/without-real-time.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/without-real-time.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>With real-time</h2>
-						<img data-src="images/with-real-time.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/with-real-time.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>Basically...</h2>
-						<img data-src="images/socket-io.png" alt="Down arrow" style="border:none;background:none;">
+						<img data-src="images/socket-io.png" alt="Down arrow">
 					</section>
 					<section>
 						<h2>Introducing Socket.IO</h2>
@@ -100,14 +103,14 @@
 							<li>Binary Streaming – think video, images</li>
 						</ul>
 					</section>
-					<section>
+					<section data-state="demo">
 						<h2>Demo</h2>
 						<h3>Listening and handling messages</h3>
 					</section>
 				</section>
 
-				<section style="text-align: left;">
-					<h2>Microsoft</h2>
+				<section style="text-align: left;" data-state="the-end">
+                    <img data-src="../../_layouts/MicrosoftLogo.png" />
 					<p><small style="font-size:0.4em;">© 2016 Microsoft Corporation. All rights reserved. Microsoft, Windows, Windows Vista and other product names are or may be registered trademarks and/or trademarks in the U.S. and/or other countries.
 The information herein is for informational purposes only and represents the current view of Microsoft Corporation as of the date of this presentation.  Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information provided after the date of this presentation.  MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AS TO THE INFORMATION IN THIS PRESENTATION.
 </small></p>
