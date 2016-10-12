@@ -108,14 +108,13 @@
 						</ul>
 					</section>
 					<section>
-						<h2>The Node Community</h2>
+						<h2>Node Release &amp; Release Model</h2>
 						<ul>
-							<li>Five years after its debut, Node is the third most popular project on GitHub.</li>
-							<li>Over 2 million downloads per month</li>
-							<li>Over 20 million downloads of v0.10x</li>
-							<li>Over 81,000 modules on npm</li>
-							<li>Over 475 meetups worldwide talking about Node</li>
-							<li>Reference: <a href="http://strongloop.com/node-js/infographic/">http://strongloop.com/node-js/infographic/</a></li>
+							<li>Following a forked release model, similar to Ubuntu.</li>
+							<li>Long-Term Support vs. Current</li>
+							<li>Current LTS Version: v4.6.0 (NPM: 2.15.9)</li>
+							<li>Current Version: v6.7.0 (NPM 3.10.3)</li>
+							<li>On Windows, use the Current version as there are less issues with long-paths and NPM since >v3.0</li>
 						</ul>
 					</section>
 				</section>
@@ -142,6 +141,24 @@ choco install nodejs.install
 							<li>Double check that the node executable has been added to your PATH system environment variable</li>
 							<li><a href="https://www.youtube.com/watch?v=W9pg2FHeoq8">https://www.youtube.com/watch?v=W9pg2FHeoq8</a> To see how to change your environment variables on Windows 8 and Windows 8.1</li>
 							<li>You will want to make sure the following folder has been added to the PATH variable: C:\Program Files (x86)\nodejs\</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Installing Node with Bash for Windows</h2>
+						<ul>
+							<li>Install <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash for Windows</a></li>
+							<pre><code class="cmd" data-trim contenteditable>
+sudo apt-get update
+sudo apt-get install nodejs nodejs-legacy npm
+							</code></pre>
+						</ul>
+					</section>
+					<section>
+						<h2>Installing Visual Studio Code</h2>
+						<ul>
+							<li><a href="https://code.visualstudio.com">Visual Studio Code</a> is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, Mac and Linux.</li> 
+							<li>It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.</li>
+							<li>Built-in support for Node.js Debugging, Git, Intellisense, Linting, Chrome Debugging Protocol, etc.</li>
 						</ul>
 					</section>
 					<section>
@@ -311,14 +328,15 @@ var fs = require("fs");
 						<h2>Popular NPM Modules</h2>
 						<h4>Most Depended Upon</h4>
 						<ul>
-							<li>7053 underscore</li>
-							<li>6458 async</li>
-							<li>5591 request</li>
-							<li>4931 lodash</li>
-							<li>3630 commander</li>
-							<li>3543 express</li>
-							<li>2708 optimist</li>
-							<li>2634 coffee-script</li>
+							<li>underscore</li>
+							<li>async</li>
+							<li>request</li>
+							<li>lodash</li>
+							<li>commander</li>
+							<li>express</li>
+							<li>bluebird</li>
+							<li>chalk</li>
+							<li>debug</li>
 						</ul>
 					</section>
 					<section>
