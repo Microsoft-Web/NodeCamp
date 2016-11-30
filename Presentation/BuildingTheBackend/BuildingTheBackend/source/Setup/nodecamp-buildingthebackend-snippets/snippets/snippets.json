@@ -2,7 +2,7 @@
 	"Node JS Socket.IO MongoDB Save Message": {
 		"prefix": "NodeJsSocketIO-mongoDB-save-message",
 		"body": [
-			"mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {",
+			"mongo.connect(process.env.MONGODB_URI, function (err, db) {",
 			"\tif (err) {",
 			"\t\tconsole.warn(err.message);",
 			"\t} else {",
@@ -19,7 +19,7 @@
 	"Node JS Socket.IO MongoDB Retrieve Messages": {
 		"prefix": "NodeJsSocketIO-mongoDB-retrieve-messages",
 		"body": [
-			"mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {",
+			"mongo.connect(process.env.MONGODB_URI, function (err, db) {",
 			"\tif (err){",
 			"\t\tconsole.warn(err.message);",
 			"\t} else {",

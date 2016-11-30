@@ -427,7 +427,7 @@ We then pass the socket.io instance to the module we created.
 	(Code Snippet - _NodeJsSocketIO-mongoDB-retrieve-messages_)
 
 	````JavaScript
-    mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {
+    mongo.connect(process.env.MONGODB_URI, function (err, db) {
         if(err){
             console.warn(err.message);
         } else {
@@ -440,12 +440,12 @@ We then pass the socket.io instance to the module we created.
 
 1. Add the next code snippet inside the "chat" event and before the `socket.broadcast.emit('chat', msg);` line:
 
-	> **Speaking point:** We want to connect to the database using the URI we have in the **CUSTOMCONNSTR_MONGOLAB_URI** environment variable and insert the chat message received in the socket connection.
+	> **Speaking point:** We want to connect to the database using the URI we have in the **MONGODB_URI** environment variable and insert the chat message received in the socket connection.
 
 	(Code Snippet - _NodeJsSocketIO-mongoDB-save-message_)
 
 	````JavaScript
-	mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {
+	mongo.connect(process.env.MONGODB_URI, function (err, db) {
 		if (err) {
 			console.warn(err.message);
 		} else {
